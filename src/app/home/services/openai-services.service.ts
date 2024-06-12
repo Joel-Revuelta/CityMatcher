@@ -1,44 +1,55 @@
 import { environment } from '../../../environments/environment';
 import { Injectable, inject } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { map, tap } from 'rxjs/operators';
-import { Requirements } from '../interfaces/city.interface';
+import { City, Requirements } from '../interfaces/city.interface';
+import { OpenAI } from 'openai';
+import { last } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class OpenaiService {
-  private apiUrl = 'https://api.openai.com/v1/engines/gpt-3.5-turbo-0125/completions';
+  private openAI = new OpenAI({ apiKey: environment.openaiKey, dangerouslyAllowBrowser: true });
+  private assistantId = 'asst_mgL6I4iUg26fzR8OXDNBWVDN'
+  private thread = this.openAI.beta.threads.create();
 
-  private http: HttpClient = inject(HttpClient);
+  async getGPT3Response(requirements: Requirements): Promise<City[]> {
+    // const prompt = `
+    // - qualityOfLife: Approximately ${requirements.qualityOfLife}/100
+    // - happinessRate: Approximately ${requirements.happinessRate}/100
+    // - publicServices: Approximately ${requirements.publicServices}/100
+    // - safety: Approximately ${requirements.safety}/100
+    // - desiredJob: ${requirements.desiredJob}
+    // - averageSalary: Approximately ${requirements.averageSalary}
+    // - costOfLiving: Approximately ${requirements.costOfLiving}
+    // `;
 
-  getGPT3Response(requirements: Requirements) {
-    const prompt = `You are an AI trained on a vast dataset of global city information. Your objective is to generate a consistent list of 6 cities that match the following specific user requirements. The data should remain consistent across different requests. Format the output as a JSON object, where each entry is a (city, country) pair as the key, and its details as the value. Exclude the "desired job" from the details. Ensure the cities meet the criteria as closely as possible without going far beyond the specified values:
-- Quality of life: Approximately ${requirements['Quality of life']}/100
-- Happiness rate: Approximately ${requirements['Happiness rate']}/100
-- Public services: Approximately ${requirements['Public services']}/100
-- Safety: Approximately ${requirements['Safety']}/100
-- Desired job: ${requirements['Desired job']}
-- Average salary: Around ${requirements['Average salary']}
-- Cost of living: Around ${requirements['Cost of living']}
+    // const message = this.openAI.beta.threads.messages.create(
+    //   (await this.thread).id,
+    //   {
+    //     role: 'user',
+    //     content: prompt,
+    //   }
+    // );
 
-Please provide cities that meet these criteria as closely as possible without significantly exceeding them. Be as accurate as possible across requests. Do not make up the data. Example of expected output format:
-{
-  "City1, Country1": {"Quality of life": "70", "Happiness rate": "65", "Public services": "40", "Safety": "35", "Average salary": "1900", "Cost of living": "850"},
-  "City2, Country2": {...}
-}`;
-
-    console.log(prompt);
-
-    return this.http.post(this.apiUrl, {
-      prompt: prompt,
-      max_tokens: 1000,
-    }, {
-      headers: {
-        'Authorization': `Bearer ${environment.openaiKey}`
-      }
-    }).pipe(
-      map((response: any) => JSON.parse(response['choices'][0].text))
-    );
+    // const run = this.openAI.beta.threads.runs.createAndPoll(
+    //   (await this.thread).id,
+    //   { assistant_id: this.assistantId }
+    // )
+    // if ((await run).status === 'completed') {
+    //   const messsages = await this.openAI.beta.threads.messages.list((await this.thread).id);
+    //   const lastMessage = messsages.data[0];
+    //   return lastMessage.content[0].type === 'text' ? JSON.parse(lastMessage.content[0].text.value).cities : null ;
+    // }
+    // return [];
+    return JSON.parse(`
+[
+  {"name": "Varna, Bulgaria", "qualityOfLife": "35", "happinessRate": "37", "publicServices": "34", "safety": "39", "averageSalary": "1450", "costOfLiving": "540"},
+  {"name": "Skopje, North Macedonia", "qualityOfLife": "36", "happinessRate": "38", "publicServices": "36", "safety": "37", "averageSalary": "1380", "costOfLiving": "550"},
+  {"name": "Podgorica, Montenegro", "qualityOfLife": "34", "happinessRate": "36", "publicServices": "33", "safety": "38", "averageSalary": "1420", "costOfLiving": "530"},
+  {"name": "Novi Sad, Serbia", "qualityOfLife": "36", "happinessRate": "37", "publicServices": "35", "safety": "36", "averageSalary": "1370", "costOfLiving": "540"},
+  {"name": "Tirana, Albania", "qualityOfLife": "35", "happinessRate": "37", "publicServices": "34", "safety": "37", "averageSalary": "1390", "costOfLiving": "550"},
+  {"name": "Bishkek, Kyrgyzstan", "qualityOfLife": "36", "happinessRate": "38", "publicServices": "35", "safety": "36", "averageSalary": "1400", "costOfLiving": "540"}
+]
+`)
   }
 }

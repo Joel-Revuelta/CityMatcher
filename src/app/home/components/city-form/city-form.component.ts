@@ -6,7 +6,6 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button'
 import { OpenaiService } from '../../services/openai-services.service';
 import { City, Requirements } from '../../interfaces/city.interface';
-import { firstValueFrom } from 'rxjs';
 
 @Component({
   selector: 'app-city-form',
@@ -24,7 +23,7 @@ import { firstValueFrom } from 'rxjs';
 export class CityFormComponent {
 
   @Output()
-  public onSearch: EventEmitter<string> = new EventEmitter<string>();
+  public onSearch: EventEmitter<City[]> = new EventEmitter<City[]>();
 
   private fb: FormBuilder = inject(FormBuilder);
   private OpenaiService: OpenaiService = inject(OpenaiService);
@@ -46,21 +45,20 @@ export class CityFormComponent {
     this.loading = true;
     const formValues = this.cityForm.value;
 
-    // Transform formValues to match the Requirements interface
     const requirements: Requirements = {
-      "Quality of life": formValues.qualityOfLife,
-      "Happiness rate": formValues.happiness,
-      "Public services": formValues.publicServices,
-      "Safety": formValues.safety,
-      "Desired job": formValues.desiredJob,
-      "Average salary": formValues.averageSalary,
-      "Cost of living": formValues.costOfLiving
+      qualityOfLife: formValues.qualityOfLife,
+      happinessRate: formValues.happiness,
+      publicServices: formValues.publicServices,
+      safety: formValues.safety,
+      desiredJob: formValues.desiredJob,
+      averageSalary: formValues.averageSalary,
+      costOfLiving: formValues.costOfLiving
     };
 
     try {
-      const result = await firstValueFrom(this.OpenaiService.getGPT3Response(requirements));
-      this.cities = result ? result : [];
+      this.cities = await this.OpenaiService.getGPT3Response(requirements);
       console.log(this.cities);
+      this.onSearch.emit(this.cities);
     } catch (error) {
       console.error(error);
       this.cities = [];

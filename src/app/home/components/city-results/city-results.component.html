@@ -1,0 +1,13 @@
+<ul>
+    @for (city of cities; track $index) {
+      <li>
+        <h2>{{ city.name }}</h2>
+        <h3>Quality Of Life: {{ city.qualityOfLife }}</h3>
+        <h3>Happiness Rate: {{ city.happinessRate }}</h3>
+        <h3>Public Services: {{ city.publicServices }}</h3>
+        <h3>Safety: {{ city.safety }}</h3>
+        <h3>Average Salary: {{ city.averageSalary }}</h3>
+        <h3>Cost Of Living: {{ city.costOfLiving }}</h3>
+      </li>
+    }
+</ul>

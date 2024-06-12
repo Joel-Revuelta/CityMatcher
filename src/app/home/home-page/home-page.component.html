@@ -1,2 +1,6 @@
 
-<app-city-form/>
+<app-city-form (onSearch)="displayCities( $event )"/>
+
+@if (cities.length > 0) {
+  <app-city-results [cities]="cities"/>
+}
