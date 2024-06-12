@@ -1,0 +1,52 @@
+<form [formGroup]="cityForm"  (submit)="handleSubmit()">
+  <div class="flex justify-evenly">
+    <div class="flex flex-col gap-10">
+      <div class="flex flex-col">
+        <mat-label class="text-3xl font-medium">Quality Of Life</mat-label>
+        <mat-slider min="0" max="100" discrete>
+          <input matSliderThumb formControlName="qualityOfLife">
+        </mat-slider>
+      </div>
+      <div class="flex flex-col">
+        <mat-label class="text-3xl font-medium">Happiness Rate</mat-label>
+        <mat-slider min="0" max="100" discrete>
+          <input matSliderThumb formControlName="happiness">
+        </mat-slider>
+      </div>
+      <div class="flex flex-col">
+        <mat-label class="text-3xl font-medium">Public Services</mat-label>
+        <mat-slider min="0" max="100" discrete>
+          <input matSliderThumb formControlName="publicServices">
+        </mat-slider>
+      </div>
+      <div class="flex flex-col">
+        <mat-label class="text-3xl font-medium">Safety</mat-label>
+        <mat-slider min="0" max="100" discrete>
+          <input matSliderThumb formControlName="safety">
+        </mat-slider>
+      </div>
+    </div>
+
+    <div class="flex flex-col">
+      <mat-form-field>
+        <mat-label class="font-medium">Desired Job</mat-label>
+        <input matInput placeholder="Desired job" formControlName="desiredJob">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label class="font-medium">Average Salary</mat-label>
+        <input type="number" matInput placeholder="Average salary" formControlName="averageSalary">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label class="font-medium">Cost Of Livng</mat-label>
+        <input type="number" matInput placeholder="Desired city" formControlName="costOfLiving">
+      </mat-form-field>
+    </div>
+  </div>
+
+  <div class="flex justify-center">
+    <button mat-fab extended color="primary" type="submit">
+      Find Cities
+    </button>
+  </div>
+
+</form>
