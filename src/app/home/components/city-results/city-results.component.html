@@ -9,33 +9,36 @@
                   city.coincidence! > 50 ? 'orange' : 'red'
         }">
           {{ city.coincidence | number:'2.0-2' }}%
+          <button mat-mini-fab class="ml-4" (click)="openInMaps(city.name, city.country)">
+            <mat-icon>place</mat-icon>
+          </button>
         </mat-card-actions>
       </mat-card-header>
       <mat-divider></mat-divider>
       <mat-card-content class="mt-2">
         <h3 class="flex justify-center gap-5">
-          <mat-icon class="text-yellow-400">star</mat-icon>
+          <mat-icon class="text-yellow-400" matTooltip="Quality of life index">star</mat-icon>
           <div class="flex-grow">
             <mat-progress-bar class="mt-2" mode="determinate" [value]="city.qualityOfLife"></mat-progress-bar>
           </div>
           {{ city.qualityOfLife }}
         </h3>
         <h3 class="flex justify-center gap-5">
-          <mat-icon color="primary">mood</mat-icon>
+          <mat-icon color="primary" matTooltip="Happiness rate">mood</mat-icon>
           <div class="flex-grow">
             <mat-progress-bar class="mt-2" mode="determinate" [value]="city.happinessRate"></mat-progress-bar>
           </div>
           {{ city.happinessRate }}
         </h3>
         <h3 class="flex justify-center gap-5">
-          <mat-icon class="text-red-500">local_hospital</mat-icon>
+          <mat-icon class="text-red-500" matTooltip="Public services index">local_hospital</mat-icon>
           <div class="flex-grow">
             <mat-progress-bar class="mt-2" mode="determinate" [value]="city.publicServices"></mat-progress-bar>
           </div>
           {{ city.publicServices }}
         </h3>
         <h3 class="flex justify-center gap-5">
-          <mat-icon class="text-blue-500">local_police</mat-icon>
+          <mat-icon class="text-blue-500" matTooltip="Safety index">local_police</mat-icon>
           <div class="flex-grow">
             <mat-progress-bar class="mt-2" mode="determinate" [value]="city.safety"></mat-progress-bar>
           </div>
@@ -43,11 +46,11 @@
         </h3>
         <div class="flex justify-around">
           <h3 class="flex justify-center gap-5">
-            <mat-icon class="text-green-500">payments</mat-icon>
+            <mat-icon class="text-green-500" matTooltip="Average salary for desired job">payments</mat-icon>
             {{ city.averageSalary }}
           </h3>
           <h3 class="flex justify-center gap-5">
-            <mat-icon class="text-orange-400">shopping_cart</mat-icon>
+            <mat-icon class="text-orange-400"  matTooltip="Cost of living">shopping_cart</mat-icon>
             {{ city.costOfLiving }}
           </h3>
         </div>
