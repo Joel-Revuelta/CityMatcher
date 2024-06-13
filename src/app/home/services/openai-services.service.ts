@@ -21,7 +21,7 @@ export class OpenaiService {
     - weatherConditions: ${requirements.weatherConditions}
     - seasonalPreferences: ${requirements.seasonalPreferences}
     - desiredJob: ${requirements.desiredJob}
-    - averageSalary: Approximately ${requirements.averageSalary}/month
+    - averageSalary: Approximately ${requirements.averageSalary}
     - costOfLiving: Approximately ${requirements.costOfLiving}/month
     `;
 
