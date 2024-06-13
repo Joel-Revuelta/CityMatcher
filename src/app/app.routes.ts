@@ -1,6 +1,5 @@
 import { Routes } from '@angular/router';
 
-// only route is details, anything else redirects to '' (home)
 export const routes: Routes = [
   {
     path: '',
