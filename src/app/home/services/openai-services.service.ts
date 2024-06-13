@@ -41,15 +41,15 @@ export class OpenaiService {
       return lastMessage.content[0].type === 'text' ? JSON.parse(lastMessage.content[0].text.value).cities : null ;
     }
     return [];
-//     return JSON.parse(`
-// [
-//   {"name": "Varna", "country": "Bulgaria", "qualityOfLife": "35", "happinessRate": "37", "publicServices": "34", "safety": "39", "averageSalary": "1450", "costOfLiving": "540"},
-//   {"name": "Skopje", "country": "North Macedonia", "qualityOfLife": "36", "happinessRate": "38", "publicServices": "36", "safety": "37", "averageSalary": "1380", "costOfLiving": "550"},
-//   {"name": "Podgorica", "country": "Montenegro", "qualityOfLife": "34", "happinessRate": "36", "publicServices": "33", "safety": "38", "averageSalary": "1420", "costOfLiving": "530"},
-//   {"name": "Novi Sad", "country": "Servia", "qualityOfLife": "36", "happinessRate": "37", "publicServices": "35", "safety": "36", "averageSalary": "1370", "costOfLiving": "540"},
-//   {"name": "Tirana", "country": "Albania", "qualityOfLife": "35", "happinessRate": "37", "publicServices": "34", "safety": "37", "averageSalary": "1390", "costOfLiving": "550"},
-//   {"name": "Bishkek", "country": "Kyrgyzstan", "qualityOfLife": "36", "happinessRate": "38", "publicServices": "35", "safety": "36", "averageSalary": "1400", "costOfLiving": "540"}
-// ]
-// `)
+    return JSON.parse(`
+[
+  {"name": "Varna", "country": "Bulgaria", "qualityOfLife": "35", "happinessRate": "37", "publicServices": "34", "safety": "39", "averageSalary": "1450", "costOfLiving": "540"},
+  {"name": "Skopje", "country": "North Macedonia", "qualityOfLife": "36", "happinessRate": "38", "publicServices": "36", "safety": "37", "averageSalary": "1380", "costOfLiving": "550"},
+  {"name": "Podgorica", "country": "Montenegro", "qualityOfLife": "34", "happinessRate": "36", "publicServices": "33", "safety": "38", "averageSalary": "1420", "costOfLiving": "530"},
+  {"name": "Novi Sad", "country": "Servia", "qualityOfLife": "36", "happinessRate": "37", "publicServices": "35", "safety": "36", "averageSalary": "1370", "costOfLiving": "540"},
+  {"name": "Tirana", "country": "Albania", "qualityOfLife": "35", "happinessRate": "37", "publicServices": "34", "safety": "37", "averageSalary": "1390", "costOfLiving": "550"},
+  {"name": "Bishkek", "country": "Kyrgyzstan", "qualityOfLife": "36", "happinessRate": "38", "publicServices": "35", "safety": "36", "averageSalary": "1400", "costOfLiving": "540"}
+]
+`)
   }
 }

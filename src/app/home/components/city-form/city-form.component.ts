@@ -7,6 +7,7 @@ import { MatButtonModule } from '@angular/material/button'
 import { OpenaiService } from '../../services/openai-services.service';
 import { City, Requirements } from '../../interfaces/city.interface';
 import { MatAccordion, MatExpansionModule } from '@angular/material/expansion';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @Component({
   selector: 'app-city-form',
@@ -18,7 +19,8 @@ import { MatAccordion, MatExpansionModule } from '@angular/material/expansion';
     MatInputModule,
     MatButtonModule,
     MatExpansionModule,
-    MatAccordion
+    MatAccordion,
+    MatProgressSpinnerModule
   ],
   templateUrl: './city-form.component.html',
   styleUrl: './city-form.component.scss'
@@ -60,6 +62,8 @@ export class CityFormComponent {
 
     try {
       this.cities = await this.OpenaiService.getGPT3Response(requirements);
+      this.cities = this.calculateCoincidence(this.cities, requirements);
+      this.cities.sort((a, b) => b.coincidence! - a.coincidence!);
       console.log(this.cities);
       this.onSearch.emit(this.cities);
     } catch (error) {
@@ -68,6 +72,28 @@ export class CityFormComponent {
     } finally {
       this.loading = false;
     }
+  }
+
+  private calculateCoincidence(cities: City[], requirements: Requirements): City[] {
+    return cities.map(city => {
+      let nbOfDifferences = 4;
+      const qualityOfLifeDiff = 100 - Math.abs(city.qualityOfLife - requirements.qualityOfLife);
+      const happinessRateDiff = 100 - Math.abs(city.happinessRate - requirements.happinessRate);
+      const publicServicesDiff = 100 - Math.abs(city.publicServices - requirements.publicServices);
+      const safetyDiff = 100 - Math.abs(city.safety - requirements.safety);
+      let salaryByCostOfLivingDiff = 0;
+
+      if (requirements.averageSalary > 0 && requirements.costOfLiving > 0) {
+        const salaryByCostOfLiving = requirements.costOfLiving / requirements.averageSalary * 100;
+        const citySalaryByCostOfLiving = city.costOfLiving / city.averageSalary * 100;
+        salaryByCostOfLivingDiff = 100 - Math.abs(salaryByCostOfLiving - citySalaryByCostOfLiving);
+        nbOfDifferences++;
+      }
+
+      const averageDiff = (qualityOfLifeDiff + happinessRateDiff + publicServicesDiff + safetyDiff + salaryByCostOfLivingDiff) / nbOfDifferences;
+
+      return { ...city, coincidence: averageDiff };
+    });
   }
 
 }
