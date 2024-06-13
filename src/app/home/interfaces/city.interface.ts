@@ -8,7 +8,7 @@ export interface City {
   safety:         number;
   averageSalary:  number;
   costOfLiving:   number;
-  coincidence?:    number;
+  coincidence?:   number;
 }
 
 export interface Requirements {
