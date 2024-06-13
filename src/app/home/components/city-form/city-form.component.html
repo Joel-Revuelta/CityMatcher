@@ -1,6 +1,12 @@
 <form [formGroup]="cityForm"  (submit)="handleSubmit()">
-  <div class="flex justify-evenly">
-    <div class="flex flex-col gap-10">
+  <mat-accordion multi>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <h2>City Preferences</h2>
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <div class="flex justify-evenly">
       <div class="flex flex-col">
         <mat-label class="text-3xl font-medium">Quality Of Life</mat-label>
         <mat-slider min="0" max="100" discrete>
@@ -25,9 +31,16 @@
           <input matSliderThumb formControlName="safety">
         </mat-slider>
       </div>
-    </div>
+      </div>
+    </mat-expansion-panel>
 
-    <div class="flex flex-col">
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <h2>Job Preferences</h2>
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <div class="flex justify-evenly">
       <mat-form-field>
         <mat-label class="font-medium">Desired Job</mat-label>
         <input matInput placeholder="Desired job" formControlName="desiredJob">
@@ -40,10 +53,11 @@
         <mat-label class="font-medium">Cost Of Livng</mat-label>
         <input type="number" matInput placeholder="Desired city" formControlName="costOfLiving">
       </mat-form-field>
-    </div>
-  </div>
+      </div>
+    </mat-expansion-panel>
+  </mat-accordion>
 
-  <div class="flex justify-center">
+  <div class="mt-5 flex justify-center">
     <button mat-fab extended color="primary" type="submit">
       Find Cities
     </button>

@@ -6,6 +6,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button'
 import { OpenaiService } from '../../services/openai-services.service';
 import { City, Requirements } from '../../interfaces/city.interface';
+import { MatAccordion, MatExpansionModule } from '@angular/material/expansion';
 
 @Component({
   selector: 'app-city-form',
@@ -15,7 +16,9 @@ import { City, Requirements } from '../../interfaces/city.interface';
     MatFormFieldModule,
     MatSliderModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
+    MatExpansionModule,
+    MatAccordion
   ],
   templateUrl: './city-form.component.html',
   styleUrl: './city-form.component.scss'
