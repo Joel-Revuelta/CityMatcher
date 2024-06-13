@@ -8,6 +8,7 @@ import { OpenaiService } from '../../services/openai-services.service';
 import { City, Requirements } from '../../interfaces/city.interface';
 import { MatAccordion, MatExpansionModule } from '@angular/material/expansion';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatSelectModule } from '@angular/material/select';
 
 @Component({
   selector: 'app-city-form',
@@ -20,7 +21,8 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     MatButtonModule,
     MatExpansionModule,
     MatAccordion,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatSelectModule
   ],
   templateUrl: './city-form.component.html',
   styleUrl: './city-form.component.scss'
@@ -38,6 +40,8 @@ export class CityFormComponent {
     happiness: [50],
     publicServices: [50],
     safety: [50],
+    weatherConditions: [''],
+    seasonalPreferences: [''],
     desiredJob: [''],
     averageSalary: [0],
     costOfLiving: [0]
@@ -55,6 +59,8 @@ export class CityFormComponent {
       happinessRate: formValues.happiness,
       publicServices: formValues.publicServices,
       safety: formValues.safety,
+      weatherConditions: formValues.weatherConditions,
+      seasonalPreferences: formValues.seasonalPreferences,
       desiredJob: formValues.desiredJob,
       averageSalary: formValues.averageSalary,
       costOfLiving: formValues.costOfLiving

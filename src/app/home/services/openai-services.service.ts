@@ -18,10 +18,14 @@ export class OpenaiService {
     - happinessRate: Approximately ${requirements.happinessRate}/100
     - publicServices: Approximately ${requirements.publicServices}/100
     - safety: Approximately ${requirements.safety}/100
+    - weatherConditions: ${requirements.weatherConditions}
+    - seasonalPreferences: ${requirements.seasonalPreferences}
     - desiredJob: ${requirements.desiredJob}
     - averageSalary: Approximately ${requirements.averageSalary}/month
     - costOfLiving: Approximately ${requirements.costOfLiving}/month
     `;
+
+    console.log(prompt);
 
     const message = this.openAI.beta.threads.messages.create(
       (await this.thread).id,

@@ -37,10 +37,35 @@
     <mat-expansion-panel expanded>
       <mat-expansion-panel-header>
         <mat-panel-title>
+          <h2>Climate Preferences</h2>
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-20">
+        <mat-form-field>
+          <mat-label>Weather Conditions</mat-label>
+          <mat-select formControlName="weatherConditions">
+            <mat-option value="sunny">Sunny</mat-option>
+            <mat-option value="rainy">Rainy</mat-option>
+            <mat-option value="snowy">Snowy</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Seasonal Preferences</mat-label>
+          <mat-select formControlName="seasonalPreferences">
+            <mat-option value="distinctSeasons">Distinct Seasons</mat-option>
+            <mat-option value="uniformClimate">Uniform Climate</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel expanded>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
           <h2>Job Preferences</h2>
         </mat-panel-title>
       </mat-expansion-panel-header>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-5">
         <mat-form-field>
           <mat-label class="font-medium">Desired Job</mat-label>
           <input matInput placeholder="Desired job" formControlName="desiredJob">
