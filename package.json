@@ -5,7 +5,7 @@
   "description": "Find where you'd actually thrive — an explainable city matching engine.",
   "packageManager": "pnpm@11.22.0",
   "engines": {
-    "node": ">=22.12"
+    "node": "22.x"
   },
   "scripts": {
     "dev": "next dev",
