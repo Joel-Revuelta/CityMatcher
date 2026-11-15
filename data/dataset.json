@@ -1,0 +1,6924 @@
+{
+  "generatedAt": "2026-11-15T13:45:27.560Z",
+  "methodologyVersion": "1.0",
+  "cities": [
+    {
+      "slug": "amsterdam",
+      "name": "Amsterdam",
+      "country": "Netherlands",
+      "countryCode": "NL",
+      "region": "western",
+      "population": 900000,
+      "size": "medium",
+      "lat": 52.3676,
+      "lng": 4.9041,
+      "currency": "EUR",
+      "climate": {
+        "monthly": [
+          {
+            "month": "Jan",
+            "high": 7,
+            "low": 2.4,
+            "rain": 79,
+            "sun": 116
+          },
+          {
+            "month": "Feb",
+            "high": 9.2,
+            "low": 3.3,
+            "rain": 92,
+            "sun": 143
+          },
+          {
+            "month": "Mar",
+            "high": 10.5,
+            "low": 3.6,
+            "rain": 68,
+            "sun": 230
+          },
+          {
+            "month": "Apr",
+            "high": 13.1,
+            "low": 4.9,
+            "rain": 60,
+            "sun": 304
+          },
+          {
+            "month": "May",
+            "high": 16.6,
+            "low": 8.3,
+            "rain": 75,
+            "sun": 364
+          },
+          {
+            "month": "Jun",
+            "high": 21,
+            "low": 12.6,
+            "rain": 80,
+            "sun": 360
+          },
+          {
+            "month": "Jul",
+            "high": 21.2,
+            "low": 13.6,
+            "rain": 86,
+            "sun": 361
+          },
+          {
+            "month": "Aug",
+            "high": 22.3,
+            "low": 14.5,
+            "rain": 77,
+            "sun": 351
+          },
+          {
+            "month": "Sep",
+            "high": 19.7,
+            "low": 12,
+            "rain": 83,
+            "sun": 276
+          },
+          {
+            "month": "Oct",
+            "high": 15.3,
+            "low": 9.4,
+            "rain": 125,
+            "sun": 183
+          },
+          {
+            "month": "Nov",
+            "high": 10.4,
+            "low": 5.2,
+            "rain": 91,
+            "sun": 129
+          },
+          {
+            "month": "Dec",
+            "high": 7.7,
+            "low": 3.2,
+            "rain": 89,
+            "sun": 88
+          }
+        ],
+        "summerHigh": 21.8,
+        "winterLow": 2.8,
+        "annualRain": 1005,
+        "annualSunHours": 2905,
+        "tags": [
+          "four-seasons"
+        ]
+      },
+      "cost": {
+        "rentOneBed": 2100,
+        "livingSingle": 1200,
+        "totalSingle": 3300,
+        "index": 80
+      },
+      "work": {
+        "avgNetSalary": 3100,
+        "salaryCoverage": 0.94,
+        "topSectors": [
+          "Tech",
+          "Finance",
+          "Creative"
+        ]
+      },
+      "metrics": {
+        "safety": 80,
+        "healthcare": 88,
+        "internet": 93,
+        "walkability": 92,
+        "environment": 78,
+        "happiness": 80,
+        "publicServices": 82,
+        "english": 90
+      },
+      "confidence": "medium",
+      "sources": [
+        {
+          "label": "Open-Meteo climate normals",
+          "url": "https://open-meteo.com/",
+          "asOf": "2024-12-31",
+          "note": "ERA5 reanalysis, monthly averages 2019–2024"
+        },
+        {
+          "label": "World Bank country indicators",
+          "url": "https://data.worldbank.org/",
+          "asOf": "2025",
+          "note": "Internet use, life expectancy, health spending, PM2.5, GDP PPP, unemployment"
+        },
+        {
+          "label": "CityMatcher cost model",
+          "url": "/methodology",
+          "asOf": "2025-06-30",
+          "note": "Curated rent, living-cost and salary estimates for a single person; modelled, medium confidence"
+        }
+      ],
+      "editorial": {
+        "summary": "Bikes, canals and a deeply international working culture, with one of Europe's tightest and most expensive rental markets.",
+        "bestFor": "English-speaking professionals who want car-free living and a global career network."
+      }
+    },
+    {
+      "slug": "athens",
+      "name": "Athens",
+      "country": "Greece",
+      "countryCode": "GR",
+      "region": "southern",
+      "population": 3100000,
+      "size": "large",
+      "lat": 37.9838,
+      "lng": 23.7275,
+      "currency": "EUR",
+      "climate": {
+        "monthly": [
+          {
+            "month": "Jan",
+            "high": 12.4,
+            "low": 5.4,
+            "rain": 81,
+            "sun": 224
+          },
+          {
+            "month": "Feb",
+            "high": 13.6,
+            "low": 6.1,
+            "rain": 51,
+            "sun": 242
+          },
+          {
+            "month": "Mar",
+            "high": 15.4,
+            "low": 7.3,
+            "rain": 44,
+            "sun": 295
+          },
+          {
+            "month": "Apr",
+            "high": 19.6,
+            "low": 10.7,
+            "rain": 40,
+            "sun": 328
+          },
+          {
+            "month": "May",
+            "high": 24.7,
+            "low": 15.5,
+            "rain": 29,
+            "sun": 372
+          },
+          {
+            "month": "Jun",
+            "high": 30.2,
+            "low": 20.5,
+            "rain": 26,
+            "sun": 408
+          },
+          {
+            "month": "Jul",
+            "high": 33.9,
+            "low": 23.3,
+            "rain": 9,
+            "sun": 423
+          },
+          {
+            "month": "Aug",
+            "high": 33.3,
+            "low": 23.1,
+            "rain": 16,
+            "sun": 398
+          },
+          {
+            "month": "Sep",
+            "high": 28.6,
+            "low": 19.4,
+            "rain": 18,
+            "sun": 344
+          },
+          {
+            "month": "Oct",
+            "high": 24,
+            "low": 15.1,
+            "rain": 32,
+            "sun": 304
+          },
+          {
+            "month": "Nov",
+            "high": 18.9,
+            "low": 11.3,
+            "rain": 72,
+            "sun": 242
+          },
+          {
+            "month": "Dec",
+            "high": 14.8,
+            "low": 8.4,
+            "rain": 117,
+            "sun": 221
+          }
+        ],
+        "summerHigh": 33.6,
+        "winterLow": 5.8,
+        "annualRain": 535,
+        "annualSunHours": 3801,
+        "tags": [
+          "warm"
+        ]
+      },
+      "cost": {
+        "rentOneBed": 900,
+        "livingSingle": 750,
+        "totalSingle": 1650,
+        "index": 33
+      },
+      "work": {
+        "avgNetSalary": 1150,
+        "salaryCoverage": 0.7,
+        "topSectors": [
+          "Tourism",
+          "Shipping",
+          "Tech"
+        ]
+      },
+      "metrics": {
+        "safety": 70,
+        "healthcare": 78,
+        "internet": 69,
+        "walkability": 84,
+        "environment": 66,
+        "happiness": 66,
+        "publicServices": 66,
+        "english": 66
+      },
+      "confidence": "medium",
+      "sources": [
+        {
+          "label": "Open-Meteo climate normals",
+          "url": "https://open-meteo.com/",
+          "asOf": "2024-12-31",
+          "note": "ERA5 reanalysis, monthly averages 2019–2024"
+        },
+        {
+          "label": "World Bank country indicators",
+          "url": "https://data.worldbank.org/",
+          "asOf": "2025",
+          "note": "Internet use, life expectancy, health spending, PM2.5, GDP PPP, unemployment"
+        },
+        {
+          "label": "CityMatcher cost model",
+          "url": "/methodology",
+          "asOf": "2025-06-30",
+          "note": "Curated rent, living-cost and salary estimates for a single person; modelled, medium confidence"
+        }
+      ],
+      "editorial": {
+        "summary": "A sprawling, sun-baked capital with a fast-growing startup scene and low rents, offset by heat and uneven infrastructure.",
+        "bestFor": "Sun-seekers and early-stage founders who want a low burn rate in a genuinely Greek city."
+      }
+    },
+    {
+      "slug": "barcelona",
+      "name": "Barcelona",
+      "country": "Spain",
+      "countryCode": "ES",
+      "region": "western",
+      "population": 1620000,
+      "size": "large",
+      "lat": 41.3874,
+      "lng": 2.1686,
+      "currency": "EUR",
+      "climate": {
+        "monthly": [
+          {
+            "month": "Jan",
+            "high": 13.6,
+            "low": 4.2,
+            "rain": 48,
+            "sun": 244
+          },
+          {
+            "month": "Feb",
+            "high": 15.6,
+            "low": 6.1,
+            "rain": 21,
+            "sun": 251
+          },
+          {
+            "month": "Mar",
+            "high": 16.4,
+            "low": 8.1,
+            "rain": 43,
+            "sun": 299
+          },
+          {
+            "month": "Apr",
+            "high": 17.9,
+            "low": 9.8,
+            "rain": 81,
+            "sun": 314
+          },
+          {
+            "month": "May",
+            "high": 21.4,
+            "low": 13.5,
+            "rain": 55,
+            "sun": 379
+          },
+          {
+            "month": "Jun",
+            "high": 25.7,
+            "low": 18.3,
+            "rain": 39,
+            "sun": 384
+          },
+          {
+            "month": "Jul",
+            "high": 28.8,
+            "low": 21.4,
+            "rain": 28,
+            "sun": 417
+          },
+          {
+            "month": "Aug",
+            "high": 29.1,
+            "low": 21.7,
+            "rain": 46,
+            "sun": 380
+          },
+          {
+            "month": "Sep",
+            "high": 25.7,
+            "low": 18,
+            "rain": 89,
+            "sun": 310
+          },
+          {
+            "month": "Oct",
+            "high": 22.4,
+            "low": 14.6,
+            "rain": 93,
+            "sun": 281
+          },
+          {
+            "month": "Nov",
+            "high": 18,
+            "low": 9.6,
+            "rain": 52,
+            "sun": 228
+          },
+          {
+            "month": "Dec",
+            "high": 15.3,
+            "low": 6.1,
+            "rain": 33,
+            "sun": 237
+          }
+        ],
+        "summerHigh": 29,
+        "winterLow": 5.2,
+        "annualRain": 628,
+        "annualSunHours": 3724,
+        "tags": [
+          "warm"
+        ]
+      },
+      "cost": {
+        "rentOneBed": 1600,
+        "livingSingle": 950,
+        "totalSingle": 2550,
+        "index": 59
+      },
+      "work": {
+        "avgNetSalary": 2000,
+        "salaryCoverage": 0.78,
+        "topSectors": [
+          "Tech",
+          "Design",
+          "Tourism"
+        ]
+      },
+      "metrics": {
+        "safety": 72,
+        "healthcare": 86,
+        "internet": 91,
+        "walkability": 90,
+        "environment": 74,
+        "happiness": 78,
+        "publicServices": 78,
+        "english": 70
+      },
+      "confidence": "medium",
+      "sources": [
+        {
+          "label": "Open-Meteo climate normals",
+          "url": "https://open-meteo.com/",
+          "asOf": "2024-12-31",
+          "note": "ERA5 reanalysis, monthly averages 2019–2024"
+        },
+        {
+          "label": "World Bank country indicators",
+          "url": "https://data.worldbank.org/",
+          "asOf": "2025",
+          "note": "Internet use, life expectancy, health spending, PM2.5, GDP PPP, unemployment"
+        },
+        {
+          "label": "CityMatcher cost model",
+          "url": "/methodology",
+          "asOf": "2025-06-30",
+          "note": "Curated rent, living-cost and salary estimates for a single person; modelled, medium confidence"
+        }
+      ],
+      "editorial": {
+        "summary": "Beach, mountains and one of Europe's densest urban fabrics, balanced against tourist-heavy rents and pickpocketing.",
+        "bestFor": "Designers and remote workers who prioritize walkability, weather and a dense social scene."
+      }
+    },
+    {
+      "slug": "belgrade",
+      "name": "Belgrade",
+      "country": "Serbia",
+      "countryCode": "RS",
+      "region": "eastern",
+      "population": 1400000,
+      "size": "medium",
+      "lat": 44.7866,
+      "lng": 20.4489,
+      "currency": "RSD",
+      "climate": {
+        "monthly": [
+          {
+            "month": "Jan",
+            "high": 5.6,
+            "low": -1.2,
+            "rain": 61,
+            "sun": 156
+          },
+          {
+            "month": "Feb",
+            "high": 10.7,
+            "low": 1.4,
+            "rain": 41,
+            "sun": 204
+          },
+          {
+            "month": "Mar",
+            "high": 13.3,
+            "low": 3.2,
+            "rain": 40,
+            "sun": 265
+          },
+          {
+            "month": "Apr",
+            "high": 17.5,
+            "low": 6.7,
+            "rain": 50,
+            "sun": 305
+          },
+          {
+            "month": "May",
+            "high": 21.8,
+            "low": 12,
+            "rain": 86,
+            "sun": 335
+          },
+          {
+            "month": "Jun",
+            "high": 27.1,
+            "low": 17.3,
+            "rain": 81,
+            "sun": 374
+          },
+          {
+            "month": "Jul",
+            "high": 29.4,
+            "low": 19,
+            "rain": 66,
+            "sun": 413
+          },
+          {
+            "month": "Aug",
+            "high": 29.4,
+            "low": 18.8,
+            "rain": 56,
+            "sun": 380
+          },
+          {
+            "month": "Sep",
+            "high": 24.4,
+            "low": 14.4,
+            "rain": 63,
+            "sun": 304
+          },
+          {
+            "month": "Oct",
+            "high": 19.4,
+            "low": 9.8,
+            "rain": 36,
+            "sun": 262
+          },
+          {
+            "month": "Nov",
+            "high": 12.3,
+            "low": 5.2,
+            "rain": 65,
+            "sun": 166
+          },
+          {
+            "month": "Dec",
+            "high": 8.1,
+            "low": 1.7,
+            "rain": 71,
+            "sun": 140
+          }
+        ],
+        "summerHigh": 29.4,
+        "winterLow": 0.1,
+        "annualRain": 716,
+        "annualSunHours": 3304,
+        "tags": [
+          "cold",
+          "four-seasons"
+        ]
+      },
+      "cost": {
+        "rentOneBed": 650,
+        "livingSingle": 550,
+        "totalSingle": 1200,
+        "index": 20
+      },
+      "work": {
+        "avgNetSalary": 1000,
+        "salaryCoverage": 0.83,
+        "topSectors": [
+          "Tech",
+          "Outsourcing",
+          "Hospitality"
+        ]
+      },
+      "metrics": {
+        "safety": 72,
+        "healthcare": 74,
+        "internet": 73,
+        "walkability": 84,
+        "environment": 70,
+        "happiness": 66,
+        "publicServices": 64,
+        "english": 68
+      },
+      "confidence": "medium",
+      "sources": [
+        {
+          "label": "Open-Meteo climate normals",
+          "url": "https://open-meteo.com/",
+          "asOf": "2024-12-31",
+          "note": "ERA5 reanalysis, monthly averages 2019–2024"
+        },
+        {
+          "label": "World Bank country indicators",
+          "url": "https://data.worldbank.org/",
+          "asOf": "2025",
+          "note": "Internet use, life expectancy, health spending, PM2.5, GDP PPP, unemployment"
+        },
+        {
+          "label": "CityMatcher cost model",
+          "url": "/methodology",
+          "asOf": "2025-06-30",
+          "note": "Curated rent, living-cost and salary estimates for a single person; modelled, medium confidence"
+        }
+      ],
+      "editorial": {
+        "summary": "A high-energy, late-night city at the confluence of two rivers, with low costs and a fast-growing IT outsourcing scene.",
+        "bestFor": "Budget-conscious remote workers who want nightlife and a fast-moving local tech scene."
+      }
+    },
+    {
+      "slug": "berlin",
+      "name": "Berlin",
+      "country": "Germany",
+      "countryCode": "DE",
+      "region": "central",
+      "population": 3700000,
+      "size": "large",
+      "lat": 52.52,
+      "lng": 13.405,
+      "currency": "EUR",
+      "climate": {
+        "monthly": [
+          {
+            "month": "Jan",
+            "high": 4.7,
+            "low": -0.1,
+            "rain": 54,
+            "sun": 92
+          },
+          {
+            "month": "Feb",
+            "high": 7.5,
+            "low": 0.7,
+            "rain": 62,
+            "sun": 138
+          },
+          {
+            "month": "Mar",
+            "high": 10.1,
+            "low": 1.4,
+            "rain": 44,
+            "sun": 228
+          },
+          {
+            "month": "Apr",
+            "high": 13.9,
+            "low": 4,
+            "rain": 30,
+            "sun": 286
+          },
+          {
+            "month": "May",
+            "high": 18.7,
+            "low": 8.6,
+            "rain": 53,
+            "sun": 352
+          },
+          {
+            "month": "Jun",
+            "high": 25.2,
+            "low": 14.2,
+            "rain": 55,
+            "sun": 391
+          },
+          {
+            "month": "Jul",
+            "high": 24.6,
+            "low": 14.9,
+            "rain": 61,
+            "sun": 373
+          },
+          {
+            "month": "Aug",
+            "high": 25.4,
+            "low": 15.6,
+            "rain": 53,
+            "sun": 336
+          },
+          {
+            "month": "Sep",
+            "high": 20.9,
+            "low": 11.6,
+            "rain": 42,
+            "sun": 275
+          },
+          {
+            "month": "Oct",
+            "high": 15.3,
+            "low": 8.1,
+            "rain": 57,
+            "sun": 195
+          },
+          {
+            "month": "Nov",
+            "high": 8.6,
+            "low": 3.3,
+            "rain": 49,
+            "sun": 117
+          },
+          {
+            "month": "Dec",
+            "high": 5,
+            "low": 0.6,
+            "rain": 54,
+            "sun": 80
+          }
+        ],
+        "summerHigh": 25,
+        "winterLow": 0.3,
+        "annualRain": 614,
+        "annualSunHours": 2863,
+        "tags": [
+          "cold",
+          "four-seasons"
+        ]
+      },
+      "cost": {
+        "rentOneBed": 1500,
+        "livingSingle": 1000,
+        "totalSingle": 2500,
+        "index": 57
+      },
+      "work": {
+        "avgNetSalary": 2400,
+        "salaryCoverage": 0.96,
+        "topSectors": [
+          "Startups",
+          "Creative",
+          "Public sector"
+        ]
+      },
+      "metrics": {
+        "safety": 76,
+        "healthcare": 86,
+        "internet": 86,
+        "walkability": 89,
+        "environment": 76,
+        "happiness": 74,
+        "publicServices": 78,
+        "english": 80
+      },
+      "confidence": "medium",
+      "sources": [
+        {
+          "label": "Open-Meteo climate normals",
+          "url": "https://open-meteo.com/",
+          "asOf": "2024-12-31",
+          "note": "ERA5 reanalysis, monthly averages 2019–2024"
+        },
+        {
+          "label": "World Bank country indicators",
+          "url": "https://data.worldbank.org/",
+          "asOf": "2025",
+          "note": "Internet use, life expectancy, health spending, PM2.5, GDP PPP, unemployment"
+        },
+        {
+          "label": "CityMatcher cost model",
+          "url": "/methodology",
+          "asOf": "2025-06-30",
+          "note": "Curated rent, living-cost and salary estimates for a single person; modelled, medium confidence"
+        }
+      ],
+      "editorial": {
+        "summary": "Europe's startup and creative capital, still comparatively affordable for a capital, with famously rough-edged bureaucracy.",
+        "bestFor": "Founders, freelancers and creatives who want space to experiment and an international crowd."
+      }
+    },
+    {
+      "slug": "bologna",
+      "name": "Bologna",
+      "country": "Italy",
+      "countryCode": "IT",
+      "region": "southern",
+      "population": 390000,
+      "size": "small",
+      "lat": 44.4949,
+      "lng": 11.3426,
+      "currency": "EUR",
+      "climate": {
+        "monthly": [
+          {
+            "month": "Jan",
+            "high": 8,
+            "low": 0.4,
+            "rain": 56,
+            "sun": 189
+          },
+          {
+            "month": "Feb",
+            "high": 12.4,
+            "low": 3.2,
+            "rain": 39,
+            "sun": 229
+          },
+          {
+            "month": "Mar",
+            "high": 15,
+            "low": 4.8,
+            "rain": 43,
+            "sun": 285
+          },
+          {
+            "month": "Apr",
+            "high": 17.9,
+            "low": 7.5,
+            "rain": 65,
+            "sun": 309
+          },
+          {
+            "month": "May",
+            "high": 21.8,
+            "low": 12.5,
+            "rain": 152,
+            "sun": 318
+          },
+          {
+            "month": "Jun",
+            "high": 28.8,
+            "low": 17.8,
+            "rain": 64,
+            "sun": 394
+          },
+          {
+            "month": "Jul",
+            "high": 31.6,
+            "low": 20.3,
+            "rain": 43,
+            "sun": 414
+          },
+          {
+            "month": "Aug",
+            "high": 31.2,
+            "low": 20.1,
+            "rain": 51,
+            "sun": 373
+          },
+          {
+            "month": "Sep",
+            "high": 25.5,
+            "low": 15.8,
+            "rain": 83,
+            "sun": 309
+          },
+          {
+            "month": "Oct",
+            "high": 20.6,
+            "low": 12,
+            "rain": 73,
+            "sun": 241
+          },
+          {
+            "month": "Nov",
+            "high": 13.1,
+            "low": 6.2,
+            "rain": 93,
+            "sun": 178
+          },
+          {
+            "month": "Dec",
+            "high": 8.9,
+            "low": 2.2,
+            "rain": 86,
+            "sun": 148
+          }
+        ],
+        "summerHigh": 31.4,
+        "winterLow": 1.8,
+        "annualRain": 848,
+        "annualSunHours": 3387,
+        "tags": [
+          "cold",
+          "four-seasons"
+        ]
+      },
+      "cost": {
+        "rentOneBed": 1100,
+        "livingSingle": 850,
+        "totalSingle": 1950,
+        "index": 41
+      },
+      "work": {
+        "avgNetSalary": 1800,
+        "salaryCoverage": 0.92,
+        "topSectors": [
+          "Education",
+          "Food",
+          "Engineering"
+        ]
+      },
+      "metrics": {
+        "safety": 78,
+        "healthcare": 85,
+        "internet": 76,
+        "walkability": 88,
+        "environment": 78,
+        "happiness": 77,
+        "publicServices": 76,
+        "english": 60
+      },
+      "confidence": "medium",
+      "sources": [
+        {
+          "label": "Open-Meteo climate normals",
+          "url": "https://open-meteo.com/",
+          "asOf": "2024-12-31",
+          "note": "ERA5 reanalysis, monthly averages 2019–2024"
+        },
+        {
+          "label": "World Bank country indicators",
+          "url": "https://data.worldbank.org/",
+          "asOf": "2025",
+          "note": "Internet use, life expectancy, health spending, PM2.5, GDP PPP, unemployment"
+        },
+        {
+          "label": "CityMatcher cost model",
+          "url": "/methodology",
+          "asOf": "2025-06-30",
+          "note": "Curated rent, living-cost and salary estimates for a single person; modelled, medium confidence"
+        }
+      ],
+      "editorial": {
+        "summary": "Porticoes, student energy and one of Italy's best food cultures, in a city sized for walking and cycling.",
+        "bestFor": "Academics, food people and remote workers who want Italian city life without Milan's scale."
+      }
+    },
+    {
+      "slug": "bordeaux",
+      "name": "Bordeaux",
+      "country": "France",
+      "countryCode": "FR",
+      "region": "western",
+      "population": 260000,
+      "size": "small",
+      "lat": 44.8378,
+      "lng": -0.5792,
+      "currency": "EUR",
+      "climate": {
+        "monthly": [
+          {
+            "month": "Jan",
+            "high": 10,
+            "low": 3.1,
+            "rain": 76,
+            "sun": 159
+          },
+          {
+            "month": "Feb",
+            "high": 13.7,
+            "low": 4.8,
+            "rain": 69,
+            "sun": 187
+          },
+          {
+            "month": "Mar",
+            "high": 15.4,
+            "low": 6.3,
+            "rain": 80,
+            "sun": 251
+          },
+          {
+            "month": "Apr",
+            "high": 18,
+            "low": 8.2,
+            "rain": 71,
+            "sun": 277
+          },
+          {
+            "month": "May",
+            "high": 21,
+            "low": 11.2,
+            "rain": 90,
+            "sun": 338
+          },
+          {
+            "month": "Jun",
+            "high": 24.8,
+            "low": 15.1,
+            "rain": 145,
+            "sun": 343
+          },
+          {
+            "month": "Jul",
+            "high": 27.3,
+            "low": 16.5,
+            "rain": 41,
+            "sun": 377
+          },
+          {
+            "month": "Aug",
+            "high": 27.6,
+            "low": 16.8,
+            "rain": 46,
+            "sun": 356
+          },
+          {
+            "month": "Sep",
+            "high": 24.6,
+            "low": 14.5,
+            "rain": 70,
+            "sun": 293
+          },
+          {
+            "month": "Oct",
+            "high": 20.5,
+            "low": 11.8,
+            "rain": 111,
+            "sun": 228
+          },
+          {
+            "month": "Nov",
+            "high": 14.4,
+            "low": 7.2,
+            "rain": 110,
+            "sun": 173
+          },
+          {
+            "month": "Dec",
+            "high": 11.6,
+            "low": 5.2,
+            "rain": 117,
+            "sun": 143
+          }
+        ],
+        "summerHigh": 27.5,
+        "winterLow": 4,
+        "annualRain": 1026,
+        "annualSunHours": 3125,
+        "tags": [
+          "mild"
+        ]
+      },
+      "cost": {
+        "rentOneBed": 1000,
+        "livingSingle": 850,
+        "totalSingle": 1850,
+        "index": 39
+      },
+      "work": {
+        "avgNetSalary": 1950,
+        "salaryCoverage": 1.05,
+        "topSectors": [
+          "Wine",
+          "Aerospace",
+          "Tech"
+        ]
+      },
+      "metrics": {
+        "safety": 76,
+        "healthcare": 84,
+        "internet": 75,
+        "walkability": 84,
+        "environment": 82,
+        "happiness": 77,
+        "publicServices": 76,
+        "english": 58
+      },
+      "confidence": "medium",
+      "sources": [
+        {
+          "label": "Open-Meteo climate normals",
+          "url": "https://open-meteo.com/",
+          "asOf": "2024-12-31",
+          "note": "ERA5 reanalysis, monthly averages 2019–2024"
+        },
+        {
+          "label": "World Bank country indicators",
+          "url": "https://data.worldbank.org/",
+          "asOf": "2025",
+          "note": "Internet use, life expectancy, health spending, PM2.5, GDP PPP, unemployment"
+        },
+        {
+          "label": "CityMatcher cost model",
+          "url": "/methodology",
+          "asOf": "2025-06-30",
+          "note": "Curated rent, living-cost and salary estimates for a single person; modelled, medium confidence"
+        }
+      ],
+      "editorial": {
+        "summary": "Elegant stone streets and a fast-improving tram network, close to the Atlantic and the vineyards that made it famous.",
+        "bestFor": "Remote workers and couples who want a refined, manageable city near the coast."
+      }
+    },
+    {
+      "slug": "brussels",
+      "name": "Brussels",
+      "country": "Belgium",
+      "countryCode": "BE",
+      "region": "western",
+      "population": 1200000,
+      "size": "medium",
+      "lat": 50.8503,
+      "lng": 4.3517,
+      "currency": "EUR",
+      "climate": {
+        "monthly": [
+          {
+            "month": "Jan",
+            "high": 6.3,
+            "low": 1.5,
+            "rain": 68,
+            "sun": 108
+          },
+          {
+            "month": "Feb",
+            "high": 9.6,
+            "low": 3.1,
+            "rain": 75,
+            "sun": 148
+          },
+          {
+            "month": "Mar",
+            "high": 11.3,
+            "low": 3.6,
+            "rain": 74,
+            "sun": 219
+          },
+          {
+            "month": "Apr",
+            "high": 14.1,
+            "low": 4.9,
+            "rain": 48,
+            "sun": 285
+          },
+          {
+            "month": "May",
+            "high": 17.7,
+            "low": 8.3,
+            "rain": 63,
+            "sun": 336
+          },
+          {
+            "month": "Jun",
+            "high": 22.2,
+            "low": 12.7,
+            "rain": 82,
+            "sun": 352
+          },
+          {
+            "month": "Jul",
+            "high": 22.5,
+            "low": 13.7,
+            "rain": 83,
+            "sun": 356
+          },
+          {
+            "month": "Aug",
+            "high": 23.6,
+            "low": 14.7,
+            "rain": 54,
+            "sun": 340
+          },
+          {
+            "month": "Sep",
+            "high": 20.6,
+            "low": 12.1,
+            "rain": 73,
+            "sun": 271
+          },
+          {
+            "month": "Oct",
+            "high": 15.9,
+            "low": 9.5,
+            "rain": 96,
+            "sun": 184
+          },
+          {
+            "month": "Nov",
+            "high": 10.3,
+            "low": 4.9,
+            "rain": 68,
+            "sun": 130
+          },
+          {
+            "month": "Dec",
+            "high": 7.5,
+            "low": 3.1,
+            "rain": 79,
+            "sun": 88
+          }
+        ],
+        "summerHigh": 23.1,
+        "winterLow": 2.3,
+        "annualRain": 863,
+        "annualSunHours": 2817,
+        "tags": [
+          "four-seasons"
+        ]
+      },
+      "cost": {
+        "rentOneBed": 1400,
+        "livingSingle": 1000,
+        "totalSingle": 2400,
+        "index": 54
+      },
+      "work": {
+        "avgNetSalary": 2600,
+        "salaryCoverage": 1.08,
+        "topSectors": [
+          "EU institutions",
+          "Consulting",
+          "Tech"
+        ]
+      },
+      "metrics": {
+        "safety": 68,
+        "healthcare": 88,
+        "internet": 91,
+        "walkability": 86,
+        "environment": 72,
+        "happiness": 73,
+        "publicServices": 78,
+        "english": 78
+      },
+      "confidence": "medium",
+      "sources": [
+        {
+          "label": "Open-Meteo climate normals",
+          "url": "https://open-meteo.com/",
+          "asOf": "2024-12-31",
+          "note": "ERA5 reanalysis, monthly averages 2019–2024"
+        },
+        {
+          "label": "World Bank country indicators",
+          "url": "https://data.worldbank.org/",
+          "asOf": "2025",
+          "note": "Internet use, life expectancy, health spending, PM2.5, GDP PPP, unemployment"
+        },
+        {
+          "label": "CityMatcher cost model",
+          "url": "/methodology",
+          "asOf": "2025-06-30",
+          "note": "Curated rent, living-cost and salary estimates for a single person; modelled, medium confidence"
+        }
+      ],
+      "editorial": {
+        "summary": "The EU's administrative heart: multilingual, well connected and underrated, with uneven safety between neighbourhoods.",
+        "bestFor": "Policy, NGO and consulting professionals who need to be at the centre of European decision-making."
+      }
+    },
+    {
+      "slug": "bucharest",
+      "name": "Bucharest",
+      "country": "Romania",
+      "countryCode": "RO",
+      "region": "eastern",
+      "population": 1800000,
+      "size": "large",
+      "lat": 44.4268,
+      "lng": 26.1025,
+      "currency": "RON",
+      "climate": {
+        "monthly": [
+          {
+            "month": "Jan",
+            "high": 5.5,
+            "low": -2.3,
+            "rain": 49,
+            "sun": 159
+          },
+          {
+            "month": "Feb",
+            "high": 9.6,
+            "low": -0.4,
+            "rain": 21,
+            "sun": 199
+          },
+          {
+            "month": "Mar",
+            "high": 12.5,
+            "low": 1.7,
+            "rain": 48,
+            "sun": 246
+          },
+          {
+            "month": "Apr",
+            "high": 17.1,
+            "low": 6.1,
+            "rain": 60,
+            "sun": 283
+          },
+          {
+            "month": "May",
+            "high": 22,
+            "low": 11.5,
+            "rain": 65,
+            "sun": 344
+          },
+          {
+            "month": "Jun",
+            "high": 27.4,
+            "low": 16.9,
+            "rain": 73,
+            "sun": 384
+          },
+          {
+            "month": "Jul",
+            "high": 30.6,
+            "low": 19.2,
+            "rain": 52,
+            "sun": 421
+          },
+          {
+            "month": "Aug",
+            "high": 31,
+            "low": 19.5,
+            "rain": 35,
+            "sun": 385
+          },
+          {
+            "month": "Sep",
+            "high": 25.5,
+            "low": 14.2,
+            "rain": 40,
+            "sun": 317
+          },
+          {
+            "month": "Oct",
+            "high": 19.5,
+            "low": 8.8,
+            "rain": 34,
+            "sun": 254
+          },
+          {
+            "month": "Nov",
+            "high": 12.1,
+            "low": 4,
+            "rain": 55,
+            "sun": 168
+          },
+          {
+            "month": "Dec",
+            "high": 7.1,
+            "low": 0.4,
+            "rain": 54,
+            "sun": 129
+          }
+        ],
+        "summerHigh": 30.8,
+        "winterLow": -1.3,
+        "annualRain": 586,
+        "annualSunHours": 3289,
+        "tags": [
+          "cold",
+          "four-seasons"
+        ]
+      },
+      "cost": {
+        "rentOneBed": 650,
+        "livingSingle": 550,
+        "totalSingle": 1200,
+        "index": 20
+      },
+      "work": {
+        "avgNetSalary": 1200,
+        "salaryCoverage": 1,
+        "topSectors": [
+          "Tech",
+          "BPO",
+          "Finance"
+        ]
+      },
+      "metrics": {
+        "safety": 76,
+        "healthcare": 74,
+        "internet": 81,
+        "walkability": 82,
+        "environment": 70,
+        "happiness": 68,
+        "publicServices": 66,
+        "english": 70
+      },
+      "confidence": "medium",
+      "sources": [
+        {
+          "label": "Open-Meteo climate normals",
+          "url": "https://open-meteo.com/",
+          "asOf": "2024-12-31",
+          "note": "ERA5 reanalysis, monthly averages 2019–2024"
+        },
+        {
+          "label": "World Bank country indicators",
+          "url": "https://data.worldbank.org/",
+          "asOf": "2025",
+          "note": "Internet use, life expectancy, health spending, PM2.5, GDP PPP, unemployment"
+        },
+        {
+          "label": "CityMatcher cost model",
+          "url": "/methodology",
+          "asOf": "2025-06-30",
+          "note": "Curated rent, living-cost and salary estimates for a single person; modelled, medium confidence"
+        }
+      ],
+      "editorial": {
+        "summary": "A large, fast-moving capital with a strong IT outsourcing market, low rents and wide boulevards built for cars.",
+        "bestFor": "Tech professionals who want the lowest-cost EU capital with a serious local job market."
+      }
+    },
+    {
+      "slug": "budapest",
+      "name": "Budapest",
+      "country": "Hungary",
+      "countryCode": "HU",
+      "region": "central",
+      "population": 1750000,
+      "size": "large",
+      "lat": 47.4979,
+      "lng": 19.0402,
+      "currency": "HUF",
+      "climate": {
+        "monthly": [
+          {
+            "month": "Jan",
+            "high": 4.6,
+            "low": -2,
+            "rain": 39,
+            "sun": 154
+          },
+          {
+            "month": "Feb",
+            "high": 9.2,
+            "low": 0.4,
+            "rain": 29,
+            "sun": 202
+          },
+          {
+            "month": "Mar",
+            "high": 12.5,
+            "low": 2,
+            "rain": 30,
+            "sun": 272
+          },
+          {
+            "month": "Apr",
+            "high": 16.5,
+            "low": 5.6,
+            "rain": 51,
+            "sun": 299
+          },
+          {
+            "month": "May",
+            "high": 20.6,
+            "low": 10.6,
+            "rain": 93,
+            "sun": 326
+          },
+          {
+            "month": "Jun",
+            "high": 26.5,
+            "low": 16.3,
+            "rain": 77,
+            "sun": 386
+          },
+          {
+            "month": "Jul",
+            "high": 28.8,
+            "low": 18,
+            "rain": 63,
+            "sun": 400
+          },
+          {
+            "month": "Aug",
+            "high": 28.6,
+            "low": 17.8,
+            "rain": 58,
+            "sun": 367
+          },
+          {
+            "month": "Sep",
+            "high": 23.1,
+            "low": 12.9,
+            "rain": 64,
+            "sun": 288
+          },
+          {
+            "month": "Oct",
+            "high": 17.2,
+            "low": 7.8,
+            "rain": 53,
+            "sun": 238
+          },
+          {
+            "month": "Nov",
+            "high": 9.5,
+            "low": 2.9,
+            "rain": 60,
+            "sun": 141
+          },
+          {
+            "month": "Dec",
+            "high": 5.2,
+            "low": -0.3,
+            "rain": 65,
+            "sun": 116
+          }
+        ],
+        "summerHigh": 28.7,
+        "winterLow": -0.8,
+        "annualRain": 682,
+        "annualSunHours": 3189,
+        "tags": [
+          "cold",
+          "four-seasons"
+        ]
+      },
+      "cost": {
+        "rentOneBed": 800,
+        "livingSingle": 700,
+        "totalSingle": 1500,
+        "index": 29
+      },
+      "work": {
+        "avgNetSalary": 1200,
+        "salaryCoverage": 0.8,
+        "topSectors": [
+          "Shared services",
+          "Tech",
+          "Tourism"
+        ]
+      },
+      "metrics": {
+        "safety": 78,
+        "healthcare": 78,
+        "internet": 86,
+        "walkability": 86,
+        "environment": 74,
+        "happiness": 70,
+        "publicServices": 72,
+        "english": 64
+      },
+      "confidence": "medium",
+      "sources": [
+        {
+          "label": "Open-Meteo climate normals",
+          "url": "https://open-meteo.com/",
+          "asOf": "2024-12-31",
+          "note": "ERA5 reanalysis, monthly averages 2019–2024"
+        },
+        {
+          "label": "World Bank country indicators",
+          "url": "https://data.worldbank.org/",
+          "asOf": "2025",
+          "note": "Internet use, life expectancy, health spending, PM2.5, GDP PPP, unemployment"
+        },
+        {
+          "label": "CityMatcher cost model",
+          "url": "/methodology",
+          "asOf": "2025-06-30",
+          "note": "Curated rent, living-cost and salary estimates for a single person; modelled, medium confidence"
+        }
+      ],
+      "editorial": {
+        "summary": "Grand baths, ruin bars and a low cost base, with salaries and public services still catching up to western Europe.",
+        "bestFor": "Budget-conscious remote workers who want a dense, sociable capital with thermal-bath culture."
+      }
+    },
+    {
+      "slug": "copenhagen",
+      "name": "Copenhagen",
+      "country": "Denmark",
+      "countryCode": "DK",
+      "region": "northern",
+      "population": 650000,
+      "size": "medium",
+      "lat": 55.6761,
+      "lng": 12.5683,
+      "currency": "DKK",
+      "climate": {
+        "monthly": [
+          {
+            "month": "Jan",
+            "high": 4.5,
+            "low": 1,
+            "rain": 64,
+            "sun": 92
+          },
+          {
+            "month": "Feb",
+            "high": 5.5,
+            "low": 1.4,
+            "rain": 63,
+            "sun": 139
+          },
+          {
+            "month": "Mar",
+            "high": 7.1,
+            "low": 1.7,
+            "rain": 46,
+            "sun": 223
+          },
+          {
+            "month": "Apr",
+            "high": 10.3,
+            "low": 3.6,
+            "rain": 38,
+            "sun": 321
+          },
+          {
+            "month": "May",
+            "high": 14.7,
+            "low": 8.2,
+            "rain": 47,
+            "sun": 370
+          },
+          {
+            "month": "Jun",
+            "high": 19.7,
+            "low": 13.1,
+            "rain": 42,
+            "sun": 396
+          },
+          {
+            "month": "Jul",
+            "high": 20.2,
+            "low": 14.4,
+            "rain": 69,
+            "sun": 384
+          },
+          {
+            "month": "Aug",
+            "high": 20.7,
+            "low": 14.9,
+            "rain": 65,
+            "sun": 339
+          },
+          {
+            "month": "Sep",
+            "high": 17.9,
+            "low": 12.8,
+            "rain": 60,
+            "sun": 271
+          },
+          {
+            "month": "Oct",
+            "high": 13.2,
+            "low": 9.3,
+            "rain": 78,
+            "sun": 173
+          },
+          {
+            "month": "Nov",
+            "high": 8.6,
+            "low": 5.6,
+            "rain": 53,
+            "sun": 86
+          },
+          {
+            "month": "Dec",
+            "high": 5.2,
+            "low": 2.3,
+            "rain": 63,
+            "sun": 61
+          }
+        ],
+        "summerHigh": 20.5,
+        "winterLow": 1.2,
+        "annualRain": 688,
+        "annualSunHours": 2855,
+        "tags": [
+          "cold"
+        ]
+      },
+      "cost": {
+        "rentOneBed": 1800,
+        "livingSingle": 1200,
+        "totalSingle": 3000,
+        "index": 71
+      },
+      "work": {
+        "avgNetSalary": 3200,
+        "salaryCoverage": 1.07,
+        "topSectors": [
+          "Design",
+          "Pharma",
+          "Tech"
+        ]
+      },
+      "metrics": {
+        "safety": 90,
+        "healthcare": 90,
+        "internet": 99,
+        "walkability": 92,
+        "environment": 88,
+        "happiness": 84,
+        "publicServices": 88,
+        "english": 90
+      },
+      "confidence": "medium",
+      "sources": [
+        {
+          "label": "Open-Meteo climate normals",
+          "url": "https://open-meteo.com/",
+          "asOf": "2024-12-31",
+          "note": "ERA5 reanalysis, monthly averages 2019–2024"
+        },
+        {
+          "label": "World Bank country indicators",
+          "url": "https://data.worldbank.org/",
+          "asOf": "2025",
+          "note": "Internet use, life expectancy, health spending, PM2.5, GDP PPP, unemployment"
+        },
+        {
+          "label": "CityMatcher cost model",
+          "url": "/methodology",
+          "asOf": "2025-06-30",
+          "note": "Curated rent, living-cost and salary estimates for a single person; modelled, medium confidence"
+        }
+      ],
+      "editorial": {
+        "summary": "Bike-first, beautifully designed and famously contented, with high taxes and a housing market that rewards patience.",
+        "bestFor": "Design and pharma professionals who value cycling, safety and work-life balance above tax efficiency."
+      }
+    },
+    {
+      "slug": "dublin",
+      "name": "Dublin",
+      "country": "Ireland",
+      "countryCode": "IE",
+      "region": "western",
+      "population": 590000,
+      "size": "medium",
+      "lat": 53.3498,
+      "lng": -6.2603,
+      "currency": "EUR",
+      "climate": {
+        "monthly": [
+          {
+            "month": "Jan",
+            "high": 8.3,
+            "low": 3.7,
+            "rain": 55,
+            "sun": 126
+          },
+          {
+            "month": "Feb",
+            "high": 10,
+            "low": 4.8,
+            "rain": 73,
+            "sun": 148
+          },
+          {
+            "month": "Mar",
+            "high": 10.6,
+            "low": 4.8,
+            "rain": 82,
+            "sun": 213
+          },
+          {
+            "month": "Apr",
+            "high": 11.7,
+            "low": 5.8,
+            "rain": 66,
+            "sun": 280
+          },
+          {
+            "month": "May",
+            "high": 15,
+            "low": 8.6,
+            "rain": 61,
+            "sun": 341
+          },
+          {
+            "month": "Jun",
+            "high": 17.4,
+            "low": 11.1,
+            "rain": 71,
+            "sun": 341
+          },
+          {
+            "month": "Jul",
+            "high": 19.2,
+            "low": 13,
+            "rain": 83,
+            "sun": 307
+          },
+          {
+            "month": "Aug",
+            "high": 19.1,
+            "low": 13,
+            "rain": 89,
+            "sun": 308
+          },
+          {
+            "month": "Sep",
+            "high": 17.3,
+            "low": 11.4,
+            "rain": 90,
+            "sun": 249
+          },
+          {
+            "month": "Oct",
+            "high": 14.3,
+            "low": 9.3,
+            "rain": 114,
+            "sun": 191
+          },
+          {
+            "month": "Nov",
+            "high": 11,
+            "low": 6.6,
+            "rain": 82,
+            "sun": 130
+          },
+          {
+            "month": "Dec",
+            "high": 9.2,
+            "low": 4.8,
+            "rain": 83,
+            "sun": 109
+          }
+        ],
+        "summerHigh": 19.2,
+        "winterLow": 4.3,
+        "annualRain": 949,
+        "annualSunHours": 2743,
+        "tags": [
+          "mild"
+        ]
+      },
+      "cost": {
+        "rentOneBed": 2200,
+        "livingSingle": 1200,
+        "totalSingle": 3400,
+        "index": 83
+      },
+      "work": {
+        "avgNetSalary": 3400,
+        "salaryCoverage": 1,
+        "topSectors": [
+          "Tech",
+          "Pharma",
+          "Finance"
+        ]
+      },
+      "metrics": {
+        "safety": 74,
+        "healthcare": 84,
+        "internet": 94,
+        "walkability": 86,
+        "environment": 80,
+        "happiness": 77,
+        "publicServices": 76,
+        "english": 96
+      },
+      "confidence": "medium",
+      "sources": [
+        {
+          "label": "Open-Meteo climate normals",
+          "url": "https://open-meteo.com/",
+          "asOf": "2024-12-31",
+          "note": "ERA5 reanalysis, monthly averages 2019–2024"
+        },
+        {
+          "label": "World Bank country indicators",
+          "url": "https://data.worldbank.org/",
+          "asOf": "2025",
+          "note": "Internet use, life expectancy, health spending, PM2.5, GDP PPP, unemployment"
+        },
+        {
+          "label": "CityMatcher cost model",
+          "url": "/methodology",
+          "asOf": "2025-06-30",
+          "note": "Curated rent, living-cost and salary estimates for a single person; modelled, medium confidence"
+        }
+      ],
+      "editorial": {
+        "summary": "English-speaking, friendly and home to the European HQs of major tech firms, with a housing crisis that dominates everything.",
+        "bestFor": "Tech and pharma professionals who need an English-speaking EU base and a strong salary."
+      }
+    },
+    {
+      "slug": "edinburgh",
+      "name": "Edinburgh",
+      "country": "United Kingdom",
+      "countryCode": "GB",
+      "region": "western",
+      "population": 530000,
+      "size": "medium",
+      "lat": 55.9533,
+      "lng": -3.1883,
+      "currency": "GBP",
+      "climate": {
+        "monthly": [
+          {
+            "month": "Jan",
+            "high": 6.8,
+            "low": 2.6,
+            "rain": 67,
+            "sun": 117
+          },
+          {
+            "month": "Feb",
+            "high": 8.2,
+            "low": 3.3,
+            "rain": 84,
+            "sun": 146
+          },
+          {
+            "month": "Mar",
+            "high": 9.2,
+            "low": 3.3,
+            "rain": 81,
+            "sun": 211
+          },
+          {
+            "month": "Apr",
+            "high": 10.9,
+            "low": 3.9,
+            "rain": 54,
+            "sun": 284
+          },
+          {
+            "month": "May",
+            "high": 14.1,
+            "low": 7.4,
+            "rain": 90,
+            "sun": 311
+          },
+          {
+            "month": "Jun",
+            "high": 16.9,
+            "low": 10.1,
+            "rain": 70,
+            "sun": 340
+          },
+          {
+            "month": "Jul",
+            "high": 18.5,
+            "low": 12.1,
+            "rain": 97,
+            "sun": 316
+          },
+          {
+            "month": "Aug",
+            "high": 18.2,
+            "low": 12.1,
+            "rain": 92,
+            "sun": 309
+          },
+          {
+            "month": "Sep",
+            "high": 16.3,
+            "low": 10.3,
+            "rain": 84,
+            "sun": 233
+          },
+          {
+            "month": "Oct",
+            "high": 12.7,
+            "low": 7.9,
+            "rain": 126,
+            "sun": 160
+          },
+          {
+            "month": "Nov",
+            "high": 9.4,
+            "low": 4.8,
+            "rain": 81,
+            "sun": 123
+          },
+          {
+            "month": "Dec",
+            "high": 7.3,
+            "low": 3.3,
+            "rain": 106,
+            "sun": 76
+          }
+        ],
+        "summerHigh": 18.4,
+        "winterLow": 3,
+        "annualRain": 1032,
+        "annualSunHours": 2626,
+        "tags": [
+          "mild"
+        ]
+      },
+      "cost": {
+        "rentOneBed": 1500,
+        "livingSingle": 1000,
+        "totalSingle": 2500,
+        "index": 57
+      },
+      "work": {
+        "avgNetSalary": 2800,
+        "salaryCoverage": 1.12,
+        "topSectors": [
+          "Finance",
+          "Education",
+          "Tech"
+        ]
+      },
+      "metrics": {
+        "safety": 80,
+        "healthcare": 88,
+        "internet": 90,
+        "walkability": 88,
+        "environment": 84,
+        "happiness": 78,
+        "publicServices": 80,
+        "english": 96
+      },
+      "confidence": "medium",
+      "sources": [
+        {
+          "label": "Open-Meteo climate normals",
+          "url": "https://open-meteo.com/",
+          "asOf": "2024-12-31",
+          "note": "ERA5 reanalysis, monthly averages 2019–2024"
+        },
+        {
+          "label": "World Bank country indicators",
+          "url": "https://data.worldbank.org/",
+          "asOf": "2025",
+          "note": "Internet use, life expectancy, health spending, PM2.5, GDP PPP, unemployment"
+        },
+        {
+          "label": "CityMatcher cost model",
+          "url": "/methodology",
+          "asOf": "2025-06-30",
+          "note": "Curated rent, living-cost and salary estimates for a single person; modelled, medium confidence"
+        }
+      ],
+      "editorial": {
+        "summary": "A handsome, hilly capital with a strong university and finance base, walkable enough that many residents skip the bus.",
+        "bestFor": "Professionals who want a compact, green, English-speaking city with strong public services."
+      }
+    },
+    {
+      "slug": "geneva",
+      "name": "Geneva",
+      "country": "Switzerland",
+      "countryCode": "CH",
+      "region": "central",
+      "population": 200000,
+      "size": "small",
+      "lat": 46.2044,
+      "lng": 6.1432,
+      "currency": "CHF",
+      "climate": {
+        "monthly": [
+          {
+            "month": "Jan",
+            "high": 5.5,
+            "low": -0.5,
+            "rain": 91,
+            "sun": 176
+          },
+          {
+            "month": "Feb",
+            "high": 9.4,
+            "low": 1,
+            "rain": 69,
+            "sun": 208
+          },
+          {
+            "month": "Mar",
+            "high": 11.8,
+            "low": 2.7,
+            "rain": 87,
+            "sun": 276
+          },
+          {
+            "month": "Apr",
+            "high": 14.8,
+            "low": 5.2,
+            "rain": 79,
+            "sun": 307
+          },
+          {
+            "month": "May",
+            "high": 18.3,
+            "low": 9.4,
+            "rain": 112,
+            "sun": 345
+          },
+          {
+            "month": "Jun",
+            "high": 24.1,
+            "low": 14.6,
+            "rain": 104,
+            "sun": 369
+          },
+          {
+            "month": "Jul",
+            "high": 26.7,
+            "low": 16.6,
+            "rain": 87,
+            "sun": 404
+          },
+          {
+            "month": "Aug",
+            "high": 26.5,
+            "low": 16.7,
+            "rain": 69,
+            "sun": 362
+          },
+          {
+            "month": "Sep",
+            "high": 21.6,
+            "low": 13.2,
+            "rain": 89,
+            "sun": 298
+          },
+          {
+            "month": "Oct",
+            "high": 16.6,
+            "low": 9.1,
+            "rain": 133,
+            "sun": 236
+          },
+          {
+            "month": "Nov",
+            "high": 9.8,
+            "low": 3.9,
+            "rain": 117,
+            "sun": 186
+          },
+          {
+            "month": "Dec",
+            "high": 6.6,
+            "low": 0.7,
+            "rain": 158,
+            "sun": 149
+          }
+        ],
+        "summerHigh": 26.6,
+        "winterLow": 0.3,
+        "annualRain": 1195,
+        "annualSunHours": 3316,
+        "tags": [
+          "cold",
+          "four-seasons"
+        ]
+      },
+      "cost": {
+        "rentOneBed": 2500,
+        "livingSingle": 1500,
+        "totalSingle": 4000,
+        "index": 100
+      },
+      "work": {
+        "avgNetSalary": 5500,
+        "salaryCoverage": 1.38,
+        "topSectors": [
+          "International organisations",
+          "Finance",
+          "Pharma"
+        ]
+      },
+      "metrics": {
+        "safety": 92,
+        "healthcare": 94,
+        "internet": 94,
+        "walkability": 86,
+        "environment": 90,
+        "happiness": 84,
+        "publicServices": 90,
+        "english": 78
+      },
+      "confidence": "medium",
+      "sources": [
+        {
+          "label": "Open-Meteo climate normals",
+          "url": "https://open-meteo.com/",
+          "asOf": "2024-12-31",
+          "note": "ERA5 reanalysis, monthly averages 2019–2024"
+        },
+        {
+          "label": "World Bank country indicators",
+          "url": "https://data.worldbank.org/",
+          "asOf": "2025",
+          "note": "Internet use, life expectancy, health spending, PM2.5, GDP PPP, unemployment"
+        },
+        {
+          "label": "CityMatcher cost model",
+          "url": "/methodology",
+          "asOf": "2025-06-30",
+          "note": "Curated rent, living-cost and salary estimates for a single person; modelled, medium confidence"
+        }
+      ],
+      "editorial": {
+        "summary": "A small, international city on the lake, built around diplomacy and private banking, with prices to match.",
+        "bestFor": "NGO, diplomacy and pharma professionals who need a global hub in a calm setting."
+      }
+    },
+    {
+      "slug": "hamburg",
+      "name": "Hamburg",
+      "country": "Germany",
+      "countryCode": "DE",
+      "region": "central",
+      "population": 1900000,
+      "size": "large",
+      "lat": 53.5511,
+      "lng": 9.9937,
+      "currency": "EUR",
+      "climate": {
+        "monthly": [
+          {
+            "month": "Jan",
+            "high": 5.5,
+            "low": 1,
+            "rain": 76,
+            "sun": 87
+          },
+          {
+            "month": "Feb",
+            "high": 7.9,
+            "low": 1.7,
+            "rain": 88,
+            "sun": 127
+          },
+          {
+            "month": "Mar",
+            "high": 10,
+            "low": 2,
+            "rain": 57,
+            "sun": 217
+          },
+          {
+            "month": "Apr",
+            "high": 13.2,
+            "low": 3.7,
+            "rain": 48,
+            "sun": 300
+          },
+          {
+            "month": "May",
+            "high": 17.4,
+            "low": 7.9,
+            "rain": 70,
+            "sun": 347
+          },
+          {
+            "month": "Jun",
+            "high": 23,
+            "low": 12.7,
+            "rain": 65,
+            "sun": 379
+          },
+          {
+            "month": "Jul",
+            "high": 22.5,
+            "low": 13.8,
+            "rain": 82,
+            "sun": 355
+          },
+          {
+            "month": "Aug",
+            "high": 23.7,
+            "low": 14.5,
+            "rain": 71,
+            "sun": 339
+          },
+          {
+            "month": "Sep",
+            "high": 19.8,
+            "low": 11.5,
+            "rain": 66,
+            "sun": 269
+          },
+          {
+            "month": "Oct",
+            "high": 14.9,
+            "low": 8.5,
+            "rain": 90,
+            "sun": 187
+          },
+          {
+            "month": "Nov",
+            "high": 8.8,
+            "low": 4.1,
+            "rain": 67,
+            "sun": 104
+          },
+          {
+            "month": "Dec",
+            "high": 5.7,
+            "low": 1.7,
+            "rain": 77,
+            "sun": 69
+          }
+        ],
+        "summerHigh": 23.1,
+        "winterLow": 1.4,
+        "annualRain": 857,
+        "annualSunHours": 2780,
+        "tags": [
+          "cold",
+          "four-seasons"
+        ]
+      },
+      "cost": {
+        "rentOneBed": 1300,
+        "livingSingle": 950,
+        "totalSingle": 2250,
+        "index": 50
+      },
+      "work": {
+        "avgNetSalary": 2600,
+        "salaryCoverage": 1.16,
+        "topSectors": [
+          "Media",
+          "Logistics",
+          "Tech"
+        ]
+      },
+      "metrics": {
+        "safety": 80,
+        "healthcare": 88,
+        "internet": 86,
+        "walkability": 84,
+        "environment": 82,
+        "happiness": 77,
+        "publicServices": 82,
+        "english": 74
+      },
+      "confidence": "medium",
+      "sources": [
+        {
+          "label": "Open-Meteo climate normals",
+          "url": "https://open-meteo.com/",
+          "asOf": "2024-12-31",
+          "note": "ERA5 reanalysis, monthly averages 2019–2024"
+        },
+        {
+          "label": "World Bank country indicators",
+          "url": "https://data.worldbank.org/",
+          "asOf": "2025",
+          "note": "Internet use, life expectancy, health spending, PM2.5, GDP PPP, unemployment"
+        },
+        {
+          "label": "CityMatcher cost model",
+          "url": "/methodology",
+          "asOf": "2025-06-30",
+          "note": "Curated rent, living-cost and salary estimates for a single person; modelled, medium confidence"
+        }
+      ],
+      "editorial": {
+        "summary": "A port city with a media and publishing streak, generous green space and a more relaxed pace than Munich.",
+        "bestFor": "Media and logistics professionals who want big-city opportunity with water and parks nearby."
+      }
+    },
+    {
+      "slug": "helsinki",
+      "name": "Helsinki",
+      "country": "Finland",
+      "countryCode": "FI",
+      "region": "northern",
+      "population": 660000,
+      "size": "medium",
+      "lat": 60.1699,
+      "lng": 24.9384,
+      "currency": "EUR",
+      "climate": {
+        "monthly": [
+          {
+            "month": "Jan",
+            "high": -0.7,
+            "low": -5.9,
+            "rain": 78,
+            "sun": 48
+          },
+          {
+            "month": "Feb",
+            "high": 0,
+            "low": -5.3,
+            "rain": 70,
+            "sun": 98
+          },
+          {
+            "month": "Mar",
+            "high": 2.2,
+            "low": -3.7,
+            "rain": 52,
+            "sun": 206
+          },
+          {
+            "month": "Apr",
+            "high": 7.4,
+            "low": 0,
+            "rain": 40,
+            "sun": 304
+          },
+          {
+            "month": "May",
+            "high": 13.3,
+            "low": 5.3,
+            "rain": 56,
+            "sun": 389
+          },
+          {
+            "month": "Jun",
+            "high": 20,
+            "low": 12.3,
+            "rain": 47,
+            "sun": 462
+          },
+          {
+            "month": "Jul",
+            "high": 20.8,
+            "low": 14,
+            "rain": 80,
+            "sun": 421
+          },
+          {
+            "month": "Aug",
+            "high": 20,
+            "low": 13.7,
+            "rain": 92,
+            "sun": 348
+          },
+          {
+            "month": "Sep",
+            "high": 15.4,
+            "low": 9.8,
+            "rain": 72,
+            "sun": 257
+          },
+          {
+            "month": "Oct",
+            "high": 9.8,
+            "low": 5.1,
+            "rain": 88,
+            "sun": 155
+          },
+          {
+            "month": "Nov",
+            "high": 4.6,
+            "low": 1,
+            "rain": 81,
+            "sun": 58
+          },
+          {
+            "month": "Dec",
+            "high": 0.7,
+            "low": -3.4,
+            "rain": 71,
+            "sun": 35
+          }
+        ],
+        "summerHigh": 20.4,
+        "winterLow": -5.6,
+        "annualRain": 827,
+        "annualSunHours": 2781,
+        "tags": [
+          "cold"
+        ]
+      },
+      "cost": {
+        "rentOneBed": 1400,
+        "livingSingle": 1000,
+        "totalSingle": 2400,
+        "index": 54
+      },
+      "work": {
+        "avgNetSalary": 2900,
+        "salaryCoverage": 1.21,
+        "topSectors": [
+          "Tech",
+          "Gaming",
+          "Design"
+        ]
+      },
+      "metrics": {
+        "safety": 92,
+        "healthcare": 90,
+        "internet": 86,
+        "walkability": 88,
+        "environment": 88,
+        "happiness": 86,
+        "publicServices": 90,
+        "english": 84
+      },
+      "confidence": "medium",
+      "sources": [
+        {
+          "label": "Open-Meteo climate normals",
+          "url": "https://open-meteo.com/",
+          "asOf": "2024-12-31",
+          "note": "ERA5 reanalysis, monthly averages 2019–2024"
+        },
+        {
+          "label": "World Bank country indicators",
+          "url": "https://data.worldbank.org/",
+          "asOf": "2025",
+          "note": "Internet use, life expectancy, health spending, PM2.5, GDP PPP, unemployment"
+        },
+        {
+          "label": "CityMatcher cost model",
+          "url": "/methodology",
+          "asOf": "2025-06-30",
+          "note": "Curated rent, living-cost and salary estimates for a single person; modelled, medium confidence"
+        }
+      ],
+      "editorial": {
+        "summary": "A quiet, highly functional seaside capital with exceptional safety and a strong gaming and tech cluster.",
+        "bestFor": "People who value calm, safety and public services over nightlife and year-round warmth."
+      }
+    },
+    {
+      "slug": "krakow",
+      "name": "Krakow",
+      "country": "Poland",
+      "countryCode": "PL",
+      "region": "central",
+      "population": 800000,
+      "size": "medium",
+      "lat": 50.0647,
+      "lng": 19.945,
+      "currency": "PLN",
+      "climate": {
+        "monthly": [
+          {
+            "month": "Jan",
+            "high": 3,
+            "low": -2.8,
+            "rain": 59,
+            "sun": 116
+          },
+          {
+            "month": "Feb",
+            "high": 6.9,
+            "low": -0.9,
+            "rain": 59,
+            "sun": 144
+          },
+          {
+            "month": "Mar",
+            "high": 10.3,
+            "low": 0.1,
+            "rain": 38,
+            "sun": 247
+          },
+          {
+            "month": "Apr",
+            "high": 13.8,
+            "low": 3.4,
+            "rain": 61,
+            "sun": 270
+          },
+          {
+            "month": "May",
+            "high": 18.5,
+            "low": 8,
+            "rain": 90,
+            "sun": 323
+          },
+          {
+            "month": "Jun",
+            "high": 24.5,
+            "low": 14.1,
+            "rain": 66,
+            "sun": 366
+          },
+          {
+            "month": "Jul",
+            "high": 25.4,
+            "low": 15.3,
+            "rain": 98,
+            "sun": 375
+          },
+          {
+            "month": "Aug",
+            "high": 25.4,
+            "low": 15.5,
+            "rain": 102,
+            "sun": 329
+          },
+          {
+            "month": "Sep",
+            "high": 20.5,
+            "low": 11,
+            "rain": 91,
+            "sun": 265
+          },
+          {
+            "month": "Oct",
+            "high": 15.7,
+            "low": 6.5,
+            "rain": 56,
+            "sun": 230
+          },
+          {
+            "month": "Nov",
+            "high": 8.4,
+            "low": 1.8,
+            "rain": 45,
+            "sun": 135
+          },
+          {
+            "month": "Dec",
+            "high": 4,
+            "low": -1.4,
+            "rain": 51,
+            "sun": 100
+          }
+        ],
+        "summerHigh": 25.4,
+        "winterLow": -1.8,
+        "annualRain": 816,
+        "annualSunHours": 2900,
+        "tags": [
+          "cold",
+          "four-seasons"
+        ]
+      },
+      "cost": {
+        "rentOneBed": 800,
+        "livingSingle": 650,
+        "totalSingle": 1450,
+        "index": 27
+      },
+      "work": {
+        "avgNetSalary": 1300,
+        "salaryCoverage": 0.9,
+        "topSectors": [
+          "Tech",
+          "BPO",
+          "Tourism"
+        ]
+      },
+      "metrics": {
+        "safety": 84,
+        "healthcare": 78,
+        "internet": 75,
+        "walkability": 84,
+        "environment": 76,
+        "happiness": 74,
+        "publicServices": 72,
+        "english": 70
+      },
+      "confidence": "medium",
+      "sources": [
+        {
+          "label": "Open-Meteo climate normals",
+          "url": "https://open-meteo.com/",
+          "asOf": "2024-12-31",
+          "note": "ERA5 reanalysis, monthly averages 2019–2024"
+        },
+        {
+          "label": "World Bank country indicators",
+          "url": "https://data.worldbank.org/",
+          "asOf": "2025",
+          "note": "Internet use, life expectancy, health spending, PM2.5, GDP PPP, unemployment"
+        },
+        {
+          "label": "CityMatcher cost model",
+          "url": "/methodology",
+          "asOf": "2025-06-30",
+          "note": "Curated rent, living-cost and salary estimates for a single person; modelled, medium confidence"
+        }
+      ],
+      "editorial": {
+        "summary": "A historic university city with a growing outsourcing and tech base, compact enough to walk across.",
+        "bestFor": "Young professionals and students who want low costs, safety and a lively old town."
+      }
+    },
+    {
+      "slug": "lisbon",
+      "name": "Lisbon",
+      "country": "Portugal",
+      "countryCode": "PT",
+      "region": "western",
+      "population": 545000,
+      "size": "medium",
+      "lat": 38.7223,
+      "lng": -9.1393,
+      "currency": "EUR",
+      "climate": {
+        "monthly": [
+          {
+            "month": "Jan",
+            "high": 14.8,
+            "low": 8.6,
+            "rain": 52,
+            "sun": 239
+          },
+          {
+            "month": "Feb",
+            "high": 16.9,
+            "low": 9.6,
+            "rain": 53,
+            "sun": 238
+          },
+          {
+            "month": "Mar",
+            "high": 18.2,
+            "low": 10.4,
+            "rain": 52,
+            "sun": 303
+          },
+          {
+            "month": "Apr",
+            "high": 19.8,
+            "low": 11.9,
+            "rain": 65,
+            "sun": 330
+          },
+          {
+            "month": "May",
+            "high": 23.6,
+            "low": 14.5,
+            "rain": 21,
+            "sun": 381
+          },
+          {
+            "month": "Jun",
+            "high": 24.6,
+            "low": 15.9,
+            "rain": 22,
+            "sun": 395
+          },
+          {
+            "month": "Jul",
+            "high": 28.5,
+            "low": 17.9,
+            "rain": 3,
+            "sun": 413
+          },
+          {
+            "month": "Aug",
+            "high": 28.4,
+            "low": 18.2,
+            "rain": 2,
+            "sun": 379
+          },
+          {
+            "month": "Sep",
+            "high": 26,
+            "low": 17.3,
+            "rain": 45,
+            "sun": 323
+          },
+          {
+            "month": "Oct",
+            "high": 23,
+            "low": 15.5,
+            "rain": 89,
+            "sun": 272
+          },
+          {
+            "month": "Nov",
+            "high": 18.4,
+            "low": 12.3,
+            "rain": 70,
+            "sun": 223
+          },
+          {
+            "month": "Dec",
+            "high": 16,
+            "low": 10.4,
+            "rain": 99,
+            "sun": 225
+          }
+        ],
+        "summerHigh": 28.5,
+        "winterLow": 9.1,
+        "annualRain": 573,
+        "annualSunHours": 3721,
+        "tags": [
+          "warm"
+        ]
+      },
+      "cost": {
+        "rentOneBed": 1300,
+        "livingSingle": 900,
+        "totalSingle": 2200,
+        "index": 49
+      },
+      "work": {
+        "avgNetSalary": 1450,
+        "salaryCoverage": 0.66,
+        "topSectors": [
+          "Tech",
+          "Tourism",
+          "Shared services"
+        ]
+      },
+      "metrics": {
+        "safety": 78,
+        "healthcare": 82,
+        "internet": 74,
+        "walkability": 88,
+        "environment": 76,
+        "happiness": 76,
+        "publicServices": 74,
+        "english": 78
+      },
+      "confidence": "medium",
+      "sources": [
+        {
+          "label": "Open-Meteo climate normals",
+          "url": "https://open-meteo.com/",
+          "asOf": "2024-12-31",
+          "note": "ERA5 reanalysis, monthly averages 2019–2024"
+        },
+        {
+          "label": "World Bank country indicators",
+          "url": "https://data.worldbank.org/",
+          "asOf": "2025",
+          "note": "Internet use, life expectancy, health spending, PM2.5, GDP PPP, unemployment"
+        },
+        {
+          "label": "CityMatcher cost model",
+          "url": "/methodology",
+          "asOf": "2025-06-30",
+          "note": "Curated rent, living-cost and salary estimates for a single person; modelled, medium confidence"
+        }
+      ],
+      "editorial": {
+        "summary": "Atlantic light, tiled streets and a mature remote-work scene, with rents that have climbed well past local wages.",
+        "bestFor": "Remote workers who want sunshine, coastline and big-city energy without a capital's formality."
+      }
+    },
+    {
+      "slug": "ljubljana",
+      "name": "Ljubljana",
+      "country": "Slovenia",
+      "countryCode": "SI",
+      "region": "central",
+      "population": 295000,
+      "size": "small",
+      "lat": 46.0569,
+      "lng": 14.5058,
+      "currency": "EUR",
+      "climate": {
+        "monthly": [
+          {
+            "month": "Jan",
+            "high": 5.5,
+            "low": -3.7,
+            "rain": 87,
+            "sun": 158
+          },
+          {
+            "month": "Feb",
+            "high": 9.9,
+            "low": -1.5,
+            "rain": 61,
+            "sun": 198
+          },
+          {
+            "month": "Mar",
+            "high": 12.5,
+            "low": 0.1,
+            "rain": 75,
+            "sun": 271
+          },
+          {
+            "month": "Apr",
+            "high": 15.6,
+            "low": 3.3,
+            "rain": 83,
+            "sun": 281
+          },
+          {
+            "month": "May",
+            "high": 19,
+            "low": 8.6,
+            "rain": 166,
+            "sun": 295
+          },
+          {
+            "month": "Jun",
+            "high": 25.9,
+            "low": 14,
+            "rain": 80,
+            "sun": 377
+          },
+          {
+            "month": "Jul",
+            "high": 28.2,
+            "low": 15.7,
+            "rain": 99,
+            "sun": 396
+          },
+          {
+            "month": "Aug",
+            "high": 27.2,
+            "low": 15.7,
+            "rain": 98,
+            "sun": 353
+          },
+          {
+            "month": "Sep",
+            "high": 22.1,
+            "low": 11.1,
+            "rain": 133,
+            "sun": 288
+          },
+          {
+            "month": "Oct",
+            "high": 17.5,
+            "low": 7.5,
+            "rain": 124,
+            "sun": 225
+          },
+          {
+            "month": "Nov",
+            "high": 10.2,
+            "low": 2.2,
+            "rain": 133,
+            "sun": 146
+          },
+          {
+            "month": "Dec",
+            "high": 5.9,
+            "low": -1.3,
+            "rain": 121,
+            "sun": 116
+          }
+        ],
+        "summerHigh": 27.7,
+        "winterLow": -2.6,
+        "annualRain": 1260,
+        "annualSunHours": 3104,
+        "tags": [
+          "cold",
+          "four-seasons"
+        ]
+      },
+      "cost": {
+        "rentOneBed": 850,
+        "livingSingle": 700,
+        "totalSingle": 1550,
+        "index": 30
+      },
+      "work": {
+        "avgNetSalary": 1500,
+        "salaryCoverage": 0.97,
+        "topSectors": [
+          "Tech",
+          "Pharma",
+          "Tourism"
+        ]
+      },
+      "metrics": {
+        "safety": 88,
+        "healthcare": 82,
+        "internet": 79,
+        "walkability": 88,
+        "environment": 86,
+        "happiness": 78,
+        "publicServices": 78,
+        "english": 76
+      },
+      "confidence": "medium",
+      "sources": [
+        {
+          "label": "Open-Meteo climate normals",
+          "url": "https://open-meteo.com/",
+          "asOf": "2024-12-31",
+          "note": "ERA5 reanalysis, monthly averages 2019–2024"
+        },
+        {
+          "label": "World Bank country indicators",
+          "url": "https://data.worldbank.org/",
+          "asOf": "2025",
+          "note": "Internet use, life expectancy, health spending, PM2.5, GDP PPP, unemployment"
+        },
+        {
+          "label": "CityMatcher cost model",
+          "url": "/methodology",
+          "asOf": "2025-06-30",
+          "note": "Curated rent, living-cost and salary estimates for a single person; modelled, medium confidence"
+        }
+      ],
+      "editorial": {
+        "summary": "A green, car-light capital with a river through its centre and easy access to Alps and Adriatic.",
+        "bestFor": "Remote workers and outdoorsy professionals who want small-city calm with real amenities."
+      }
+    },
+    {
+      "slug": "london",
+      "name": "London",
+      "country": "United Kingdom",
+      "countryCode": "GB",
+      "region": "western",
+      "population": 8800000,
+      "size": "large",
+      "lat": 51.5074,
+      "lng": -0.1278,
+      "currency": "GBP",
+      "climate": {
+        "monthly": [
+          {
+            "month": "Jan",
+            "high": 7.7,
+            "low": 1.6,
+            "rain": 58,
+            "sun": 136
+          },
+          {
+            "month": "Feb",
+            "high": 10.3,
+            "low": 3.3,
+            "rain": 64,
+            "sun": 145
+          },
+          {
+            "month": "Mar",
+            "high": 11.5,
+            "low": 4,
+            "rain": 59,
+            "sun": 201
+          },
+          {
+            "month": "Apr",
+            "high": 14,
+            "low": 4.4,
+            "rain": 40,
+            "sun": 289
+          },
+          {
+            "month": "May",
+            "high": 17.4,
+            "low": 8,
+            "rain": 56,
+            "sun": 334
+          },
+          {
+            "month": "Jun",
+            "high": 21,
+            "low": 11.4,
+            "rain": 66,
+            "sun": 348
+          },
+          {
+            "month": "Jul",
+            "high": 22.6,
+            "low": 13.5,
+            "rain": 66,
+            "sun": 349
+          },
+          {
+            "month": "Aug",
+            "high": 22.9,
+            "low": 13.8,
+            "rain": 48,
+            "sun": 322
+          },
+          {
+            "month": "Sep",
+            "high": 20.3,
+            "low": 11.7,
+            "rain": 73,
+            "sun": 259
+          },
+          {
+            "month": "Oct",
+            "high": 15.7,
+            "low": 8.8,
+            "rain": 108,
+            "sun": 193
+          },
+          {
+            "month": "Nov",
+            "high": 11.2,
+            "low": 5.2,
+            "rain": 75,
+            "sun": 135
+          },
+          {
+            "month": "Dec",
+            "high": 8.9,
+            "low": 3.8,
+            "rain": 73,
+            "sun": 103
+          }
+        ],
+        "summerHigh": 22.8,
+        "winterLow": 2.5,
+        "annualRain": 786,
+        "annualSunHours": 2814,
+        "tags": [
+          "four-seasons"
+        ]
+      },
+      "cost": {
+        "rentOneBed": 2400,
+        "livingSingle": 1400,
+        "totalSingle": 3800,
+        "index": 94
+      },
+      "work": {
+        "avgNetSalary": 3500,
+        "salaryCoverage": 0.92,
+        "topSectors": [
+          "Finance",
+          "Tech",
+          "Media"
+        ]
+      },
+      "metrics": {
+        "safety": 72,
+        "healthcare": 86,
+        "internet": 90,
+        "walkability": 90,
+        "environment": 72,
+        "happiness": 72,
+        "publicServices": 78,
+        "english": 96
+      },
+      "confidence": "medium",
+      "sources": [
+        {
+          "label": "Open-Meteo climate normals",
+          "url": "https://open-meteo.com/",
+          "asOf": "2024-12-31",
+          "note": "ERA5 reanalysis, monthly averages 2019–2024"
+        },
+        {
+          "label": "World Bank country indicators",
+          "url": "https://data.worldbank.org/",
+          "asOf": "2025",
+          "note": "Internet use, life expectancy, health spending, PM2.5, GDP PPP, unemployment"
+        },
+        {
+          "label": "CityMatcher cost model",
+          "url": "/methodology",
+          "asOf": "2025-06-30",
+          "note": "Curated rent, living-cost and salary estimates for a single person; modelled, medium confidence"
+        }
+      ],
+      "editorial": {
+        "summary": "The biggest job market in Europe and a truly global city, at the cost of extreme housing pressure and long commutes.",
+        "bestFor": "Career-maximizers who want the widest possible job market and can absorb the rent."
+      }
+    },
+    {
+      "slug": "lyon",
+      "name": "Lyon",
+      "country": "France",
+      "countryCode": "FR",
+      "region": "western",
+      "population": 520000,
+      "size": "medium",
+      "lat": 45.764,
+      "lng": 4.8357,
+      "currency": "EUR",
+      "climate": {
+        "monthly": [
+          {
+            "month": "Jan",
+            "high": 6.5,
+            "low": 0.3,
+            "rain": 51,
+            "sun": 149
+          },
+          {
+            "month": "Feb",
+            "high": 11.1,
+            "low": 1.8,
+            "rain": 39,
+            "sun": 200
+          },
+          {
+            "month": "Mar",
+            "high": 13.8,
+            "low": 3.7,
+            "rain": 68,
+            "sun": 280
+          },
+          {
+            "month": "Apr",
+            "high": 16.7,
+            "low": 6.2,
+            "rain": 61,
+            "sun": 297
+          },
+          {
+            "month": "May",
+            "high": 20.4,
+            "low": 10.3,
+            "rain": 97,
+            "sun": 335
+          },
+          {
+            "month": "Jun",
+            "high": 26.1,
+            "low": 15.3,
+            "rain": 99,
+            "sun": 372
+          },
+          {
+            "month": "Jul",
+            "high": 28.3,
+            "low": 16.9,
+            "rain": 69,
+            "sun": 404
+          },
+          {
+            "month": "Aug",
+            "high": 28.1,
+            "low": 16.7,
+            "rain": 61,
+            "sun": 369
+          },
+          {
+            "month": "Sep",
+            "high": 23.7,
+            "low": 13.4,
+            "rain": 86,
+            "sun": 304
+          },
+          {
+            "month": "Oct",
+            "high": 18.5,
+            "low": 10.2,
+            "rain": 124,
+            "sun": 230
+          },
+          {
+            "month": "Nov",
+            "high": 11.2,
+            "low": 4.7,
+            "rain": 77,
+            "sun": 171
+          },
+          {
+            "month": "Dec",
+            "high": 7.9,
+            "low": 2,
+            "rain": 94,
+            "sun": 138
+          }
+        ],
+        "summerHigh": 28.2,
+        "winterLow": 1.1,
+        "annualRain": 926,
+        "annualSunHours": 3249,
+        "tags": [
+          "cold",
+          "four-seasons"
+        ]
+      },
+      "cost": {
+        "rentOneBed": 1100,
+        "livingSingle": 900,
+        "totalSingle": 2000,
+        "index": 43
+      },
+      "work": {
+        "avgNetSalary": 2100,
+        "salaryCoverage": 1.05,
+        "topSectors": [
+          "Healthcare",
+          "Tech",
+          "Education"
+        ]
+      },
+      "metrics": {
+        "safety": 74,
+        "healthcare": 86,
+        "internet": 75,
+        "walkability": 85,
+        "environment": 76,
+        "happiness": 76,
+        "publicServices": 78,
+        "english": 60
+      },
+      "confidence": "medium",
+      "sources": [
+        {
+          "label": "Open-Meteo climate normals",
+          "url": "https://open-meteo.com/",
+          "asOf": "2024-12-31",
+          "note": "ERA5 reanalysis, monthly averages 2019–2024"
+        },
+        {
+          "label": "World Bank country indicators",
+          "url": "https://data.worldbank.org/",
+          "asOf": "2025",
+          "note": "Internet use, life expectancy, health spending, PM2.5, GDP PPP, unemployment"
+        },
+        {
+          "label": "CityMatcher cost model",
+          "url": "/methodology",
+          "asOf": "2025-06-30",
+          "note": "Curated rent, living-cost and salary estimates for a single person; modelled, medium confidence"
+        }
+      ],
+      "editorial": {
+        "summary": "France's gastronomic second city: two rivers, a walkable centre and a serious tech and health-sector base.",
+        "bestFor": "Professionals who want French city life with better space and lower costs than Paris."
+      }
+    },
+    {
+      "slug": "madrid",
+      "name": "Madrid",
+      "country": "Spain",
+      "countryCode": "ES",
+      "region": "western",
+      "population": 3300000,
+      "size": "large",
+      "lat": 40.4168,
+      "lng": -3.7038,
+      "currency": "EUR",
+      "climate": {
+        "monthly": [
+          {
+            "month": "Jan",
+            "high": 10.4,
+            "low": 0.9,
+            "rain": 38,
+            "sun": 216
+          },
+          {
+            "month": "Feb",
+            "high": 14.8,
+            "low": 3,
+            "rain": 19,
+            "sun": 243
+          },
+          {
+            "month": "Mar",
+            "high": 16.7,
+            "low": 5.2,
+            "rain": 60,
+            "sun": 278
+          },
+          {
+            "month": "Apr",
+            "high": 19.3,
+            "low": 7.5,
+            "rain": 65,
+            "sun": 316
+          },
+          {
+            "month": "May",
+            "high": 25,
+            "low": 11.7,
+            "rain": 24,
+            "sun": 392
+          },
+          {
+            "month": "Jun",
+            "high": 29.4,
+            "low": 16.1,
+            "rain": 25,
+            "sun": 392
+          },
+          {
+            "month": "Jul",
+            "high": 34.9,
+            "low": 20.3,
+            "rain": 2,
+            "sun": 431
+          },
+          {
+            "month": "Aug",
+            "high": 33.8,
+            "low": 19.8,
+            "rain": 11,
+            "sun": 391
+          },
+          {
+            "month": "Sep",
+            "high": 26.2,
+            "low": 14.6,
+            "rain": 81,
+            "sun": 322
+          },
+          {
+            "month": "Oct",
+            "high": 21.6,
+            "low": 10.8,
+            "rain": 70,
+            "sun": 264
+          },
+          {
+            "month": "Nov",
+            "high": 14.6,
+            "low": 6.2,
+            "rain": 45,
+            "sun": 212
+          },
+          {
+            "month": "Dec",
+            "high": 11.5,
+            "low": 3.4,
+            "rain": 55,
+            "sun": 189
+          }
+        ],
+        "summerHigh": 34.3,
+        "winterLow": 2,
+        "annualRain": 495,
+        "annualSunHours": 3646,
+        "tags": [
+          "warm",
+          "four-seasons"
+        ]
+      },
+      "cost": {
+        "rentOneBed": 1400,
+        "livingSingle": 900,
+        "totalSingle": 2300,
+        "index": 51
+      },
+      "work": {
+        "avgNetSalary": 1900,
+        "salaryCoverage": 0.83,
+        "topSectors": [
+          "Finance",
+          "Tech",
+          "Public sector"
+        ]
+      },
+      "metrics": {
+        "safety": 80,
+        "healthcare": 86,
+        "internet": 91,
+        "walkability": 88,
+        "environment": 72,
+        "happiness": 78,
+        "publicServices": 78,
+        "english": 62
+      },
+      "confidence": "medium",
+      "sources": [
+        {
+          "label": "Open-Meteo climate normals",
+          "url": "https://open-meteo.com/",
+          "asOf": "2024-12-31",
+          "note": "ERA5 reanalysis, monthly averages 2019–2024"
+        },
+        {
+          "label": "World Bank country indicators",
+          "url": "https://data.worldbank.org/",
+          "asOf": "2025",
+          "note": "Internet use, life expectancy, health spending, PM2.5, GDP PPP, unemployment"
+        },
+        {
+          "label": "CityMatcher cost model",
+          "url": "/methodology",
+          "asOf": "2025-06-30",
+          "note": "Curated rent, living-cost and salary estimates for a single person; modelled, medium confidence"
+        }
+      ],
+      "editorial": {
+        "summary": "Late dinners, grand boulevards and a huge job market, with a cost of living that still undercuts most western capitals.",
+        "bestFor": "Career-minded newcomers who want big-city amenities and are willing to learn Spanish."
+      }
+    },
+    {
+      "slug": "manchester",
+      "name": "Manchester",
+      "country": "United Kingdom",
+      "countryCode": "GB",
+      "region": "western",
+      "population": 550000,
+      "size": "medium",
+      "lat": 53.4808,
+      "lng": -2.2426,
+      "currency": "GBP",
+      "climate": {
+        "monthly": [
+          {
+            "month": "Jan",
+            "high": 7.2,
+            "low": 1.8,
+            "rain": 97,
+            "sun": 98
+          },
+          {
+            "month": "Feb",
+            "high": 9.4,
+            "low": 3.2,
+            "rain": 117,
+            "sun": 129
+          },
+          {
+            "month": "Mar",
+            "high": 10.7,
+            "low": 3.3,
+            "rain": 99,
+            "sun": 202
+          },
+          {
+            "month": "Apr",
+            "high": 13.1,
+            "low": 4,
+            "rain": 59,
+            "sun": 286
+          },
+          {
+            "month": "May",
+            "high": 16.1,
+            "low": 7.7,
+            "rain": 80,
+            "sun": 311
+          },
+          {
+            "month": "Jun",
+            "high": 19.1,
+            "low": 10.6,
+            "rain": 88,
+            "sun": 311
+          },
+          {
+            "month": "Jul",
+            "high": 20,
+            "low": 12.5,
+            "rain": 131,
+            "sun": 290
+          },
+          {
+            "month": "Aug",
+            "high": 20,
+            "low": 12.6,
+            "rain": 115,
+            "sun": 296
+          },
+          {
+            "month": "Sep",
+            "high": 18,
+            "low": 10.7,
+            "rain": 100,
+            "sun": 229
+          },
+          {
+            "month": "Oct",
+            "high": 14.2,
+            "low": 8.2,
+            "rain": 145,
+            "sun": 163
+          },
+          {
+            "month": "Nov",
+            "high": 10.1,
+            "low": 4.7,
+            "rain": 105,
+            "sun": 108
+          },
+          {
+            "month": "Dec",
+            "high": 8,
+            "low": 3.3,
+            "rain": 126,
+            "sun": 80
+          }
+        ],
+        "summerHigh": 20,
+        "winterLow": 2.5,
+        "annualRain": 1262,
+        "annualSunHours": 2503,
+        "tags": [
+          "mild"
+        ]
+      },
+      "cost": {
+        "rentOneBed": 1300,
+        "livingSingle": 950,
+        "totalSingle": 2250,
+        "index": 50
+      },
+      "work": {
+        "avgNetSalary": 2600,
+        "salaryCoverage": 1.16,
+        "topSectors": [
+          "Media",
+          "Tech",
+          "Education"
+        ]
+      },
+      "metrics": {
+        "safety": 70,
+        "healthcare": 84,
+        "internet": 90,
+        "walkability": 86,
+        "environment": 74,
+        "happiness": 74,
+        "publicServices": 76,
+        "english": 96
+      },
+      "confidence": "medium",
+      "sources": [
+        {
+          "label": "Open-Meteo climate normals",
+          "url": "https://open-meteo.com/",
+          "asOf": "2024-12-31",
+          "note": "ERA5 reanalysis, monthly averages 2019–2024"
+        },
+        {
+          "label": "World Bank country indicators",
+          "url": "https://data.worldbank.org/",
+          "asOf": "2025",
+          "note": "Internet use, life expectancy, health spending, PM2.5, GDP PPP, unemployment"
+        },
+        {
+          "label": "CityMatcher cost model",
+          "url": "/methodology",
+          "asOf": "2025-06-30",
+          "note": "Curated rent, living-cost and salary estimates for a single person; modelled, medium confidence"
+        }
+      ],
+      "editorial": {
+        "summary": "A music and media city with a fast-growing tech scene, significantly cheaper than London and increasingly international.",
+        "bestFor": "Creative and tech professionals who want UK opportunity without London's rent."
+      }
+    },
+    {
+      "slug": "milan",
+      "name": "Milan",
+      "country": "Italy",
+      "countryCode": "IT",
+      "region": "southern",
+      "population": 1370000,
+      "size": "medium",
+      "lat": 45.4642,
+      "lng": 9.19,
+      "currency": "EUR",
+      "climate": {
+        "monthly": [
+          {
+            "month": "Jan",
+            "high": 7.9,
+            "low": -0.7,
+            "rain": 49,
+            "sun": 194
+          },
+          {
+            "month": "Feb",
+            "high": 12.2,
+            "low": 2.1,
+            "rain": 65,
+            "sun": 209
+          },
+          {
+            "month": "Mar",
+            "high": 15,
+            "low": 4.4,
+            "rain": 65,
+            "sun": 280
+          },
+          {
+            "month": "Apr",
+            "high": 18.2,
+            "low": 7.6,
+            "rain": 88,
+            "sun": 303
+          },
+          {
+            "month": "May",
+            "high": 22,
+            "low": 12.6,
+            "rain": 170,
+            "sun": 319
+          },
+          {
+            "month": "Jun",
+            "high": 28,
+            "low": 17.8,
+            "rain": 99,
+            "sun": 386
+          },
+          {
+            "month": "Jul",
+            "high": 30.3,
+            "low": 20.2,
+            "rain": 109,
+            "sun": 416
+          },
+          {
+            "month": "Aug",
+            "high": 30,
+            "low": 20.1,
+            "rain": 115,
+            "sun": 370
+          },
+          {
+            "month": "Sep",
+            "high": 24.7,
+            "low": 15.7,
+            "rain": 139,
+            "sun": 298
+          },
+          {
+            "month": "Oct",
+            "high": 19.3,
+            "low": 11.5,
+            "rain": 159,
+            "sun": 221
+          },
+          {
+            "month": "Nov",
+            "high": 12.4,
+            "low": 5.2,
+            "rain": 113,
+            "sun": 172
+          },
+          {
+            "month": "Dec",
+            "high": 7.8,
+            "low": 1.4,
+            "rain": 88,
+            "sun": 139
+          }
+        ],
+        "summerHigh": 30.2,
+        "winterLow": 0.7,
+        "annualRain": 1259,
+        "annualSunHours": 3307,
+        "tags": [
+          "cold",
+          "four-seasons"
+        ]
+      },
+      "cost": {
+        "rentOneBed": 1600,
+        "livingSingle": 1000,
+        "totalSingle": 2600,
+        "index": 60
+      },
+      "work": {
+        "avgNetSalary": 2000,
+        "salaryCoverage": 0.77,
+        "topSectors": [
+          "Finance",
+          "Fashion",
+          "Design"
+        ]
+      },
+      "metrics": {
+        "safety": 72,
+        "healthcare": 84,
+        "internet": 76,
+        "walkability": 86,
+        "environment": 70,
+        "happiness": 72,
+        "publicServices": 74,
+        "english": 62
+      },
+      "confidence": "medium",
+      "sources": [
+        {
+          "label": "Open-Meteo climate normals",
+          "url": "https://open-meteo.com/",
+          "asOf": "2024-12-31",
+          "note": "ERA5 reanalysis, monthly averages 2019–2024"
+        },
+        {
+          "label": "World Bank country indicators",
+          "url": "https://data.worldbank.org/",
+          "asOf": "2025",
+          "note": "Internet use, life expectancy, health spending, PM2.5, GDP PPP, unemployment"
+        },
+        {
+          "label": "CityMatcher cost model",
+          "url": "/methodology",
+          "asOf": "2025-06-30",
+          "note": "Curated rent, living-cost and salary estimates for a single person; modelled, medium confidence"
+        }
+      ],
+      "editorial": {
+        "summary": "Italy's commercial engine, with finance, fashion and design jobs, plus the country's best-connected northern hub.",
+        "bestFor": "Design, fashion and finance professionals who need Italy's most international job market."
+      }
+    },
+    {
+      "slug": "munich",
+      "name": "Munich",
+      "country": "Germany",
+      "countryCode": "DE",
+      "region": "central",
+      "population": 1500000,
+      "size": "large",
+      "lat": 48.1351,
+      "lng": 11.582,
+      "currency": "EUR",
+      "climate": {
+        "monthly": [
+          {
+            "month": "Jan",
+            "high": 4.3,
+            "low": -2.6,
+            "rain": 73,
+            "sun": 141
+          },
+          {
+            "month": "Feb",
+            "high": 8.5,
+            "low": -0.4,
+            "rain": 72,
+            "sun": 189
+          },
+          {
+            "month": "Mar",
+            "high": 10.8,
+            "low": 0.6,
+            "rain": 61,
+            "sun": 254
+          },
+          {
+            "month": "Apr",
+            "high": 13.8,
+            "low": 3.1,
+            "rain": 69,
+            "sun": 277
+          },
+          {
+            "month": "May",
+            "high": 17.1,
+            "low": 7.5,
+            "rain": 129,
+            "sun": 298
+          },
+          {
+            "month": "Jun",
+            "high": 23.3,
+            "low": 12.8,
+            "rain": 143,
+            "sun": 357
+          },
+          {
+            "month": "Jul",
+            "high": 24.4,
+            "low": 14.2,
+            "rain": 110,
+            "sun": 361
+          },
+          {
+            "month": "Aug",
+            "high": 23.9,
+            "low": 14.2,
+            "rain": 150,
+            "sun": 318
+          },
+          {
+            "month": "Sep",
+            "high": 19.7,
+            "low": 10.2,
+            "rain": 100,
+            "sun": 272
+          },
+          {
+            "month": "Oct",
+            "high": 15.9,
+            "low": 6.9,
+            "rain": 74,
+            "sun": 212
+          },
+          {
+            "month": "Nov",
+            "high": 8.4,
+            "low": 1.4,
+            "rain": 77,
+            "sun": 152
+          },
+          {
+            "month": "Dec",
+            "high": 5.4,
+            "low": -1.1,
+            "rain": 78,
+            "sun": 127
+          }
+        ],
+        "summerHigh": 24.2,
+        "winterLow": -1.5,
+        "annualRain": 1136,
+        "annualSunHours": 2958,
+        "tags": [
+          "cold",
+          "four-seasons"
+        ]
+      },
+      "cost": {
+        "rentOneBed": 1800,
+        "livingSingle": 1100,
+        "totalSingle": 2900,
+        "index": 69
+      },
+      "work": {
+        "avgNetSalary": 3000,
+        "salaryCoverage": 1.03,
+        "topSectors": [
+          "Engineering",
+          "Insurance",
+          "Tech"
+        ]
+      },
+      "metrics": {
+        "safety": 88,
+        "healthcare": 90,
+        "internet": 86,
+        "walkability": 84,
+        "environment": 84,
+        "happiness": 80,
+        "publicServices": 86,
+        "english": 76
+      },
+      "confidence": "medium",
+      "sources": [
+        {
+          "label": "Open-Meteo climate normals",
+          "url": "https://open-meteo.com/",
+          "asOf": "2024-12-31",
+          "note": "ERA5 reanalysis, monthly averages 2019–2024"
+        },
+        {
+          "label": "World Bank country indicators",
+          "url": "https://data.worldbank.org/",
+          "asOf": "2025",
+          "note": "Internet use, life expectancy, health spending, PM2.5, GDP PPP, unemployment"
+        },
+        {
+          "label": "CityMatcher cost model",
+          "url": "/methodology",
+          "asOf": "2025-06-30",
+          "note": "Curated rent, living-cost and salary estimates for a single person; modelled, medium confidence"
+        }
+      ],
+      "editorial": {
+        "summary": "A polished, safe and prosperous city with Alpine access, high salaries and a housing market to match.",
+        "bestFor": "Engineers and professionals optimizing for safety, public services and outdoor access."
+      }
+    },
+    {
+      "slug": "oslo",
+      "name": "Oslo",
+      "country": "Norway",
+      "countryCode": "NO",
+      "region": "northern",
+      "population": 700000,
+      "size": "medium",
+      "lat": 59.9139,
+      "lng": 10.7522,
+      "currency": "NOK",
+      "climate": {
+        "monthly": [
+          {
+            "month": "Jan",
+            "high": -0.3,
+            "low": -5.8,
+            "rain": 67,
+            "sun": 88
+          },
+          {
+            "month": "Feb",
+            "high": 1.9,
+            "low": -4.3,
+            "rain": 65,
+            "sun": 138
+          },
+          {
+            "month": "Mar",
+            "high": 5.1,
+            "low": -2.7,
+            "rain": 62,
+            "sun": 228
+          },
+          {
+            "month": "Apr",
+            "high": 10.4,
+            "low": 0.9,
+            "rain": 48,
+            "sun": 315
+          },
+          {
+            "month": "May",
+            "high": 15.7,
+            "low": 6,
+            "rain": 79,
+            "sun": 370
+          },
+          {
+            "month": "Jun",
+            "high": 21,
+            "low": 11.8,
+            "rain": 94,
+            "sun": 391
+          },
+          {
+            "month": "Jul",
+            "high": 20.5,
+            "low": 12.6,
+            "rain": 130,
+            "sun": 375
+          },
+          {
+            "month": "Aug",
+            "high": 20.1,
+            "low": 12.5,
+            "rain": 92,
+            "sun": 323
+          },
+          {
+            "month": "Sep",
+            "high": 16,
+            "low": 9.1,
+            "rain": 94,
+            "sun": 226
+          },
+          {
+            "month": "Oct",
+            "high": 9.6,
+            "low": 4.5,
+            "rain": 99,
+            "sun": 147
+          },
+          {
+            "month": "Nov",
+            "high": 4.1,
+            "low": 0.2,
+            "rain": 81,
+            "sun": 69
+          },
+          {
+            "month": "Dec",
+            "high": 0,
+            "low": -4.3,
+            "rain": 77,
+            "sun": 55
+          }
+        ],
+        "summerHigh": 20.3,
+        "winterLow": -5,
+        "annualRain": 988,
+        "annualSunHours": 2725,
+        "tags": [
+          "cold"
+        ]
+      },
+      "cost": {
+        "rentOneBed": 1700,
+        "livingSingle": 1200,
+        "totalSingle": 2900,
+        "index": 69
+      },
+      "work": {
+        "avgNetSalary": 3300,
+        "salaryCoverage": 1.14,
+        "topSectors": [
+          "Energy",
+          "Shipping",
+          "Tech"
+        ]
+      },
+      "metrics": {
+        "safety": 90,
+        "healthcare": 90,
+        "internet": 98,
+        "walkability": 86,
+        "environment": 90,
+        "happiness": 83,
+        "publicServices": 88,
+        "english": 86
+      },
+      "confidence": "medium",
+      "sources": [
+        {
+          "label": "Open-Meteo climate normals",
+          "url": "https://open-meteo.com/",
+          "asOf": "2024-12-31",
+          "note": "ERA5 reanalysis, monthly averages 2019–2024"
+        },
+        {
+          "label": "World Bank country indicators",
+          "url": "https://data.worldbank.org/",
+          "asOf": "2025",
+          "note": "Internet use, life expectancy, health spending, PM2.5, GDP PPP, unemployment"
+        },
+        {
+          "label": "CityMatcher cost model",
+          "url": "/methodology",
+          "asOf": "2025-06-30",
+          "note": "Curated rent, living-cost and salary estimates for a single person; modelled, medium confidence"
+        }
+      ],
+      "editorial": {
+        "summary": "Fjord-side living with very high wages and very high prices, backed by excellent public services and access to nature.",
+        "bestFor": "Energy and engineering professionals who want outdoor access and a low-stress, high-trust society."
+      }
+    },
+    {
+      "slug": "paris",
+      "name": "Paris",
+      "country": "France",
+      "countryCode": "FR",
+      "region": "western",
+      "population": 2100000,
+      "size": "large",
+      "lat": 48.8566,
+      "lng": 2.3522,
+      "currency": "EUR",
+      "climate": {
+        "monthly": [
+          {
+            "month": "Jan",
+            "high": 7.3,
+            "low": 1.6,
+            "rain": 61,
+            "sun": 110
+          },
+          {
+            "month": "Feb",
+            "high": 10.8,
+            "low": 3.2,
+            "rain": 54,
+            "sun": 150
+          },
+          {
+            "month": "Mar",
+            "high": 12.8,
+            "low": 4.1,
+            "rain": 71,
+            "sun": 231
+          },
+          {
+            "month": "Apr",
+            "high": 15.8,
+            "low": 5.5,
+            "rain": 50,
+            "sun": 301
+          },
+          {
+            "month": "May",
+            "high": 19,
+            "low": 9.2,
+            "rain": 70,
+            "sun": 342
+          },
+          {
+            "month": "Jun",
+            "high": 23.6,
+            "low": 13.4,
+            "rain": 78,
+            "sun": 359
+          },
+          {
+            "month": "Jul",
+            "high": 25.4,
+            "low": 14.8,
+            "rain": 54,
+            "sun": 370
+          },
+          {
+            "month": "Aug",
+            "high": 25.4,
+            "low": 15.2,
+            "rain": 73,
+            "sun": 333
+          },
+          {
+            "month": "Sep",
+            "high": 22.3,
+            "low": 12.6,
+            "rain": 69,
+            "sun": 275
+          },
+          {
+            "month": "Oct",
+            "high": 17.3,
+            "low": 9.7,
+            "rain": 95,
+            "sun": 193
+          },
+          {
+            "month": "Nov",
+            "high": 11.3,
+            "low": 5.3,
+            "rain": 63,
+            "sun": 142
+          },
+          {
+            "month": "Dec",
+            "high": 8.7,
+            "low": 3.5,
+            "rain": 89,
+            "sun": 97
+          }
+        ],
+        "summerHigh": 25.4,
+        "winterLow": 2.4,
+        "annualRain": 827,
+        "annualSunHours": 2903,
+        "tags": [
+          "four-seasons"
+        ]
+      },
+      "cost": {
+        "rentOneBed": 1900,
+        "livingSingle": 1150,
+        "totalSingle": 3050,
+        "index": 73
+      },
+      "work": {
+        "avgNetSalary": 2600,
+        "salaryCoverage": 0.85,
+        "topSectors": [
+          "Finance",
+          "Luxury",
+          "Tech",
+          "Culture"
+        ]
+      },
+      "metrics": {
+        "safety": 66,
+        "healthcare": 89,
+        "internet": 75,
+        "walkability": 92,
+        "environment": 68,
+        "happiness": 70,
+        "publicServices": 80,
+        "english": 68
+      },
+      "confidence": "medium",
+      "sources": [
+        {
+          "label": "Open-Meteo climate normals",
+          "url": "https://open-meteo.com/",
+          "asOf": "2024-12-31",
+          "note": "ERA5 reanalysis, monthly averages 2019–2024"
+        },
+        {
+          "label": "World Bank country indicators",
+          "url": "https://data.worldbank.org/",
+          "asOf": "2025",
+          "note": "Internet use, life expectancy, health spending, PM2.5, GDP PPP, unemployment"
+        },
+        {
+          "label": "CityMatcher cost model",
+          "url": "/methodology",
+          "asOf": "2025-06-30",
+          "note": "Curated rent, living-cost and salary estimates for a single person; modelled, medium confidence"
+        }
+      ],
+      "editorial": {
+        "summary": "Unmatched density and culture, with the rent, noise and commute times that come with being one of the world's most visited cities.",
+        "bestFor": "Ambitious professionals who value culture, transit and prestige more than space or quiet."
+      }
+    },
+    {
+      "slug": "porto",
+      "name": "Porto",
+      "country": "Portugal",
+      "countryCode": "PT",
+      "region": "western",
+      "population": 232000,
+      "size": "small",
+      "lat": 41.1579,
+      "lng": -8.6291,
+      "currency": "EUR",
+      "climate": {
+        "monthly": [
+          {
+            "month": "Jan",
+            "high": 13.6,
+            "low": 7.1,
+            "rain": 162,
+            "sun": 206
+          },
+          {
+            "month": "Feb",
+            "high": 15.7,
+            "low": 8.3,
+            "rain": 104,
+            "sun": 229
+          },
+          {
+            "month": "Mar",
+            "high": 16.4,
+            "low": 9,
+            "rain": 129,
+            "sun": 279
+          },
+          {
+            "month": "Apr",
+            "high": 17.7,
+            "low": 10.5,
+            "rain": 132,
+            "sun": 315
+          },
+          {
+            "month": "May",
+            "high": 20.3,
+            "low": 12.8,
+            "rain": 69,
+            "sun": 369
+          },
+          {
+            "month": "Jun",
+            "high": 21.1,
+            "low": 14.4,
+            "rain": 59,
+            "sun": 382
+          },
+          {
+            "month": "Jul",
+            "high": 24.1,
+            "low": 16.2,
+            "rain": 16,
+            "sun": 411
+          },
+          {
+            "month": "Aug",
+            "high": 23.8,
+            "low": 16.1,
+            "rain": 16,
+            "sun": 370
+          },
+          {
+            "month": "Sep",
+            "high": 23.3,
+            "low": 15.7,
+            "rain": 89,
+            "sun": 317
+          },
+          {
+            "month": "Oct",
+            "high": 20.3,
+            "low": 13.9,
+            "rain": 226,
+            "sun": 234
+          },
+          {
+            "month": "Nov",
+            "high": 16.8,
+            "low": 11.1,
+            "rain": 180,
+            "sun": 196
+          },
+          {
+            "month": "Dec",
+            "high": 14.5,
+            "low": 8.8,
+            "rain": 231,
+            "sun": 188
+          }
+        ],
+        "summerHigh": 24,
+        "winterLow": 7.7,
+        "annualRain": 1413,
+        "annualSunHours": 3496,
+        "tags": [
+          "mild"
+        ]
+      },
+      "cost": {
+        "rentOneBed": 1000,
+        "livingSingle": 800,
+        "totalSingle": 1800,
+        "index": 37
+      },
+      "work": {
+        "avgNetSalary": 1250,
+        "salaryCoverage": 0.69,
+        "topSectors": [
+          "Tech",
+          "Design",
+          "Tourism"
+        ]
+      },
+      "metrics": {
+        "safety": 82,
+        "healthcare": 80,
+        "internet": 74,
+        "walkability": 84,
+        "environment": 80,
+        "happiness": 75,
+        "publicServices": 72,
+        "english": 72
+      },
+      "confidence": "medium",
+      "sources": [
+        {
+          "label": "Open-Meteo climate normals",
+          "url": "https://open-meteo.com/",
+          "asOf": "2024-12-31",
+          "note": "ERA5 reanalysis, monthly averages 2019–2024"
+        },
+        {
+          "label": "World Bank country indicators",
+          "url": "https://data.worldbank.org/",
+          "asOf": "2025",
+          "note": "Internet use, life expectancy, health spending, PM2.5, GDP PPP, unemployment"
+        },
+        {
+          "label": "CityMatcher cost model",
+          "url": "/methodology",
+          "asOf": "2025-06-30",
+          "note": "Curated rent, living-cost and salary estimates for a single person; modelled, medium confidence"
+        }
+      ],
+      "editorial": {
+        "summary": "A compact, riverfront city with a strong design and startup streak, cheaper than Lisbon but still Atlantic-facing.",
+        "bestFor": "Creatives and remote workers who want urban life at a slower, more affordable pace."
+      }
+    },
+    {
+      "slug": "prague",
+      "name": "Prague",
+      "country": "Czechia",
+      "countryCode": "CZ",
+      "region": "central",
+      "population": 1300000,
+      "size": "medium",
+      "lat": 50.0755,
+      "lng": 14.4378,
+      "currency": "CZK",
+      "climate": {
+        "monthly": [
+          {
+            "month": "Jan",
+            "high": 4.2,
+            "low": -1.5,
+            "rain": 43,
+            "sun": 122
+          },
+          {
+            "month": "Feb",
+            "high": 7.5,
+            "low": -0.2,
+            "rain": 52,
+            "sun": 162
+          },
+          {
+            "month": "Mar",
+            "high": 10.8,
+            "low": 1.1,
+            "rain": 36,
+            "sun": 247
+          },
+          {
+            "month": "Apr",
+            "high": 14.7,
+            "low": 3.7,
+            "rain": 40,
+            "sun": 282
+          },
+          {
+            "month": "May",
+            "high": 18.9,
+            "low": 8.5,
+            "rain": 78,
+            "sun": 320
+          },
+          {
+            "month": "Jun",
+            "high": 25.3,
+            "low": 14.3,
+            "rain": 82,
+            "sun": 373
+          },
+          {
+            "month": "Jul",
+            "high": 26.1,
+            "low": 15.4,
+            "rain": 66,
+            "sun": 379
+          },
+          {
+            "month": "Aug",
+            "high": 25.4,
+            "low": 15.4,
+            "rain": 99,
+            "sun": 325
+          },
+          {
+            "month": "Sep",
+            "high": 21.2,
+            "low": 11.2,
+            "rain": 62,
+            "sun": 276
+          },
+          {
+            "month": "Oct",
+            "high": 15.9,
+            "low": 7.2,
+            "rain": 51,
+            "sun": 210
+          },
+          {
+            "month": "Nov",
+            "high": 8.3,
+            "low": 2,
+            "rain": 45,
+            "sun": 130
+          },
+          {
+            "month": "Dec",
+            "high": 5,
+            "low": -0.4,
+            "rain": 48,
+            "sun": 116
+          }
+        ],
+        "summerHigh": 25.8,
+        "winterLow": -0.8,
+        "annualRain": 702,
+        "annualSunHours": 2942,
+        "tags": [
+          "cold",
+          "four-seasons"
+        ]
+      },
+      "cost": {
+        "rentOneBed": 1100,
+        "livingSingle": 800,
+        "totalSingle": 1900,
+        "index": 40
+      },
+      "work": {
+        "avgNetSalary": 1700,
+        "salaryCoverage": 0.89,
+        "topSectors": [
+          "Tech",
+          "Gaming",
+          "Tourism"
+        ]
+      },
+      "metrics": {
+        "safety": 84,
+        "healthcare": 84,
+        "internet": 73,
+        "walkability": 88,
+        "environment": 80,
+        "happiness": 76,
+        "publicServices": 78,
+        "english": 70
+      },
+      "confidence": "medium",
+      "sources": [
+        {
+          "label": "Open-Meteo climate normals",
+          "url": "https://open-meteo.com/",
+          "asOf": "2024-12-31",
+          "note": "ERA5 reanalysis, monthly averages 2019–2024"
+        },
+        {
+          "label": "World Bank country indicators",
+          "url": "https://data.worldbank.org/",
+          "asOf": "2025",
+          "note": "Internet use, life expectancy, health spending, PM2.5, GDP PPP, unemployment"
+        },
+        {
+          "label": "CityMatcher cost model",
+          "url": "/methodology",
+          "asOf": "2025-06-30",
+          "note": "Curated rent, living-cost and salary estimates for a single person; modelled, medium confidence"
+        }
+      ],
+      "editorial": {
+        "summary": "A beautifully preserved centre with a growing tech and gaming scene, still noticeably cheaper than western capitals.",
+        "bestFor": "Tech workers and students who want a historic, walkable city with room in the budget."
+      }
+    },
+    {
+      "slug": "riga",
+      "name": "Riga",
+      "country": "Latvia",
+      "countryCode": "LV",
+      "region": "eastern",
+      "population": 600000,
+      "size": "medium",
+      "lat": 56.9496,
+      "lng": 24.1052,
+      "currency": "EUR",
+      "climate": {
+        "monthly": [
+          {
+            "month": "Jan",
+            "high": 0.6,
+            "low": -4.1,
+            "rain": 60,
+            "sun": 67
+          },
+          {
+            "month": "Feb",
+            "high": 2.4,
+            "low": -2.8,
+            "rain": 53,
+            "sun": 117
+          },
+          {
+            "month": "Mar",
+            "high": 6.2,
+            "low": -1.4,
+            "rain": 47,
+            "sun": 227
+          },
+          {
+            "month": "Apr",
+            "high": 11.1,
+            "low": 2.2,
+            "rain": 33,
+            "sun": 300
+          },
+          {
+            "month": "May",
+            "high": 16.5,
+            "low": 6.6,
+            "rain": 63,
+            "sun": 380
+          },
+          {
+            "month": "Jun",
+            "high": 23,
+            "low": 13.1,
+            "rain": 70,
+            "sun": 417
+          },
+          {
+            "month": "Jul",
+            "high": 22.5,
+            "low": 14.2,
+            "rain": 95,
+            "sun": 416
+          },
+          {
+            "month": "Aug",
+            "high": 22.3,
+            "low": 13.8,
+            "rain": 98,
+            "sun": 349
+          },
+          {
+            "month": "Sep",
+            "high": 17.9,
+            "low": 10.2,
+            "rain": 59,
+            "sun": 286
+          },
+          {
+            "month": "Oct",
+            "high": 11.9,
+            "low": 6.1,
+            "rain": 82,
+            "sun": 167
+          },
+          {
+            "month": "Nov",
+            "high": 5.7,
+            "low": 1.7,
+            "rain": 58,
+            "sun": 72
+          },
+          {
+            "month": "Dec",
+            "high": 1.6,
+            "low": -2.5,
+            "rain": 54,
+            "sun": 49
+          }
+        ],
+        "summerHigh": 22.4,
+        "winterLow": -3.4,
+        "annualRain": 772,
+        "annualSunHours": 2847,
+        "tags": [
+          "cold",
+          "four-seasons"
+        ]
+      },
+      "cost": {
+        "rentOneBed": 700,
+        "livingSingle": 600,
+        "totalSingle": 1300,
+        "index": 23
+      },
+      "work": {
+        "avgNetSalary": 1300,
+        "salaryCoverage": 1,
+        "topSectors": [
+          "Shared services",
+          "Logistics",
+          "Tech"
+        ]
+      },
+      "metrics": {
+        "safety": 78,
+        "healthcare": 78,
+        "internet": 84,
+        "walkability": 82,
+        "environment": 80,
+        "happiness": 70,
+        "publicServices": 72,
+        "english": 72
+      },
+      "confidence": "medium",
+      "sources": [
+        {
+          "label": "Open-Meteo climate normals",
+          "url": "https://open-meteo.com/",
+          "asOf": "2024-12-31",
+          "note": "ERA5 reanalysis, monthly averages 2019–2024"
+        },
+        {
+          "label": "World Bank country indicators",
+          "url": "https://data.worldbank.org/",
+          "asOf": "2025",
+          "note": "Internet use, life expectancy, health spending, PM2.5, GDP PPP, unemployment"
+        },
+        {
+          "label": "CityMatcher cost model",
+          "url": "/methodology",
+          "asOf": "2025-06-30",
+          "note": "Curated rent, living-cost and salary estimates for a single person; modelled, medium confidence"
+        }
+      ],
+      "editorial": {
+        "summary": "Art nouveau streets and a sizable business-services sector, with very low living costs and a long, dark winter.",
+        "bestFor": "Budget-focused remote workers who want a walkable Baltic capital with good transit."
+      }
+    },
+    {
+      "slug": "rome",
+      "name": "Rome",
+      "country": "Italy",
+      "countryCode": "IT",
+      "region": "southern",
+      "population": 2800000,
+      "size": "large",
+      "lat": 41.9028,
+      "lng": 12.4964,
+      "currency": "EUR",
+      "climate": {
+        "monthly": [
+          {
+            "month": "Jan",
+            "high": 12.4,
+            "low": 3.5,
+            "rain": 70,
+            "sun": 220
+          },
+          {
+            "month": "Feb",
+            "high": 15.1,
+            "low": 4.8,
+            "rain": 53,
+            "sun": 249
+          },
+          {
+            "month": "Mar",
+            "high": 16.8,
+            "low": 6.3,
+            "rain": 74,
+            "sun": 295
+          },
+          {
+            "month": "Apr",
+            "high": 19.2,
+            "low": 8.3,
+            "rain": 65,
+            "sun": 322
+          },
+          {
+            "month": "May",
+            "high": 23.4,
+            "low": 12.9,
+            "rain": 86,
+            "sun": 351
+          },
+          {
+            "month": "Jun",
+            "high": 29.8,
+            "low": 17.7,
+            "rain": 41,
+            "sun": 398
+          },
+          {
+            "month": "Jul",
+            "high": 33.7,
+            "low": 21.1,
+            "rain": 17,
+            "sun": 428
+          },
+          {
+            "month": "Aug",
+            "high": 33,
+            "low": 21.3,
+            "rain": 38,
+            "sun": 395
+          },
+          {
+            "month": "Sep",
+            "high": 28,
+            "low": 17.3,
+            "rain": 88,
+            "sun": 328
+          },
+          {
+            "month": "Oct",
+            "high": 23.1,
+            "low": 13.5,
+            "rain": 88,
+            "sun": 276
+          },
+          {
+            "month": "Nov",
+            "high": 17.7,
+            "low": 9.5,
+            "rain": 164,
+            "sun": 209
+          },
+          {
+            "month": "Dec",
+            "high": 14,
+            "low": 5.9,
+            "rain": 124,
+            "sun": 205
+          }
+        ],
+        "summerHigh": 33.4,
+        "winterLow": 4.2,
+        "annualRain": 908,
+        "annualSunHours": 3676,
+        "tags": [
+          "warm"
+        ]
+      },
+      "cost": {
+        "rentOneBed": 1300,
+        "livingSingle": 950,
+        "totalSingle": 2250,
+        "index": 50
+      },
+      "work": {
+        "avgNetSalary": 1700,
+        "salaryCoverage": 0.76,
+        "topSectors": [
+          "Tourism",
+          "Public sector",
+          "Culture"
+        ]
+      },
+      "metrics": {
+        "safety": 66,
+        "healthcare": 82,
+        "internet": 76,
+        "walkability": 82,
+        "environment": 68,
+        "happiness": 70,
+        "publicServices": 70,
+        "english": 60
+      },
+      "confidence": "medium",
+      "sources": [
+        {
+          "label": "Open-Meteo climate normals",
+          "url": "https://open-meteo.com/",
+          "asOf": "2024-12-31",
+          "note": "ERA5 reanalysis, monthly averages 2019–2024"
+        },
+        {
+          "label": "World Bank country indicators",
+          "url": "https://data.worldbank.org/",
+          "asOf": "2025",
+          "note": "Internet use, life expectancy, health spending, PM2.5, GDP PPP, unemployment"
+        },
+        {
+          "label": "CityMatcher cost model",
+          "url": "/methodology",
+          "asOf": "2025-06-30",
+          "note": "Curated rent, living-cost and salary estimates for a single person; modelled, medium confidence"
+        }
+      ],
+      "editorial": {
+        "summary": "Ancient layers, neighbourhood life and spectacular food, held back by traffic, bureaucracy and uneven public services.",
+        "bestFor": "Culture-first movers who can tolerate administrative friction for an unmatched sense of place."
+      }
+    },
+    {
+      "slug": "rotterdam",
+      "name": "Rotterdam",
+      "country": "Netherlands",
+      "countryCode": "NL",
+      "region": "western",
+      "population": 650000,
+      "size": "medium",
+      "lat": 51.9244,
+      "lng": 4.4777,
+      "currency": "EUR",
+      "climate": {
+        "monthly": [
+          {
+            "month": "Jan",
+            "high": 7.1,
+            "low": 2.5,
+            "rain": 73,
+            "sun": 116
+          },
+          {
+            "month": "Feb",
+            "high": 9.4,
+            "low": 3.5,
+            "rain": 82,
+            "sun": 145
+          },
+          {
+            "month": "Mar",
+            "high": 11,
+            "low": 3.8,
+            "rain": 71,
+            "sun": 226
+          },
+          {
+            "month": "Apr",
+            "high": 13.6,
+            "low": 5.1,
+            "rain": 59,
+            "sun": 300
+          },
+          {
+            "month": "May",
+            "high": 17.2,
+            "low": 8.5,
+            "rain": 70,
+            "sun": 361
+          },
+          {
+            "month": "Jun",
+            "high": 21.5,
+            "low": 12.8,
+            "rain": 81,
+            "sun": 366
+          },
+          {
+            "month": "Jul",
+            "high": 21.8,
+            "low": 13.9,
+            "rain": 78,
+            "sun": 357
+          },
+          {
+            "month": "Aug",
+            "high": 22.9,
+            "low": 15,
+            "rain": 74,
+            "sun": 354
+          },
+          {
+            "month": "Sep",
+            "high": 20.1,
+            "low": 12.4,
+            "rain": 82,
+            "sun": 276
+          },
+          {
+            "month": "Oct",
+            "high": 15.6,
+            "low": 9.7,
+            "rain": 110,
+            "sun": 182
+          },
+          {
+            "month": "Nov",
+            "high": 10.6,
+            "low": 5.5,
+            "rain": 92,
+            "sun": 129
+          },
+          {
+            "month": "Dec",
+            "high": 7.9,
+            "low": 3.5,
+            "rain": 87,
+            "sun": 92
+          }
+        ],
+        "summerHigh": 22.4,
+        "winterLow": 3,
+        "annualRain": 959,
+        "annualSunHours": 2904,
+        "tags": [
+          "mild"
+        ]
+      },
+      "cost": {
+        "rentOneBed": 1600,
+        "livingSingle": 1000,
+        "totalSingle": 2600,
+        "index": 60
+      },
+      "work": {
+        "avgNetSalary": 2700,
+        "salaryCoverage": 1.04,
+        "topSectors": [
+          "Logistics",
+          "Architecture",
+          "Tech"
+        ]
+      },
+      "metrics": {
+        "safety": 74,
+        "healthcare": 86,
+        "internet": 93,
+        "walkability": 86,
+        "environment": 74,
+        "happiness": 76,
+        "publicServices": 80,
+        "english": 88
+      },
+      "confidence": "medium",
+      "sources": [
+        {
+          "label": "Open-Meteo climate normals",
+          "url": "https://open-meteo.com/",
+          "asOf": "2024-12-31",
+          "note": "ERA5 reanalysis, monthly averages 2019–2024"
+        },
+        {
+          "label": "World Bank country indicators",
+          "url": "https://data.worldbank.org/",
+          "asOf": "2025",
+          "note": "Internet use, life expectancy, health spending, PM2.5, GDP PPP, unemployment"
+        },
+        {
+          "label": "CityMatcher cost model",
+          "url": "/methodology",
+          "asOf": "2025-06-30",
+          "note": "Curated rent, living-cost and salary estimates for a single person; modelled, medium confidence"
+        }
+      ],
+      "editorial": {
+        "summary": "Modern architecture, a working port and more space than Amsterdam, with a grittier, less touristy feel.",
+        "bestFor": "Practical city-dwellers who want Dutch infrastructure without Amsterdam's price premium."
+      }
+    },
+    {
+      "slug": "sofia",
+      "name": "Sofia",
+      "country": "Bulgaria",
+      "countryCode": "BG",
+      "region": "eastern",
+      "population": 1300000,
+      "size": "medium",
+      "lat": 42.6977,
+      "lng": 23.3219,
+      "currency": "BGN",
+      "climate": {
+        "monthly": [
+          {
+            "month": "Jan",
+            "high": 5.5,
+            "low": -2.7,
+            "rain": 69,
+            "sun": 196
+          },
+          {
+            "month": "Feb",
+            "high": 9.6,
+            "low": -1.2,
+            "rain": 29,
+            "sun": 222
+          },
+          {
+            "month": "Mar",
+            "high": 11.8,
+            "low": 0.8,
+            "rain": 56,
+            "sun": 263
+          },
+          {
+            "month": "Apr",
+            "high": 16.1,
+            "low": 4.5,
+            "rain": 66,
+            "sun": 299
+          },
+          {
+            "month": "May",
+            "high": 20.7,
+            "low": 9.7,
+            "rain": 76,
+            "sun": 341
+          },
+          {
+            "month": "Jun",
+            "high": 25.2,
+            "low": 14.5,
+            "rain": 76,
+            "sun": 396
+          },
+          {
+            "month": "Jul",
+            "high": 29,
+            "low": 16.7,
+            "rain": 30,
+            "sun": 436
+          },
+          {
+            "month": "Aug",
+            "high": 29.3,
+            "low": 16.8,
+            "rain": 39,
+            "sun": 387
+          },
+          {
+            "month": "Sep",
+            "high": 24.4,
+            "low": 12.6,
+            "rain": 34,
+            "sun": 324
+          },
+          {
+            "month": "Oct",
+            "high": 19.4,
+            "low": 7.8,
+            "rain": 50,
+            "sun": 280
+          },
+          {
+            "month": "Nov",
+            "high": 12,
+            "low": 3.2,
+            "rain": 66,
+            "sun": 195
+          },
+          {
+            "month": "Dec",
+            "high": 7.2,
+            "low": -0.3,
+            "rain": 69,
+            "sun": 178
+          }
+        ],
+        "summerHigh": 29.2,
+        "winterLow": -1.9,
+        "annualRain": 660,
+        "annualSunHours": 3517,
+        "tags": [
+          "cold",
+          "four-seasons"
+        ]
+      },
+      "cost": {
+        "rentOneBed": 600,
+        "livingSingle": 500,
+        "totalSingle": 1100,
+        "index": 17
+      },
+      "work": {
+        "avgNetSalary": 1100,
+        "salaryCoverage": 1,
+        "topSectors": [
+          "IT",
+          "Outsourcing",
+          "Finance"
+        ]
+      },
+      "metrics": {
+        "safety": 76,
+        "healthcare": 72,
+        "internet": 61,
+        "walkability": 82,
+        "environment": 72,
+        "happiness": 66,
+        "publicServices": 64,
+        "english": 68
+      },
+      "confidence": "medium",
+      "sources": [
+        {
+          "label": "Open-Meteo climate normals",
+          "url": "https://open-meteo.com/",
+          "asOf": "2024-12-31",
+          "note": "ERA5 reanalysis, monthly averages 2019–2024"
+        },
+        {
+          "label": "World Bank country indicators",
+          "url": "https://data.worldbank.org/",
+          "asOf": "2025",
+          "note": "Internet use, life expectancy, health spending, PM2.5, GDP PPP, unemployment"
+        },
+        {
+          "label": "CityMatcher cost model",
+          "url": "/methodology",
+          "asOf": "2025-06-30",
+          "note": "Curated rent, living-cost and salary estimates for a single person; modelled, medium confidence"
+        }
+      ],
+      "editorial": {
+        "summary": "A compact Balkan capital under a mountain, with very low costs, a strong outsourcing sector and fast-improving infrastructure.",
+        "bestFor": "IT and outsourcing professionals who want an EU base with a minimal monthly burn."
+      }
+    },
+    {
+      "slug": "stockholm",
+      "name": "Stockholm",
+      "country": "Sweden",
+      "countryCode": "SE",
+      "region": "northern",
+      "population": 980000,
+      "size": "medium",
+      "lat": 59.3293,
+      "lng": 18.0686,
+      "currency": "SEK",
+      "climate": {
+        "monthly": [
+          {
+            "month": "Jan",
+            "high": 1.5,
+            "low": -3.4,
+            "rain": 52,
+            "sun": 65
+          },
+          {
+            "month": "Feb",
+            "high": 2.7,
+            "low": -3.3,
+            "rain": 42,
+            "sun": 120
+          },
+          {
+            "month": "Mar",
+            "high": 5.8,
+            "low": -2.1,
+            "rain": 45,
+            "sun": 209
+          },
+          {
+            "month": "Apr",
+            "high": 9.7,
+            "low": 0,
+            "rain": 29,
+            "sun": 291
+          },
+          {
+            "month": "May",
+            "high": 15.5,
+            "low": 5,
+            "rain": 63,
+            "sun": 377
+          },
+          {
+            "month": "Jun",
+            "high": 22.1,
+            "low": 11.6,
+            "rain": 62,
+            "sun": 447
+          },
+          {
+            "month": "Jul",
+            "high": 21.7,
+            "low": 12.9,
+            "rain": 79,
+            "sun": 419
+          },
+          {
+            "month": "Aug",
+            "high": 21.4,
+            "low": 12.9,
+            "rain": 81,
+            "sun": 350
+          },
+          {
+            "month": "Sep",
+            "high": 16.7,
+            "low": 9.2,
+            "rain": 43,
+            "sun": 247
+          },
+          {
+            "month": "Oct",
+            "high": 10.9,
+            "low": 5.2,
+            "rain": 70,
+            "sun": 164
+          },
+          {
+            "month": "Nov",
+            "high": 5.6,
+            "low": 1.3,
+            "rain": 50,
+            "sun": 76
+          },
+          {
+            "month": "Dec",
+            "high": 1.8,
+            "low": -2.7,
+            "rain": 53,
+            "sun": 42
+          }
+        ],
+        "summerHigh": 21.5,
+        "winterLow": -3.3,
+        "annualRain": 669,
+        "annualSunHours": 2807,
+        "tags": [
+          "cold",
+          "four-seasons"
+        ]
+      },
+      "cost": {
+        "rentOneBed": 1600,
+        "livingSingle": 1100,
+        "totalSingle": 2700,
+        "index": 63
+      },
+      "work": {
+        "avgNetSalary": 3000,
+        "salaryCoverage": 1.11,
+        "topSectors": [
+          "Tech",
+          "Finance",
+          "Design"
+        ]
+      },
+      "metrics": {
+        "safety": 86,
+        "healthcare": 90,
+        "internet": 91,
+        "walkability": 90,
+        "environment": 86,
+        "happiness": 82,
+        "publicServices": 88,
+        "english": 88
+      },
+      "confidence": "medium",
+      "sources": [
+        {
+          "label": "Open-Meteo climate normals",
+          "url": "https://open-meteo.com/",
+          "asOf": "2024-12-31",
+          "note": "ERA5 reanalysis, monthly averages 2019–2024"
+        },
+        {
+          "label": "World Bank country indicators",
+          "url": "https://data.worldbank.org/",
+          "asOf": "2025",
+          "note": "Internet use, life expectancy, health spending, PM2.5, GDP PPP, unemployment"
+        },
+        {
+          "label": "CityMatcher cost model",
+          "url": "/methodology",
+          "asOf": "2025-06-30",
+          "note": "Curated rent, living-cost and salary estimates for a single person; modelled, medium confidence"
+        }
+      ],
+      "editorial": {
+        "summary": "Islands, clean water and a world-class tech scene, with long winters and a rental queue that can outlast your visa.",
+        "bestFor": "Tech workers who want Nordic quality of life and don't mind investing in warm clothing."
+      }
+    },
+    {
+      "slug": "tallinn",
+      "name": "Tallinn",
+      "country": "Estonia",
+      "countryCode": "EE",
+      "region": "eastern",
+      "population": 450000,
+      "size": "small",
+      "lat": 59.437,
+      "lng": 24.7536,
+      "currency": "EUR",
+      "climate": {
+        "monthly": [
+          {
+            "month": "Jan",
+            "high": -0.4,
+            "low": -4.8,
+            "rain": 66,
+            "sun": 45
+          },
+          {
+            "month": "Feb",
+            "high": 0.7,
+            "low": -3.8,
+            "rain": 55,
+            "sun": 93
+          },
+          {
+            "month": "Mar",
+            "high": 4,
+            "low": -2.4,
+            "rain": 42,
+            "sun": 206
+          },
+          {
+            "month": "Apr",
+            "high": 8.6,
+            "low": 0.6,
+            "rain": 38,
+            "sun": 310
+          },
+          {
+            "month": "May",
+            "high": 14.7,
+            "low": 5.5,
+            "rain": 59,
+            "sun": 396
+          },
+          {
+            "month": "Jun",
+            "high": 21.4,
+            "low": 12,
+            "rain": 57,
+            "sun": 448
+          },
+          {
+            "month": "Jul",
+            "high": 21.5,
+            "low": 13.8,
+            "rain": 97,
+            "sun": 424
+          },
+          {
+            "month": "Aug",
+            "high": 21,
+            "low": 13.5,
+            "rain": 95,
+            "sun": 352
+          },
+          {
+            "month": "Sep",
+            "high": 16.2,
+            "low": 9.7,
+            "rain": 63,
+            "sun": 261
+          },
+          {
+            "month": "Oct",
+            "high": 10.3,
+            "low": 5.6,
+            "rain": 81,
+            "sun": 161
+          },
+          {
+            "month": "Nov",
+            "high": 4.8,
+            "low": 1.2,
+            "rain": 73,
+            "sun": 68
+          },
+          {
+            "month": "Dec",
+            "high": 0.6,
+            "low": -3.4,
+            "rain": 62,
+            "sun": 33
+          }
+        ],
+        "summerHigh": 21.3,
+        "winterLow": -4.3,
+        "annualRain": 788,
+        "annualSunHours": 2797,
+        "tags": [
+          "cold",
+          "four-seasons"
+        ]
+      },
+      "cost": {
+        "rentOneBed": 800,
+        "livingSingle": 650,
+        "totalSingle": 1450,
+        "index": 27
+      },
+      "work": {
+        "avgNetSalary": 1700,
+        "salaryCoverage": 1.17,
+        "topSectors": [
+          "Tech",
+          "Finance",
+          "Logistics"
+        ]
+      },
+      "metrics": {
+        "safety": 84,
+        "healthcare": 82,
+        "internet": 83,
+        "walkability": 84,
+        "environment": 82,
+        "happiness": 74,
+        "publicServices": 76,
+        "english": 78
+      },
+      "confidence": "medium",
+      "sources": [
+        {
+          "label": "Open-Meteo climate normals",
+          "url": "https://open-meteo.com/",
+          "asOf": "2024-12-31",
+          "note": "ERA5 reanalysis, monthly averages 2019–2024"
+        },
+        {
+          "label": "World Bank country indicators",
+          "url": "https://data.worldbank.org/",
+          "asOf": "2025",
+          "note": "Internet use, life expectancy, health spending, PM2.5, GDP PPP, unemployment"
+        },
+        {
+          "label": "CityMatcher cost model",
+          "url": "/methodology",
+          "asOf": "2025-06-30",
+          "note": "Curated rent, living-cost and salary estimates for a single person; modelled, medium confidence"
+        }
+      ],
+      "editorial": {
+        "summary": "A digital-first Baltic capital with a medieval core, low costs and one of Europe's most founder-friendly startup cultures.",
+        "bestFor": "Founders and remote workers who want a compact, tech-savvy city at a low burn rate."
+      }
+    },
+    {
+      "slug": "thessaloniki",
+      "name": "Thessaloniki",
+      "country": "Greece",
+      "countryCode": "GR",
+      "region": "southern",
+      "population": 325000,
+      "size": "small",
+      "lat": 40.6401,
+      "lng": 22.9444,
+      "currency": "EUR",
+      "climate": {
+        "monthly": [
+          {
+            "month": "Jan",
+            "high": 9.9,
+            "low": 1.8,
+            "rain": 76,
+            "sun": 221
+          },
+          {
+            "month": "Feb",
+            "high": 12.8,
+            "low": 3.2,
+            "rain": 31,
+            "sun": 242
+          },
+          {
+            "month": "Mar",
+            "high": 14.6,
+            "low": 5.3,
+            "rain": 76,
+            "sun": 275
+          },
+          {
+            "month": "Apr",
+            "high": 18.4,
+            "low": 8.7,
+            "rain": 76,
+            "sun": 315
+          },
+          {
+            "month": "May",
+            "high": 23.4,
+            "low": 13.7,
+            "rain": 57,
+            "sun": 368
+          },
+          {
+            "month": "Jun",
+            "high": 29.3,
+            "low": 18.9,
+            "rain": 58,
+            "sun": 409
+          },
+          {
+            "month": "Jul",
+            "high": 32.3,
+            "low": 21.5,
+            "rain": 25,
+            "sun": 426
+          },
+          {
+            "month": "Aug",
+            "high": 31.9,
+            "low": 21.6,
+            "rain": 26,
+            "sun": 395
+          },
+          {
+            "month": "Sep",
+            "high": 26.8,
+            "low": 17.4,
+            "rain": 46,
+            "sun": 329
+          },
+          {
+            "month": "Oct",
+            "high": 21.9,
+            "low": 12.6,
+            "rain": 64,
+            "sun": 284
+          },
+          {
+            "month": "Nov",
+            "high": 16.5,
+            "low": 8.5,
+            "rain": 79,
+            "sun": 215
+          },
+          {
+            "month": "Dec",
+            "high": 12,
+            "low": 5,
+            "rain": 104,
+            "sun": 193
+          }
+        ],
+        "summerHigh": 32.1,
+        "winterLow": 2.5,
+        "annualRain": 718,
+        "annualSunHours": 3672,
+        "tags": [
+          "warm",
+          "four-seasons"
+        ]
+      },
+      "cost": {
+        "rentOneBed": 650,
+        "livingSingle": 600,
+        "totalSingle": 1250,
+        "index": 21
+      },
+      "work": {
+        "avgNetSalary": 900,
+        "salaryCoverage": 0.72,
+        "topSectors": [
+          "Tourism",
+          "Food",
+          "Logistics"
+        ]
+      },
+      "metrics": {
+        "safety": 74,
+        "healthcare": 76,
+        "internet": 69,
+        "walkability": 82,
+        "environment": 72,
+        "happiness": 68,
+        "publicServices": 64,
+        "english": 64
+      },
+      "confidence": "medium",
+      "sources": [
+        {
+          "label": "Open-Meteo climate normals",
+          "url": "https://open-meteo.com/",
+          "asOf": "2024-12-31",
+          "note": "ERA5 reanalysis, monthly averages 2019–2024"
+        },
+        {
+          "label": "World Bank country indicators",
+          "url": "https://data.worldbank.org/",
+          "asOf": "2025",
+          "note": "Internet use, life expectancy, health spending, PM2.5, GDP PPP, unemployment"
+        },
+        {
+          "label": "CityMatcher cost model",
+          "url": "/methodology",
+          "asOf": "2025-06-30",
+          "note": "Curated rent, living-cost and salary estimates for a single person; modelled, medium confidence"
+        }
+      ],
+      "editorial": {
+        "summary": "A seaside, student-heavy city with excellent food and very low costs, though local salaries are correspondingly modest.",
+        "bestFor": "Remote workers who want sea views, warm weather and a very low monthly burn."
+      }
+    },
+    {
+      "slug": "valencia",
+      "name": "Valencia",
+      "country": "Spain",
+      "countryCode": "ES",
+      "region": "western",
+      "population": 800000,
+      "size": "medium",
+      "lat": 39.4699,
+      "lng": -0.3763,
+      "currency": "EUR",
+      "climate": {
+        "monthly": [
+          {
+            "month": "Jan",
+            "high": 16.2,
+            "low": 6.6,
+            "rain": 36,
+            "sun": 253
+          },
+          {
+            "month": "Feb",
+            "high": 17.7,
+            "low": 7.7,
+            "rain": 12,
+            "sun": 253
+          },
+          {
+            "month": "Mar",
+            "high": 18.6,
+            "low": 9.5,
+            "rain": 81,
+            "sun": 278
+          },
+          {
+            "month": "Apr",
+            "high": 19.8,
+            "low": 10.9,
+            "rain": 54,
+            "sun": 298
+          },
+          {
+            "month": "May",
+            "high": 23.5,
+            "low": 14.5,
+            "rain": 37,
+            "sun": 383
+          },
+          {
+            "month": "Jun",
+            "high": 27.3,
+            "low": 18.6,
+            "rain": 18,
+            "sun": 387
+          },
+          {
+            "month": "Jul",
+            "high": 30.4,
+            "low": 21.9,
+            "rain": 17,
+            "sun": 413
+          },
+          {
+            "month": "Aug",
+            "high": 31,
+            "low": 22.4,
+            "rain": 17,
+            "sun": 382
+          },
+          {
+            "month": "Sep",
+            "high": 27.6,
+            "low": 19.3,
+            "rain": 89,
+            "sun": 312
+          },
+          {
+            "month": "Oct",
+            "high": 24.6,
+            "low": 15.7,
+            "rain": 61,
+            "sun": 278
+          },
+          {
+            "month": "Nov",
+            "high": 20.2,
+            "low": 11.9,
+            "rain": 76,
+            "sun": 240
+          },
+          {
+            "month": "Dec",
+            "high": 17.6,
+            "low": 8.8,
+            "rain": 28,
+            "sun": 233
+          }
+        ],
+        "summerHigh": 30.7,
+        "winterLow": 7.2,
+        "annualRain": 526,
+        "annualSunHours": 3710,
+        "tags": [
+          "warm"
+        ]
+      },
+      "cost": {
+        "rentOneBed": 1100,
+        "livingSingle": 800,
+        "totalSingle": 1900,
+        "index": 40
+      },
+      "work": {
+        "avgNetSalary": 1600,
+        "salaryCoverage": 0.84,
+        "topSectors": [
+          "Tech",
+          "Logistics",
+          "Tourism"
+        ]
+      },
+      "metrics": {
+        "safety": 80,
+        "healthcare": 84,
+        "internet": 91,
+        "walkability": 86,
+        "environment": 80,
+        "happiness": 80,
+        "publicServices": 76,
+        "english": 60
+      },
+      "confidence": "medium",
+      "sources": [
+        {
+          "label": "Open-Meteo climate normals",
+          "url": "https://open-meteo.com/",
+          "asOf": "2024-12-31",
+          "note": "ERA5 reanalysis, monthly averages 2019–2024"
+        },
+        {
+          "label": "World Bank country indicators",
+          "url": "https://data.worldbank.org/",
+          "asOf": "2025",
+          "note": "Internet use, life expectancy, health spending, PM2.5, GDP PPP, unemployment"
+        },
+        {
+          "label": "CityMatcher cost model",
+          "url": "/methodology",
+          "asOf": "2025-06-30",
+          "note": "Curated rent, living-cost and salary estimates for a single person; modelled, medium confidence"
+        }
+      ],
+      "editorial": {
+        "summary": "A sunlit, bike-friendly city with a lower price tag than Madrid or Barcelona and a genuinely local everyday rhythm.",
+        "bestFor": "Remote workers and young families looking for Mediterranean life without capital-city costs."
+      }
+    },
+    {
+      "slug": "vienna",
+      "name": "Vienna",
+      "country": "Austria",
+      "countryCode": "AT",
+      "region": "central",
+      "population": 1900000,
+      "size": "large",
+      "lat": 48.2082,
+      "lng": 16.3738,
+      "currency": "EUR",
+      "climate": {
+        "monthly": [
+          {
+            "month": "Jan",
+            "high": 4.6,
+            "low": -1.5,
+            "rain": 44,
+            "sun": 143
+          },
+          {
+            "month": "Feb",
+            "high": 9,
+            "low": 1.2,
+            "rain": 30,
+            "sun": 196
+          },
+          {
+            "month": "Mar",
+            "high": 11.9,
+            "low": 2.2,
+            "rain": 30,
+            "sun": 265
+          },
+          {
+            "month": "Apr",
+            "high": 15.4,
+            "low": 5.4,
+            "rain": 53,
+            "sun": 285
+          },
+          {
+            "month": "May",
+            "high": 19.1,
+            "low": 9.9,
+            "rain": 84,
+            "sun": 313
+          },
+          {
+            "month": "Jun",
+            "high": 25.6,
+            "low": 15.5,
+            "rain": 81,
+            "sun": 379
+          },
+          {
+            "month": "Jul",
+            "high": 27.6,
+            "low": 17.2,
+            "rain": 58,
+            "sun": 386
+          },
+          {
+            "month": "Aug",
+            "high": 26.9,
+            "low": 17.2,
+            "rain": 75,
+            "sun": 344
+          },
+          {
+            "month": "Sep",
+            "high": 21.8,
+            "low": 12.5,
+            "rain": 94,
+            "sun": 283
+          },
+          {
+            "month": "Oct",
+            "high": 16.4,
+            "low": 8.2,
+            "rain": 49,
+            "sun": 229
+          },
+          {
+            "month": "Nov",
+            "high": 9.3,
+            "low": 3,
+            "rain": 46,
+            "sun": 149
+          },
+          {
+            "month": "Dec",
+            "high": 5.4,
+            "low": 0,
+            "rain": 52,
+            "sun": 121
+          }
+        ],
+        "summerHigh": 27.3,
+        "winterLow": -0.2,
+        "annualRain": 696,
+        "annualSunHours": 3093,
+        "tags": [
+          "cold",
+          "four-seasons"
+        ]
+      },
+      "cost": {
+        "rentOneBed": 1400,
+        "livingSingle": 950,
+        "totalSingle": 2350,
+        "index": 53
+      },
+      "work": {
+        "avgNetSalary": 2500,
+        "salaryCoverage": 1.06,
+        "topSectors": [
+          "Public sector",
+          "Healthcare",
+          "Tourism"
+        ]
+      },
+      "metrics": {
+        "safety": 90,
+        "healthcare": 92,
+        "internet": 82,
+        "walkability": 90,
+        "environment": 86,
+        "happiness": 82,
+        "publicServices": 90,
+        "english": 72
+      },
+      "confidence": "medium",
+      "sources": [
+        {
+          "label": "Open-Meteo climate normals",
+          "url": "https://open-meteo.com/",
+          "asOf": "2024-12-31",
+          "note": "ERA5 reanalysis, monthly averages 2019–2024"
+        },
+        {
+          "label": "World Bank country indicators",
+          "url": "https://data.worldbank.org/",
+          "asOf": "2025",
+          "note": "Internet use, life expectancy, health spending, PM2.5, GDP PPP, unemployment"
+        },
+        {
+          "label": "CityMatcher cost model",
+          "url": "/methodology",
+          "asOf": "2025-06-30",
+          "note": "Curated rent, living-cost and salary estimates for a single person; modelled, medium confidence"
+        }
+      ],
+      "editorial": {
+        "summary": "Consistently ranked among the world's most liveable cities, with exceptional public services and a calm, ordered rhythm.",
+        "bestFor": "People optimizing for safety, healthcare and public transport, and happy with a quieter pace."
+      }
+    },
+    {
+      "slug": "vilnius",
+      "name": "Vilnius",
+      "country": "Lithuania",
+      "countryCode": "LT",
+      "region": "eastern",
+      "population": 590000,
+      "size": "medium",
+      "lat": 54.6872,
+      "lng": 25.2797,
+      "currency": "EUR",
+      "climate": {
+        "monthly": [
+          {
+            "month": "Jan",
+            "high": -0.3,
+            "low": -4.8,
+            "rain": 73,
+            "sun": 61
+          },
+          {
+            "month": "Feb",
+            "high": 2,
+            "low": -3.5,
+            "rain": 50,
+            "sun": 114
+          },
+          {
+            "month": "Mar",
+            "high": 6.5,
+            "low": -1.6,
+            "rain": 35,
+            "sun": 225
+          },
+          {
+            "month": "Apr",
+            "high": 11.7,
+            "low": 2.2,
+            "rain": 49,
+            "sun": 267
+          },
+          {
+            "month": "May",
+            "high": 17,
+            "low": 6.8,
+            "rain": 77,
+            "sun": 342
+          },
+          {
+            "month": "Jun",
+            "high": 23.5,
+            "low": 13.2,
+            "rain": 79,
+            "sun": 398
+          },
+          {
+            "month": "Jul",
+            "high": 23.1,
+            "low": 14,
+            "rain": 97,
+            "sun": 382
+          },
+          {
+            "month": "Aug",
+            "high": 23.4,
+            "low": 13.9,
+            "rain": 89,
+            "sun": 346
+          },
+          {
+            "month": "Sep",
+            "high": 18.2,
+            "low": 9.6,
+            "rain": 47,
+            "sun": 269
+          },
+          {
+            "month": "Oct",
+            "high": 11.9,
+            "low": 5.8,
+            "rain": 63,
+            "sun": 162
+          },
+          {
+            "month": "Nov",
+            "high": 5.2,
+            "low": 1.3,
+            "rain": 57,
+            "sun": 61
+          },
+          {
+            "month": "Dec",
+            "high": 0.9,
+            "low": -2.6,
+            "rain": 55,
+            "sun": 43
+          }
+        ],
+        "summerHigh": 23.3,
+        "winterLow": -4.1,
+        "annualRain": 771,
+        "annualSunHours": 2670,
+        "tags": [
+          "cold",
+          "four-seasons"
+        ]
+      },
+      "cost": {
+        "rentOneBed": 750,
+        "livingSingle": 600,
+        "totalSingle": 1350,
+        "index": 24
+      },
+      "work": {
+        "avgNetSalary": 1500,
+        "salaryCoverage": 1.11,
+        "topSectors": [
+          "Fintech",
+          "Tech",
+          "Shared services"
+        ]
+      },
+      "metrics": {
+        "safety": 82,
+        "healthcare": 80,
+        "internet": 76,
+        "walkability": 82,
+        "environment": 82,
+        "happiness": 72,
+        "publicServices": 74,
+        "english": 74
+      },
+      "confidence": "medium",
+      "sources": [
+        {
+          "label": "Open-Meteo climate normals",
+          "url": "https://open-meteo.com/",
+          "asOf": "2024-12-31",
+          "note": "ERA5 reanalysis, monthly averages 2019–2024"
+        },
+        {
+          "label": "World Bank country indicators",
+          "url": "https://data.worldbank.org/",
+          "asOf": "2025",
+          "note": "Internet use, life expectancy, health spending, PM2.5, GDP PPP, unemployment"
+        },
+        {
+          "label": "CityMatcher cost model",
+          "url": "/methodology",
+          "asOf": "2025-06-30",
+          "note": "Curated rent, living-cost and salary estimates for a single person; modelled, medium confidence"
+        }
+      ],
+      "editorial": {
+        "summary": "A green, baroque old town with a fintech boom and low costs, increasingly popular with international tech teams.",
+        "bestFor": "Fintech and tech workers who want a safe, affordable EU capital with a growing international scene."
+      }
+    },
+    {
+      "slug": "warsaw",
+      "name": "Warsaw",
+      "country": "Poland",
+      "countryCode": "PL",
+      "region": "central",
+      "population": 1860000,
+      "size": "large",
+      "lat": 52.2297,
+      "lng": 21.0122,
+      "currency": "PLN",
+      "climate": {
+        "monthly": [
+          {
+            "month": "Jan",
+            "high": 2.6,
+            "low": -2,
+            "rain": 57,
+            "sun": 81
+          },
+          {
+            "month": "Feb",
+            "high": 5.6,
+            "low": -0.9,
+            "rain": 56,
+            "sun": 128
+          },
+          {
+            "month": "Mar",
+            "high": 9.1,
+            "low": 0.3,
+            "rain": 34,
+            "sun": 231
+          },
+          {
+            "month": "Apr",
+            "high": 13.6,
+            "low": 3.8,
+            "rain": 48,
+            "sun": 279
+          },
+          {
+            "month": "May",
+            "high": 18.7,
+            "low": 8.4,
+            "rain": 76,
+            "sun": 340
+          },
+          {
+            "month": "Jun",
+            "high": 24.9,
+            "low": 14.4,
+            "rain": 69,
+            "sun": 382
+          },
+          {
+            "month": "Jul",
+            "high": 25.3,
+            "low": 15.4,
+            "rain": 69,
+            "sun": 372
+          },
+          {
+            "month": "Aug",
+            "high": 25.3,
+            "low": 15.5,
+            "rain": 95,
+            "sun": 329
+          },
+          {
+            "month": "Sep",
+            "high": 20.4,
+            "low": 11,
+            "rain": 55,
+            "sun": 272
+          },
+          {
+            "month": "Oct",
+            "high": 14.7,
+            "low": 7.1,
+            "rain": 51,
+            "sun": 194
+          },
+          {
+            "month": "Nov",
+            "high": 7.5,
+            "low": 2.5,
+            "rain": 37,
+            "sun": 104
+          },
+          {
+            "month": "Dec",
+            "high": 3.5,
+            "low": -0.7,
+            "rain": 49,
+            "sun": 70
+          }
+        ],
+        "summerHigh": 25.3,
+        "winterLow": -1.4,
+        "annualRain": 696,
+        "annualSunHours": 2782,
+        "tags": [
+          "cold",
+          "four-seasons"
+        ]
+      },
+      "cost": {
+        "rentOneBed": 1000,
+        "livingSingle": 750,
+        "totalSingle": 1750,
+        "index": 36
+      },
+      "work": {
+        "avgNetSalary": 1600,
+        "salaryCoverage": 0.91,
+        "topSectors": [
+          "Finance",
+          "Tech",
+          "Shared services"
+        ]
+      },
+      "metrics": {
+        "safety": 80,
+        "healthcare": 80,
+        "internet": 75,
+        "walkability": 84,
+        "environment": 74,
+        "happiness": 72,
+        "publicServices": 74,
+        "english": 72
+      },
+      "confidence": "medium",
+      "sources": [
+        {
+          "label": "Open-Meteo climate normals",
+          "url": "https://open-meteo.com/",
+          "asOf": "2024-12-31",
+          "note": "ERA5 reanalysis, monthly averages 2019–2024"
+        },
+        {
+          "label": "World Bank country indicators",
+          "url": "https://data.worldbank.org/",
+          "asOf": "2025",
+          "note": "Internet use, life expectancy, health spending, PM2.5, GDP PPP, unemployment"
+        },
+        {
+          "label": "CityMatcher cost model",
+          "url": "/methodology",
+          "asOf": "2025-06-30",
+          "note": "Curated rent, living-cost and salary estimates for a single person; modelled, medium confidence"
+        }
+      ],
+      "editorial": {
+        "summary": "A fast-modernizing capital with a strong business-services sector, good transit and a cost base well below the EU average.",
+        "bestFor": "Professionals building a career in finance or tech while keeping housing costs low."
+      }
+    },
+    {
+      "slug": "zagreb",
+      "name": "Zagreb",
+      "country": "Croatia",
+      "countryCode": "HR",
+      "region": "eastern",
+      "population": 770000,
+      "size": "medium",
+      "lat": 45.815,
+      "lng": 15.9819,
+      "currency": "EUR",
+      "climate": {
+        "monthly": [
+          {
+            "month": "Jan",
+            "high": 5.8,
+            "low": -1.8,
+            "rain": 64,
+            "sun": 167
+          },
+          {
+            "month": "Feb",
+            "high": 10.5,
+            "low": 0.5,
+            "rain": 37,
+            "sun": 215
+          },
+          {
+            "month": "Mar",
+            "high": 13,
+            "low": 2,
+            "rain": 52,
+            "sun": 278
+          },
+          {
+            "month": "Apr",
+            "high": 16.2,
+            "low": 5.4,
+            "rain": 70,
+            "sun": 292
+          },
+          {
+            "month": "May",
+            "high": 20,
+            "low": 10.4,
+            "rain": 118,
+            "sun": 304
+          },
+          {
+            "month": "Jun",
+            "high": 26.4,
+            "low": 15.9,
+            "rain": 79,
+            "sun": 375
+          },
+          {
+            "month": "Jul",
+            "high": 28.3,
+            "low": 17.7,
+            "rain": 90,
+            "sun": 394
+          },
+          {
+            "month": "Aug",
+            "high": 27.6,
+            "low": 17.6,
+            "rain": 88,
+            "sun": 366
+          },
+          {
+            "month": "Sep",
+            "high": 22.7,
+            "low": 12.9,
+            "rain": 94,
+            "sun": 293
+          },
+          {
+            "month": "Oct",
+            "high": 17.6,
+            "low": 8.8,
+            "rain": 82,
+            "sun": 242
+          },
+          {
+            "month": "Nov",
+            "high": 10.1,
+            "low": 3.6,
+            "rain": 88,
+            "sun": 147
+          },
+          {
+            "month": "Dec",
+            "high": 6.6,
+            "low": 0.4,
+            "rain": 81,
+            "sun": 142
+          }
+        ],
+        "summerHigh": 28,
+        "winterLow": -0.6,
+        "annualRain": 943,
+        "annualSunHours": 3215,
+        "tags": [
+          "cold",
+          "four-seasons"
+        ]
+      },
+      "cost": {
+        "rentOneBed": 700,
+        "livingSingle": 600,
+        "totalSingle": 1300,
+        "index": 23
+      },
+      "work": {
+        "avgNetSalary": 1200,
+        "salaryCoverage": 0.92,
+        "topSectors": [
+          "Tourism",
+          "Tech",
+          "Public sector"
+        ]
+      },
+      "metrics": {
+        "safety": 84,
+        "healthcare": 78,
+        "internet": 64,
+        "walkability": 86,
+        "environment": 78,
+        "happiness": 72,
+        "publicServices": 72,
+        "english": 70
+      },
+      "confidence": "medium",
+      "sources": [
+        {
+          "label": "Open-Meteo climate normals",
+          "url": "https://open-meteo.com/",
+          "asOf": "2024-12-31",
+          "note": "ERA5 reanalysis, monthly averages 2019–2024"
+        },
+        {
+          "label": "World Bank country indicators",
+          "url": "https://data.worldbank.org/",
+          "asOf": "2025",
+          "note": "Internet use, life expectancy, health spending, PM2.5, GDP PPP, unemployment"
+        },
+        {
+          "label": "CityMatcher cost model",
+          "url": "/methodology",
+          "asOf": "2025-06-30",
+          "note": "Curated rent, living-cost and salary estimates for a single person; modelled, medium confidence"
+        }
+      ],
+      "editorial": {
+        "summary": "A café culture capital with a compact centre, low costs and a growing tech scene, away from the coast's seasonal crowds.",
+        "bestFor": "Remote workers who want Central European city life at Adriatic-adjacent prices."
+      }
+    },
+    {
+      "slug": "zurich",
+      "name": "Zurich",
+      "country": "Switzerland",
+      "countryCode": "CH",
+      "region": "central",
+      "population": 430000,
+      "size": "small",
+      "lat": 47.3769,
+      "lng": 8.5417,
+      "currency": "CHF",
+      "climate": {
+        "monthly": [
+          {
+            "month": "Jan",
+            "high": 4.4,
+            "low": -1.7,
+            "rain": 85,
+            "sun": 150
+          },
+          {
+            "month": "Feb",
+            "high": 8.8,
+            "low": -0.1,
+            "rain": 68,
+            "sun": 189
+          },
+          {
+            "month": "Mar",
+            "high": 11.1,
+            "low": 1.1,
+            "rain": 76,
+            "sun": 252
+          },
+          {
+            "month": "Apr",
+            "high": 14.3,
+            "low": 3.7,
+            "rain": 93,
+            "sun": 278
+          },
+          {
+            "month": "May",
+            "high": 17.6,
+            "low": 8.1,
+            "rain": 142,
+            "sun": 302
+          },
+          {
+            "month": "Jun",
+            "high": 23.6,
+            "low": 13.4,
+            "rain": 128,
+            "sun": 349
+          },
+          {
+            "month": "Jul",
+            "high": 24.9,
+            "low": 15.2,
+            "rain": 146,
+            "sun": 372
+          },
+          {
+            "month": "Aug",
+            "high": 24.5,
+            "low": 15.2,
+            "rain": 125,
+            "sun": 325
+          },
+          {
+            "month": "Sep",
+            "high": 20.3,
+            "low": 11.5,
+            "rain": 96,
+            "sun": 277
+          },
+          {
+            "month": "Oct",
+            "high": 15.8,
+            "low": 7.8,
+            "rain": 108,
+            "sun": 214
+          },
+          {
+            "month": "Nov",
+            "high": 8.6,
+            "low": 2.6,
+            "rain": 106,
+            "sun": 150
+          },
+          {
+            "month": "Dec",
+            "high": 5.2,
+            "low": -0.4,
+            "rain": 119,
+            "sun": 121
+          }
+        ],
+        "summerHigh": 24.7,
+        "winterLow": -0.9,
+        "annualRain": 1292,
+        "annualSunHours": 2979,
+        "tags": [
+          "cold",
+          "four-seasons"
+        ]
+      },
+      "cost": {
+        "rentOneBed": 2600,
+        "livingSingle": 1500,
+        "totalSingle": 4100,
+        "index": 100
+      },
+      "work": {
+        "avgNetSalary": 5500,
+        "salaryCoverage": 1.34,
+        "topSectors": [
+          "Finance",
+          "Insurance",
+          "Tech"
+        ]
+      },
+      "metrics": {
+        "safety": 94,
+        "healthcare": 94,
+        "internet": 94,
+        "walkability": 90,
+        "environment": 92,
+        "happiness": 86,
+        "publicServices": 92,
+        "english": 80
+      },
+      "confidence": "medium",
+      "sources": [
+        {
+          "label": "Open-Meteo climate normals",
+          "url": "https://open-meteo.com/",
+          "asOf": "2024-12-31",
+          "note": "ERA5 reanalysis, monthly averages 2019–2024"
+        },
+        {
+          "label": "World Bank country indicators",
+          "url": "https://data.worldbank.org/",
+          "asOf": "2025",
+          "note": "Internet use, life expectancy, health spending, PM2.5, GDP PPP, unemployment"
+        },
+        {
+          "label": "CityMatcher cost model",
+          "url": "/methodology",
+          "asOf": "2025-06-30",
+          "note": "Curated rent, living-cost and salary estimates for a single person; modelled, medium confidence"
+        }
+      ],
+      "editorial": {
+        "summary": "A lake-side banking capital with exceptional services, cleanliness and salaries to match its world-leading prices.",
+        "bestFor": "Finance and insurance professionals who want maximum safety and public-service quality."
+      }
+    }
+  ],
+  "countries": [
+    {
+      "code": "PT",
+      "name": "Portugal",
+      "internetUsers": 88.48704454,
+      "lifeExpectancy": 82.3829268292683,
+      "healthSpendPc": 2971.03930664,
+      "pm25": 8.76550462748695,
+      "gdpPpp": 53145.7317498942,
+      "unemployment": 6.164,
+      "asOf": "2025"
+    },
+    {
+      "code": "ES",
+      "name": "Spain",
+      "internetUsers": 95.7574516,
+      "lifeExpectancy": 83.8878048780488,
+      "healthSpendPc": 3106.62011719,
+      "pm25": 10.0808338779581,
+      "gdpPpp": 59867.6944716701,
+      "unemployment": 10.376,
+      "asOf": "2025"
+    },
+    {
+      "code": "FR",
+      "name": "France",
+      "internetUsers": 88.65381638,
+      "lifeExpectancy": 82.9804878048781,
+      "healthSpendPc": 5327.43359375,
+      "pm25": 8.22738625697416,
+      "gdpPpp": 63975.353585864,
+      "unemployment": 7.542,
+      "asOf": "2025"
+    },
+    {
+      "code": "DE",
+      "name": "Germany",
+      "internetUsers": 93.49999579,
+      "lifeExpectancy": 80.7926829268293,
+      "healthSpendPc": 6849.26367188,
+      "pm25": 8.81223056430691,
+      "gdpPpp": 75406.6888111618,
+      "unemployment": 3.711,
+      "asOf": "2025"
+    },
+    {
+      "code": "NL",
+      "name": "Netherlands",
+      "internetUsers": 97.00679779,
+      "lifeExpectancy": 81.9658536585366,
+      "healthSpendPc": 6845.14208984,
+      "pm25": 8.58757364083248,
+      "gdpPpp": 87320.1477254029,
+      "unemployment": 3.874,
+      "asOf": "2025"
+    },
+    {
+      "code": "BE",
+      "name": "Belgium",
+      "internetUsers": 95.77579144,
+      "lifeExpectancy": 82.3,
+      "healthSpendPc": 5931.01464844,
+      "pm25": 8.44918716609445,
+      "gdpPpp": 74675.607672673,
+      "unemployment": 5.906,
+      "asOf": "2025"
+    },
+    {
+      "code": "AT",
+      "name": "Austria",
+      "internetUsers": 91.92573373,
+      "lifeExpectancy": 81.9951219512195,
+      "healthSpendPc": 6739.30908203,
+      "pm25": 10.0337620235066,
+      "gdpPpp": 76777.5421537618,
+      "unemployment": 5.582,
+      "asOf": "2025"
+    },
+    {
+      "code": "CZ",
+      "name": "Czechia",
+      "internetUsers": 87.68776014,
+      "lifeExpectancy": 79.9780487804878,
+      "healthSpendPc": 2692.76416016,
+      "pm25": 12.7487592084261,
+      "gdpPpp": 60487.2877495391,
+      "unemployment": 2.825,
+      "asOf": "2025"
+    },
+    {
+      "code": "HU",
+      "name": "Hungary",
+      "internetUsers": 93.77898628,
+      "lifeExpectancy": 76.7243902439025,
+      "healthSpendPc": 1419.87475586,
+      "pm25": 13.7155825810085,
+      "gdpPpp": 49837.6008411067,
+      "unemployment": 4.521,
+      "asOf": "2025"
+    },
+    {
+      "code": "PL",
+      "name": "Poland",
+      "internetUsers": 88.58496367,
+      "lifeExpectancy": 78.409756097561,
+      "healthSpendPc": 2014.12780762,
+      "pm25": 16.522574789688,
+      "gdpPpp": 54262.4040405236,
+      "unemployment": 2.976,
+      "asOf": "2025"
+    },
+    {
+      "code": "IT",
+      "name": "Italy",
+      "internetUsers": 89.2207202,
+      "lifeExpectancy": 83.9512195121951,
+      "healthSpendPc": 3397.68798828,
+      "pm25": 14.291805636343,
+      "gdpPpp": 62802.5108384276,
+      "unemployment": 6.391,
+      "asOf": "2025"
+    },
+    {
+      "code": "GR",
+      "name": "Greece",
+      "internetUsers": 86.26968886,
+      "lifeExpectancy": 81.8390243902439,
+      "healthSpendPc": 1962.59594727,
+      "pm25": 14.118664022908,
+      "gdpPpp": 45263.6498511586,
+      "unemployment": 8.54,
+      "asOf": "2025"
+    },
+    {
+      "code": "IE",
+      "name": "Ireland",
+      "internetUsers": 97.18769836,
+      "lifeExpectancy": 83.009756097561,
+      "healthSpendPc": 7394.85009766,
+      "pm25": 7.51222073505132,
+      "gdpPpp": 155089.413131749,
+      "unemployment": 4.632,
+      "asOf": "2025"
+    },
+    {
+      "code": "GB",
+      "name": "United Kingdom",
+      "internetUsers": 95.4720993,
+      "lifeExpectancy": 81.3868536585366,
+      "healthSpendPc": 5860.23925781,
+      "pm25": 9.46282991802458,
+      "gdpPpp": 64606.4955066338,
+      "unemployment": 4.746,
+      "asOf": "2025"
+    },
+    {
+      "code": "DK",
+      "name": "Denmark",
+      "internetUsers": 99.76915157,
+      "lifeExpectancy": 82.2536585365854,
+      "healthSpendPc": 6745.06152344,
+      "pm25": 7.50264703002735,
+      "gdpPpp": 83218.071525634,
+      "unemployment": 5.529,
+      "asOf": "2025"
+    },
+    {
+      "code": "SE",
+      "name": "Sweden",
+      "internetUsers": 95.76629783,
+      "lifeExpectancy": 84.0634146341463,
+      "healthSpendPc": 6484.76464844,
+      "pm25": 5.25938129137927,
+      "gdpPpp": 72528.8892631159,
+      "unemployment": 8.694,
+      "asOf": "2025"
+    },
+    {
+      "code": "NO",
+      "name": "Norway",
+      "internetUsers": 99,
+      "lifeExpectancy": 83.1609756097561,
+      "healthSpendPc": 8296.35546875,
+      "pm25": 5.52141079375347,
+      "gdpPpp": 104043.666429243,
+      "unemployment": 4.637,
+      "asOf": "2025"
+    },
+    {
+      "code": "FI",
+      "name": "Finland",
+      "internetUsers": 93.72405196,
+      "lifeExpectancy": 82.3365853658537,
+      "healthSpendPc": 5515.40478516,
+      "pm25": 4.56663882609005,
+      "gdpPpp": 65884.4876972259,
+      "unemployment": 9.461,
+      "asOf": "2025"
+    },
+    {
+      "code": "EE",
+      "name": "Estonia",
+      "internetUsers": 92.23796204,
+      "lifeExpectancy": 79.2951219512195,
+      "healthSpendPc": 2437.83764648,
+      "pm25": 5.91844561892566,
+      "gdpPpp": 52105.5093433416,
+      "unemployment": 8.313,
+      "asOf": "2025"
+    },
+    {
+      "code": "LV",
+      "name": "Latvia",
+      "internetUsers": 92.70757011,
+      "lifeExpectancy": 76.4292682926829,
+      "healthSpendPc": 1645.4152832,
+      "pm25": 13.0121664059875,
+      "gdpPpp": 46136.689377286,
+      "unemployment": 6.568,
+      "asOf": "2025"
+    },
+    {
+      "code": "LT",
+      "name": "Lithuania",
+      "internetUsers": 89.16116293,
+      "lifeExpectancy": 77.1951219512195,
+      "healthSpendPc": 2232.47631836,
+      "pm25": 10.7455249948656,
+      "gdpPpp": 56837.8067003598,
+      "unemployment": 6.731,
+      "asOf": "2025"
+    },
+    {
+      "code": "CH",
+      "name": "Switzerland",
+      "internetUsers": 97.32103855,
+      "lifeExpectancy": 84.4073170731707,
+      "healthSpendPc": 11783.66992188,
+      "pm25": 8.32022270668715,
+      "gdpPpp": 102513.347221899,
+      "unemployment": 4.873,
+      "asOf": "2025"
+    },
+    {
+      "code": "SI",
+      "name": "Slovenia",
+      "internetUsers": 90.76355487,
+      "lifeExpectancy": 82.2853658536585,
+      "healthSpendPc": 3370.53076172,
+      "pm25": 12.5550625384956,
+      "gdpPpp": 59244.7106359661,
+      "unemployment": 3.175,
+      "asOf": "2025"
+    },
+    {
+      "code": "HR",
+      "name": "Croatia",
+      "internetUsers": 83.63240029,
+      "lifeExpectancy": 78.9292682926829,
+      "healthSpendPc": 1548.33959961,
+      "pm25": 15.7786705432032,
+      "gdpPpp": 50946.1671131832,
+      "unemployment": 5.002,
+      "asOf": "2025"
+    },
+    {
+      "code": "RS",
+      "name": "Serbia",
+      "internetUsers": 87.69071294,
+      "lifeExpectancy": 75.9682926829268,
+      "healthSpendPc": 983.69372559,
+      "pm25": 19.3375514552379,
+      "gdpPpp": 33909.7605745332,
+      "unemployment": 7.123,
+      "asOf": "2025"
+    },
+    {
+      "code": "RO",
+      "name": "Romania",
+      "internetUsers": 91.29048551,
+      "lifeExpectancy": 76.4585365853659,
+      "healthSpendPc": 1050.99755859,
+      "pm25": 16.007729806639,
+      "gdpPpp": 50895.081617639,
+      "unemployment": 5.992,
+      "asOf": "2025"
+    },
+    {
+      "code": "BG",
+      "name": "Bulgaria",
+      "internetUsers": 82.438955,
+      "lifeExpectancy": 75.7609756097561,
+      "healthSpendPc": 1257.87597656,
+      "pm25": 19.6823426211069,
+      "gdpPpp": 44451.1001576913,
+      "unemployment": 3.536,
+      "asOf": "2025"
+    }
+  ]
+}
