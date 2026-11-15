@@ -1,9 +1,10 @@
 # pnpm 11 settings.
 #
-# Next/Tailwind build tooling needs esbuild's postinstall binary. pnpm 10+
-# blocks lifecycle scripts unless they are explicitly approved.
-onlyBuiltDependencies:
-  - esbuild
+# Next/Tailwind build tooling needs esbuild's postinstall binary. pnpm 11
+# requires build scripts to be explicitly allowed; `onlyBuiltDependencies`
+# was removed in v11 in favour of `allowBuilds`.
+allowBuilds:
+  esbuild: true
 
 # eslint-config-next -> @typescript-eslint/typescript-estree pins minimatch ^10.2.2,
 # which is inside a moderate dev-only denial-of-service advisory. 11.0.8 is the
