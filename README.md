@@ -9,6 +9,8 @@ with sourced data, an explicit trade-off and a realistic monthly budget.
 The ranking is deterministic and versioned. AI is an optional interface layer for parsing
 natural language; it never invents a city score. The app is fully usable without any API key.
 
+**Live:** <https://city-matcher-sigma.vercel.app> · **Source:** <https://github.com/Joel-Revuelta/CityMatcher>
+
 ## What is in v1
 
 - 42 European cities across 27 countries.
