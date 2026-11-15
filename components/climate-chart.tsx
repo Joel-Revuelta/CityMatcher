@@ -1,8 +1,8 @@
 import type { CityClimate } from "@/lib/types";
 
 const WIDTH = 760;
-const HEIGHT = 250;
-const PAD = { top: 18, right: 12, bottom: 34, left: 12 };
+const HEIGHT = 240;
+const PAD = { top: 18, right: 12, bottom: 32, left: 32 };
 
 export function ClimateChart({ climate }: { climate: CityClimate }) {
   const { monthly } = climate;
@@ -26,7 +26,7 @@ export function ClimateChart({ climate }: { climate: CityClimate }) {
   const lowPath = monthly
     .map((month, index) => `${index === 0 ? "M" : "L"} ${x(index).toFixed(1)} ${y(month.low).toFixed(1)}`)
     .join(" ");
-  const areaPath = `${highPath} ${monthly
+  const bandPath = `${highPath} ${monthly
     .slice()
     .reverse()
     .map((month, reverseIndex) => {
@@ -37,25 +37,25 @@ export function ClimateChart({ climate }: { climate: CityClimate }) {
 
   return (
     <div className="w-full">
-      <div className="flex flex-wrap items-end justify-between gap-3">
+      <div className="flex flex-wrap items-center justify-between gap-3">
         <div className="flex flex-wrap gap-4 text-xs text-muted-foreground">
           <span className="inline-flex items-center gap-1.5">
-            <span className="h-2 w-2 rounded-full bg-[var(--accent)]" />
+            <span className="h-0.5 w-4 bg-primary" />
             Average high
           </span>
           <span className="inline-flex items-center gap-1.5">
-            <span className="h-2 w-2 rounded-full bg-[var(--primary)]" />
+            <span className="h-0.5 w-4 border-t border-dashed border-muted-foreground" />
             Average low
           </span>
           <span className="inline-flex items-center gap-1.5">
-            <span className="h-2 w-2 rounded-sm bg-[var(--primary)]/25" />
+            <span className="h-2 w-1 bg-border" />
             Rain
           </span>
         </div>
-        <p className="text-xs text-muted-foreground">
-          {Math.round(climate.annualSunHours).toLocaleString("en-IE")} sun hours ·{" "}
-          {Math.round(climate.annualRain).toLocaleString("en-IE")} mm rain / year
-        </p>
+        <div className="flex gap-4 font-mono text-xs text-muted-foreground">
+          <span>{Math.round(climate.annualSunHours).toLocaleString("en-IE")} sun hours</span>
+          <span>{Math.round(climate.annualRain).toLocaleString("en-IE")} mm rain</span>
+        </div>
       </div>
 
       <svg
@@ -64,13 +64,6 @@ export function ClimateChart({ climate }: { climate: CityClimate }) {
         role="img"
         aria-label={`Monthly climate: summer highs around ${climate.summerHigh} degrees, winter lows around ${climate.winterLow} degrees`}
       >
-        <defs>
-          <linearGradient id="climate-area" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stopColor="var(--accent)" stopOpacity="0.22" />
-            <stop offset="100%" stopColor="var(--primary)" stopOpacity="0.06" />
-          </linearGradient>
-        </defs>
-
         {[0, 0.25, 0.5, 0.75, 1].map((ratio) => {
           const lineY = PAD.top + innerHeight * ratio;
           const value = Math.round(max - range * ratio);
@@ -83,13 +76,15 @@ export function ClimateChart({ climate }: { climate: CityClimate }) {
                 y2={lineY}
                 stroke="var(--border)"
                 strokeWidth="1"
-                strokeDasharray={ratio === 1 ? "0" : "3 5"}
+                strokeDasharray={ratio === 1 ? "0" : "2 4"}
               />
               <text
-                x={PAD.left}
-                y={lineY - 4}
+                x={PAD.left - 8}
+                y={lineY + 3}
+                textAnchor="end"
                 fill="var(--muted-foreground)"
                 fontSize="9"
+                fontFamily="var(--font-plex-mono)"
               >
                 {value}°
               </text>
@@ -98,49 +93,49 @@ export function ClimateChart({ climate }: { climate: CityClimate }) {
         })}
 
         {monthly.map((month, index) => {
-          const barHeight = (month.rain / maxRain) * 22;
+          const barHeight = (month.rain / maxRain) * 18;
           return (
             <rect
               key={`rain-${month.month}`}
-              x={x(index) - 9}
+              x={x(index) - 10}
               y={HEIGHT - PAD.bottom - barHeight}
-              width="18"
+              width="20"
               height={barHeight}
-              rx="3"
-              fill="var(--primary)"
-              opacity="0.16"
+              fill="var(--border)"
             />
           );
         })}
 
-        <path d={areaPath} fill="url(#climate-area)" />
+        <path d={bandPath} fill="var(--muted)" opacity="0.45" />
         <path
           d={highPath}
           fill="none"
-          stroke="var(--accent)"
-          strokeWidth="2.4"
+          stroke="var(--primary)"
+          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          className="animate-line-draw"
         />
         <path
           d={lowPath}
           fill="none"
-          stroke="var(--primary)"
-          strokeWidth="2.4"
+          stroke="var(--muted-foreground)"
+          strokeWidth="1.5"
+          strokeDasharray="4 3"
           strokeLinecap="round"
           strokeLinejoin="round"
         />
 
         {monthly.map((month, index) => (
           <g key={month.month}>
-            <circle cx={x(index)} cy={y(month.high)} r="3" fill="var(--accent)" />
-            <circle cx={x(index)} cy={y(month.low)} r="3" fill="var(--primary)" />
+            <circle cx={x(index)} cy={y(month.high)} r="2.5" fill="var(--primary)" />
             <text
               x={x(index)}
               y={HEIGHT - 12}
               textAnchor="middle"
               fill="var(--muted-foreground)"
-              fontSize="10"
+              fontSize="9.5"
+              fontFamily="var(--font-plex-mono)"
             >
               {month.month}
             </text>

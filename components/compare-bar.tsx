@@ -15,21 +15,22 @@ export function CompareBar() {
   }
 
   return (
-    <div className="pointer-events-none fixed inset-x-0 bottom-4 z-50 flex justify-center px-4">
-      <div className="pointer-events-auto flex w-full max-w-xl items-center justify-between gap-3 rounded-full border border-border bg-card/95 py-2 pl-4 pr-2 shadow-2xl backdrop-blur">
+    <div className="pointer-events-none fixed inset-x-0 bottom-0 z-50 flex justify-center px-4 pb-4">
+      <div className="pointer-events-auto flex w-full max-w-2xl items-center justify-between gap-3 border border-border bg-background p-2 pl-4">
         <div className="flex min-w-0 items-center gap-2">
-          <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-primary-soft text-primary">
+          <span className="flex h-8 w-8 shrink-0 items-center justify-center border border-border text-primary">
             <GitCompareArrows className="h-3.5 w-3.5" />
           </span>
-          <p className="truncate text-sm font-semibold">
-            {compare.length} {compare.length === 1 ? "city" : "cities"} selected
+          <p className="truncate text-sm">
+            <span className="font-mono font-medium">{compare.length}</span>{" "}
+            {compare.length === 1 ? "city" : "cities"} selected
           </p>
         </div>
         <div className="flex shrink-0 items-center gap-1">
           <button
             type="button"
             onClick={clearCompare}
-            className="inline-flex h-9 w-9 items-center justify-center rounded-full text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
+            className="inline-flex h-9 w-9 items-center justify-center border border-transparent text-muted-foreground transition-colors hover:border-border hover:text-foreground"
             aria-label="Clear comparison"
             title="Clear comparison"
           >

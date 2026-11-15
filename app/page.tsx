@@ -3,13 +3,13 @@ import Link from "next/link";
 import {
   ArrowRight,
   ArrowUpRight,
-  BarChart3,
-  CheckCircle2,
   Database,
-  Sparkles,
+  GitCompareArrows,
+  Wallet,
 } from "lucide-react";
 import { PreferenceWizard } from "@/components/wizard/preference-wizard";
 import { MatchBadge } from "@/components/match-badge";
+import { MiniClimate } from "@/components/mini-climate";
 import { Badge } from "@/components/ui/badge";
 import { buttonVariants } from "@/components/ui/button";
 import { getAllCities, CITY_COUNT, COUNTRY_COUNT } from "@/lib/data";
@@ -17,7 +17,6 @@ import { DEFAULT_PREFS, decodePreferences, encodePreferences } from "@/lib/prefs
 import { rankCities } from "@/lib/scoring";
 import { PRESETS } from "@/lib/criteria";
 import { formatEUR } from "@/lib/format";
-import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/" },
@@ -51,218 +50,196 @@ export default async function HomePage({
 
   return (
     <div>
-      <section className="relative overflow-hidden">
-        <div className="pointer-events-none absolute inset-0 dot-grid opacity-[0.18]" />
-        <div className="relative mx-auto grid w-full max-w-7xl gap-12 px-4 pb-14 pt-12 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-16 lg:px-8 lg:pt-20">
-          <div className="animate-fade-up">
-            <Badge tone="primary" className="mb-5">
-              <Sparkles className="h-3 w-3" /> The relocation decision engine
-            </Badge>
-            <h1 className="max-w-2xl font-display text-5xl font-semibold leading-[0.98] tracking-[-0.035em] sm:text-6xl lg:text-[4.6rem]">
-              Find where you&apos;d <em className="text-primary">actually thrive</em>.
+      <section className="border-b border-border">
+        <div className="mx-auto grid w-full max-w-[1360px] gap-12 px-5 py-12 sm:px-8 lg:grid-cols-[1.03fr_0.97fr] lg:items-center lg:gap-16 lg:px-12 lg:py-20">
+          <div className="animate-ledger-in">
+            <p className="label">Relocation decision engine</p>
+            <h1 className="mt-4 max-w-2xl text-5xl font-semibold leading-[0.96] tracking-[-0.045em] sm:text-6xl lg:text-[5rem]">
+              A city that fits the life you want.
             </h1>
             <p className="mt-5 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
-              Tell us what matters — budget, climate, safety, work, walkability —
-              and we&apos;ll rank real European cities with sourced data, honest
-              trade-offs and a realistic monthly budget.
+              Set your budget, priorities and deal-breakers. We rank real European
+              cities with sourced data, a monthly budget and the trade-offs made
+              explicit.
             </p>
 
-            <div className="mt-7 flex flex-wrap items-center gap-3">
+            <div className="mt-7 flex flex-wrap items-center gap-2">
               <Link href="#wizard" className={buttonVariants({ size: "lg" })}>
-                Build my brief <ArrowRight className="h-4 w-4" />
+                Build my brief
+                <ArrowRight className="h-4 w-4" />
               </Link>
               <Link
-                href="/results"
+                href="/cities"
                 className={buttonVariants({ variant: "outline", size: "lg" })}
               >
-                Explore all cities
+                Browse cities
               </Link>
             </div>
 
-            <dl className="mt-9 grid max-w-lg grid-cols-3 gap-4 border-t border-border pt-6">
+            <div className="mt-9 grid max-w-lg grid-cols-3 border-t border-border pt-4">
               <div>
-                <dt className="text-[0.65rem] font-bold uppercase tracking-[0.14em] text-muted-foreground">
-                  Cities
-                </dt>
-                <dd className="mt-1 font-display text-2xl font-semibold">{CITY_COUNT}</dd>
+                <p className="font-mono text-2xl font-medium">{CITY_COUNT}</p>
+                <p className="mt-0.5 text-xs text-muted-foreground">cities</p>
               </div>
               <div>
-                <dt className="text-[0.65rem] font-bold uppercase tracking-[0.14em] text-muted-foreground">
-                  Countries
-                </dt>
-                <dd className="mt-1 font-display text-2xl font-semibold">{COUNTRY_COUNT}</dd>
+                <p className="font-mono text-2xl font-medium">{COUNTRY_COUNT}</p>
+                <p className="mt-0.5 text-xs text-muted-foreground">countries</p>
               </div>
               <div>
-                <dt className="text-[0.65rem] font-bold uppercase tracking-[0.14em] text-muted-foreground">
-                  Criteria
-                </dt>
-                <dd className="mt-1 font-display text-2xl font-semibold">11</dd>
+                <p className="font-mono text-2xl font-medium">11</p>
+                <p className="mt-0.5 text-xs text-muted-foreground">criteria</p>
               </div>
-            </dl>
+            </div>
           </div>
 
-          <div className="animate-fade-up lg:pl-4" style={{ animationDelay: "120ms" }}>
-            <div className="relative">
-              <div className="absolute -left-5 top-10 hidden h-24 w-24 rounded-full bg-accent/20 blur-2xl sm:block" />
-              <div className="surface-raised relative overflow-hidden">
-                <div className="flex items-center justify-between border-b border-border bg-muted/35 px-5 py-4">
-                  <div>
-                    <p className="eyebrow">Live preview</p>
-                    <p className="mt-1 text-sm font-semibold">Your likely matches</p>
-                  </div>
-                  <Badge tone="outline">{isEditing ? "Your brief" : "Balanced brief"}</Badge>
-                </div>
-                <div className="divide-y divide-border/70">
-                  {preview.map((result, index) => (
-                    <div key={result.city.slug} className="flex items-center gap-3 px-5 py-4">
-                      <span className="font-display text-sm font-semibold tabular-nums text-muted-foreground">
-                        {String(index + 1).padStart(2, "0")}
-                      </span>
-                      <div className="min-w-0 flex-1">
-                        <div className="flex items-center justify-between gap-2">
-                          <p className="truncate text-sm font-semibold">
-                            {result.city.name}
-                            <span className="ml-1.5 font-normal text-muted-foreground">
-                              {result.city.country}
-                            </span>
-                          </p>
-                          <MatchBadge score={result.score} tier={result.tier} size="sm" />
-                        </div>
-                        <div className="mt-2 h-1.5 overflow-hidden rounded-full bg-muted">
-                          <div
-                            className="h-full rounded-full bg-primary"
-                            style={{ width: `${result.score}%` }}
-                          />
-                        </div>
-                        <div className="mt-1.5 flex items-center justify-between text-[0.7rem] text-muted-foreground">
-                          <span>{formatEUR(result.totalMonthly)}/month</span>
-                          <span>{result.city.work.salaryCoverage.toFixed(2)}× salary coverage</span>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-                <div className="flex items-center justify-between gap-3 border-t border-border bg-muted/25 px-5 py-3">
-                  <p className="text-[0.7rem] text-muted-foreground">
-                    Based on {initial.budget ? formatEUR(initial.budget) : "no budget cap"}/month
-                    {" · "}
-                    {isEditing ? "your current brief" : "balanced weights"}
+          <div className="relative animate-ledger-in" style={{ animationDelay: "120ms" }}>
+            <div className="pointer-events-none absolute -inset-4 -z-10 coordinate-grid opacity-30 [mask-image:linear-gradient(to_bottom,black,transparent)]" />
+            <div className="border border-border bg-background">
+              <div className="flex items-end justify-between gap-3 border-b border-border px-5 py-4">
+                <div>
+                  <p className="label">Match ledger</p>
+                  <p className="mt-1 text-sm font-medium">
+                    {isEditing ? "Your current brief" : "A balanced starting point"}
                   </p>
-                  <Link
-                    href="/results"
-                    className="inline-flex items-center gap-1 text-xs font-semibold text-primary hover:underline"
-                  >
-                    Explore <ArrowUpRight className="h-3 w-3" />
-                  </Link>
                 </div>
+                <Badge tone="outline">
+                  {initial.budget ? `${formatEUR(initial.budget)}/mo` : "No cap"}
+                </Badge>
               </div>
-              <div className="absolute -bottom-4 -right-3 hidden rotate-2 rounded-2xl border border-border bg-card px-4 py-3 shadow-lg sm:block">
-                <p className="text-[0.65rem] font-bold uppercase tracking-[0.12em] text-muted-foreground">
-                  Data you can check
+
+              <div>
+                {preview.map((result, index) => (
+                  <div
+                    key={result.city.slug}
+                    className="grid grid-cols-[1.5rem_minmax(0,1fr)_5.5rem_4.5rem] items-center gap-3 border-b border-border px-5 py-4 last:border-0"
+                    style={{ animationDelay: `${180 + index * 60}ms` }}
+                  >
+                    <span className="font-mono text-xs text-muted-foreground">
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+                    <div className="min-w-0">
+                      <p className="truncate text-sm font-medium">{result.city.name}</p>
+                      <p className="mt-0.5 text-xs text-muted-foreground">
+                        {result.city.country}
+                      </p>
+                    </div>
+                    <div className="hidden sm:block">
+                      <MiniClimate climate={result.city.climate} width={78} height={22} />
+                      <p className="mt-0.5 font-mono text-xs text-muted-foreground">
+                        {result.city.climate.summerHigh}° / {result.city.climate.winterLow}°
+                      </p>
+                    </div>
+                    <div className="justify-self-end">
+                      <MatchBadge score={result.score} tier={result.tier} size="sm" />
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <div className="flex items-center justify-between gap-3 border-t border-border px-5 py-3">
+                <p className="text-xs text-muted-foreground">
+                  Costs and salary coverage are in the full ledger.
                 </p>
-                <p className="mt-1 flex items-center gap-1.5 text-xs font-semibold">
-                  <Database className="h-3.5 w-3.5 text-primary" />
-                  Climate · World Bank · cost model
-                </p>
+                <Link
+                  href="/results"
+                  className="inline-flex items-center gap-1 text-xs text-primary underline-offset-4 hover:underline"
+                >
+                  See matches
+                  <ArrowUpRight className="h-3 w-3" />
+                </Link>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid gap-5 lg:grid-cols-[1.35fr_0.65fr] lg:items-start">
+      <section id="wizard" className="mx-auto w-full max-w-[1360px] scroll-mt-24 px-5 py-12 sm:px-8 lg:px-12">
+        <div className="grid gap-10 lg:grid-cols-[1.4fr_0.6fr] lg:items-start">
           <PreferenceWizard initial={initial} />
 
-          <aside className="space-y-4 lg:sticky lg:top-24">
-            <div className="surface p-5">
-              <p className="eyebrow">How the match works</p>
-              <ol className="mt-4 space-y-4">
+          <aside className="space-y-8 lg:sticky lg:top-24">
+            <div>
+              <p className="label">How the match works</p>
+              <ol className="mt-3 border-t border-border">
                 {[
                   {
-                    title: "You set the brief",
-                    text: "Budget, climate, region and weights. Deal-breakers are filters, not hidden penalties.",
+                    title: "Set the brief",
+                    text: "Budget, region, climate and size are hard filters. Deal-breakers stay deal-breakers.",
                   },
                   {
-                    title: "We score the real city",
-                    text: "Eleven criteria from sourced data. Only the ones you care about enter the average.",
+                    title: "Weight what matters",
+                    text: "Only the criteria you keep enter the average. No hidden denominator.",
                   },
                   {
-                    title: "You see the trade-off",
-                    text: "Monthly costs, salary coverage and the one thing you'd give up — before you fall in love with a city.",
+                    title: "Read the ledger",
+                    text: "Monthly costs, salary coverage and the trade-off are shown before the score.",
                   },
-                ].map((item, index) => {
-                  return (
-                    <li key={item.title} className="flex gap-3">
-                      <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary-soft font-display text-sm font-semibold text-primary">
-                        {index + 1}
-                      </span>
-                      <div>
-                        <p className="text-sm font-semibold">{item.title}</p>
-                        <p className="mt-0.5 text-xs leading-relaxed text-muted-foreground">
-                          {item.text}
-                        </p>
-                      </div>
-                    </li>
-                  );
-                })}
+                ].map((item, index) => (
+                  <li key={item.title} className="grid grid-cols-[2rem_1fr] gap-3 border-b border-border py-3">
+                    <span className="font-mono text-xs text-primary">
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+                    <div>
+                      <p className="text-sm font-medium">{item.title}</p>
+                      <p className="mt-0.5 text-xs leading-relaxed text-muted-foreground">
+                        {item.text}
+                      </p>
+                    </div>
+                  </li>
+                ))}
               </ol>
-              <div className="mt-5 flex items-center gap-2 rounded-xl bg-muted/60 px-3 py-2.5 text-xs text-muted-foreground">
-                <IconCheck />
-                <span>No account. Your shortlist stays in your browser.</span>
-              </div>
             </div>
 
-            <div className="surface p-5">
-              <p className="eyebrow">Not another listicle</p>
+            <div className="border-t border-border pt-4">
+              <p className="label">No account, no theatre</p>
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                The ranking is deterministic and versioned. The AI, when enabled,
-                only reads your words — it never invents a score.
+                The shortlist stays in your browser. The ranking is deterministic and
+                versioned. AI only reads your words when enabled — it never invents a
+                city score.
               </p>
               <Link
                 href="/methodology"
-                className="mt-3 inline-flex items-center gap-1 text-xs font-semibold text-primary hover:underline"
+                className="mt-3 inline-flex items-center gap-1 text-xs text-primary underline-offset-4 hover:underline"
               >
-                Read the methodology <ArrowRight className="h-3 w-3" />
+                Read the methodology
+                <ArrowRight className="h-3 w-3" />
               </Link>
             </div>
           </aside>
         </div>
       </section>
 
-      <section className="mx-auto mt-24 w-full max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-wrap items-end justify-between gap-4">
+      <section className="mx-auto w-full max-w-[1360px] px-5 py-12 sm:px-8 lg:px-12">
+        <div className="flex flex-wrap items-end justify-between gap-4 border-t border-border pt-6">
           <div>
-            <p className="eyebrow">Start somewhere</p>
-            <h2 className="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">
+            <p className="label">Start somewhere</p>
+            <h2 className="mt-2 text-3xl font-semibold tracking-[-0.035em] sm:text-4xl">
               What kind of move are you making?
             </h2>
           </div>
           <Link
-            href="/results"
-            className="inline-flex items-center gap-1 text-sm font-semibold text-primary hover:underline"
+            href="/cities"
+            className="inline-flex items-center gap-1 text-sm text-primary underline-offset-4 hover:underline"
           >
-            Browse every city <ArrowRight className="h-3.5 w-3.5" />
+            Browse every city
+            <ArrowRight className="h-3.5 w-3.5" />
           </Link>
         </div>
-        <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
+        <div className="mt-6 grid border-t border-border sm:grid-cols-2 lg:grid-cols-5">
           {PRESETS.map((preset) => {
             const prefs = { ...DEFAULT_PREFS, weights: { ...preset.weights } };
             return (
               <Link
                 key={preset.id}
                 href={`/results?${encodePreferences(prefs)}`}
-                className="surface group flex flex-col p-5 transition-colors hover:border-primary/35 hover:bg-primary-soft/30"
+                className="group border-b border-border py-5 pr-5 transition-colors hover:bg-card sm:border-r sm:last:border-r-0 lg:border-b-0"
               >
-                <span className="flex h-9 w-9 items-center justify-center rounded-full bg-muted text-muted-foreground transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
-                  <Sparkles className="h-4 w-4" />
+                <span className="flex items-center justify-between gap-2">
+                  <span className="text-sm font-medium">{preset.label}</span>
+                  <ArrowUpRight className="h-3.5 w-3.5 text-muted-foreground transition-colors group-hover:text-primary" />
                 </span>
-                <p className="mt-3 text-sm font-semibold">{preset.label}</p>
-                <p className="mt-1 flex-1 text-xs leading-relaxed text-muted-foreground">
+                <span className="mt-2 block text-xs leading-relaxed text-muted-foreground">
                   {preset.description}
-                </p>
-                <span className="mt-3 inline-flex items-center gap-1 text-xs font-semibold text-primary">
-                  See matches <ArrowRight className="h-3 w-3" />
                 </span>
               </Link>
             );
@@ -270,32 +247,30 @@ export default async function HomePage({
         </div>
       </section>
 
-      <section className="mx-auto mt-24 w-full max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid gap-4 md:grid-cols-3">
+      <section className="mx-auto w-full max-w-[1360px] px-5 py-12 sm:px-8 lg:px-12">
+        <div className="grid gap-8 border-t border-border pt-6 md:grid-cols-3">
           {[
             {
               icon: Database,
-              title: "Sourced, dated, labelled",
-              text: "Climate comes from Open-Meteo; country context from the World Bank. Cost data is a transparent model with a date and confidence level.",
+              title: "Sourced, dated and labelled",
+              text: "Climate from Open-Meteo, country context from the World Bank, and a transparent cost model with a confidence label.",
             },
             {
-              icon: BarChart3,
-              title: "Explainable by design",
-              text: "Every match shows its strengths, its weakest weighted criterion and the budget maths. No black-box ranking.",
-            },
-            {
-              icon: CheckCircle2,
+              icon: GitCompareArrows,
               title: "Built for the decision",
-              text: "Compare finalists, save a shortlist, share the brief with a partner. The app works without an account.",
+              text: "A ledger you can scan, a score anatomy you can open, and a comparison matrix for the finalists.",
+            },
+            {
+              icon: Wallet,
+              title: "A real monthly budget",
+              text: "Rent, living costs, salary coverage and what is left. Not a single opaque cost-of-living index.",
             },
           ].map((item) => {
             const Icon = item.icon;
             return (
-              <div key={item.title} className="surface p-6">
-                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-primary-soft text-primary">
-                  <Icon className="h-4 w-4" />
-                </span>
-                <h3 className="mt-4 text-lg font-semibold">{item.title}</h3>
+              <div key={item.title}>
+                <Icon className="h-4 w-4 text-primary" />
+                <h3 className="mt-3 text-lg font-semibold">{item.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                   {item.text}
                 </p>
@@ -305,39 +280,24 @@ export default async function HomePage({
         </div>
       </section>
 
-      <section className="mx-auto mt-24 w-full max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="relative overflow-hidden rounded-[2rem] bg-foreground px-7 py-12 text-background sm:px-12">
-          <div className="pointer-events-none absolute inset-0 dot-grid opacity-[0.08]" />
-          <div className="relative flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-center">
-            <div className="max-w-2xl">
-              <p className="text-[0.7rem] font-bold uppercase tracking-[0.16em] text-background/60">
-                Your move, with evidence
-              </p>
-              <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight sm:text-4xl">
-                Stop guessing between Lisbon and Lyon.
-              </h2>
-              <p className="mt-3 max-w-xl text-sm leading-relaxed text-background/70">
-                Build a brief, see the ranking and understand exactly why each
-                city lands where it does. Then compare the finalists side by side.
-              </p>
-            </div>
-            <Link
-              href="#wizard"
-              className={cn(buttonVariants({ variant: "accent", size: "lg" }), "shrink-0")}
-            >
-              Build my brief <ArrowRight className="h-4 w-4" />
-            </Link>
+      <section className="mx-auto w-full max-w-[1360px] px-5 py-12 sm:px-8 lg:px-12">
+        <div className="ink-block flex flex-col items-start justify-between gap-8 px-6 py-12 sm:px-10 lg:flex-row lg:items-center">
+          <div className="max-w-2xl">
+            <p className="text-xs text-background/60">Your move, with evidence</p>
+            <h2 className="mt-3 text-3xl font-semibold tracking-[-0.035em] sm:text-4xl">
+              Stop guessing between Lisbon and Lyon.
+            </h2>
+            <p className="mt-3 max-w-xl text-sm leading-relaxed text-background/65">
+              Build a brief, read the ledger and understand why each city lands
+              where it does. Then compare the finalists side by side.
+            </p>
           </div>
+          <Link href="#wizard" className={buttonVariants({ variant: "accent", size: "lg" })}>
+            Build my brief
+            <ArrowRight className="h-4 w-4" />
+          </Link>
         </div>
       </section>
     </div>
-  );
-}
-
-function IconCheck() {
-  return (
-    <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary-soft text-primary">
-      <CheckCircle2 className="h-3 w-3" />
-    </span>
   );
 }

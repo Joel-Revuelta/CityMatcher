@@ -23,7 +23,7 @@ const sources = [
     icon: CloudSun,
     title: "Open-Meteo",
     url: "https://open-meteo.com/",
-    licence: "CC BY 4.0 · ERA5 reanalysis",
+    licence: "CC BY 4.0, ERA5 reanalysis",
     use: "Monthly high and low temperatures, rainfall and sunshine normals for every city, 2019–2024.",
     refresh: "Regenerated when the dataset is rebuilt",
   },
@@ -41,7 +41,7 @@ const sources = [
     url: "/methodology",
     licence: "Modelled estimate",
     use: "Rent, living costs, net salaries, safety, walkability, environment, happiness, public services and English composites.",
-    refresh: "Curated 2025 · medium confidence",
+    refresh: "Curated 2025, medium confidence",
   },
   {
     icon: MapPin,
@@ -58,8 +58,8 @@ export default function SourcesPage() {
   const dataset = getDataset();
 
   return (
-    <div className="mx-auto w-full max-w-5xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
-      <p className="eyebrow">Provenance</p>
+    <div className="mx-auto w-full max-w-[1100px] px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
+      <p className="label">Provenance</p>
       <h1 className="mt-2 text-4xl font-semibold tracking-tight sm:text-5xl">
         Data sources & limits.
       </h1>
@@ -81,9 +81,9 @@ export default function SourcesPage() {
           const Icon = source.icon;
           const external = source.url.startsWith("http");
           return (
-            <div key={source.title} className="surface p-5">
+            <div key={source.title} className="border border-border p-5">
               <div className="flex items-start justify-between gap-2">
-                <span className="flex h-9 w-9 items-center justify-center rounded-full bg-primary-soft text-primary">
+                <span className="flex h-9 w-9 items-center justify-center bg-primary-soft text-primary">
                   <Icon className="h-4 w-4" />
                 </span>
                 <Badge tone="outline">{source.licence}</Badge>
@@ -92,7 +92,7 @@ export default function SourcesPage() {
               <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">
                 {source.use}
               </p>
-              <p className="mt-3 text-[0.7rem] text-muted-foreground">
+              <p className="mt-3 text-xs text-muted-foreground">
                 <span className="font-semibold text-foreground">Freshness:</span>{" "}
                 {source.refresh}
               </p>
@@ -116,16 +116,16 @@ export default function SourcesPage() {
           available World Bank year. Cost, salary and composite livability values
           are modelled and should be treated as planning ranges.
         </p>
-        <div className="mt-4 overflow-hidden rounded-2xl border border-border bg-card">
+        <div className="mt-4 overflow-hidden border border-border bg-card">
           <div className="max-h-[28rem] overflow-auto">
             <table className="w-full min-w-[640px] text-left text-sm">
               <thead className="sticky top-0 bg-card">
                 <tr className="border-b border-border bg-muted/50">
-                  <th className="px-4 py-3 text-xs font-bold uppercase tracking-wide text-muted-foreground">City</th>
-                  <th className="px-4 py-3 text-xs font-bold uppercase tracking-wide text-muted-foreground">Country</th>
-                  <th className="px-4 py-3 text-xs font-bold uppercase tracking-wide text-muted-foreground">Climate</th>
-                  <th className="px-4 py-3 text-xs font-bold uppercase tracking-wide text-muted-foreground">Country data</th>
-                  <th className="px-4 py-3 text-xs font-bold uppercase tracking-wide text-muted-foreground">Confidence</th>
+                  <th className="px-4 py-3 text-xs font-medium text-muted-foreground">City</th>
+                  <th className="px-4 py-3 text-xs font-medium text-muted-foreground">Country</th>
+                  <th className="px-4 py-3 text-xs font-medium text-muted-foreground">Climate</th>
+                  <th className="px-4 py-3 text-xs font-medium text-muted-foreground">Country data</th>
+                  <th className="px-4 py-3 text-xs font-medium text-muted-foreground">Confidence</th>
                 </tr>
               </thead>
               <tbody>
@@ -153,13 +153,13 @@ export default function SourcesPage() {
         </div>
       </section>
 
-      <section className="mt-10 rounded-2xl border border-border bg-muted/30 p-5">
+      <section className="mt-10 border border-border p-5">
         <h2 className="text-lg font-semibold">What is not here yet</h2>
-        <ul className="mt-2 space-y-2 text-sm leading-relaxed text-muted-foreground">
-          <li>• Verified city-level crime statistics, school quality and neighbourhood data.</li>
-          <li>• Visa eligibility by nationality, tax residence and immigration processing times.</li>
-          <li>• Live rent listings, job openings and occupation-level salary offers.</li>
-          <li>• Licensed cost-of-living panels; v1 uses a transparent model instead.</li>
+        <ul className="mt-2 border-t border-border">
+          <li className="border-b border-border/70 py-2 text-sm leading-relaxed text-muted-foreground">Verified city-level crime statistics, school quality and neighbourhood data.</li>
+          <li className="border-b border-border/70 py-2 text-sm leading-relaxed text-muted-foreground">Visa eligibility by nationality, tax residence and immigration processing times.</li>
+          <li className="border-b border-border/70 py-2 text-sm leading-relaxed text-muted-foreground">Live rent listings, job openings and occupation-level salary offers.</li>
+          <li className="py-2 text-sm leading-relaxed text-muted-foreground">Licensed cost-of-living panels; v1 uses a transparent model instead.</li>
         </ul>
         <p className="mt-3 text-xs leading-relaxed text-muted-foreground">
           These are deliberate omissions, not hidden estimates. They are the next
@@ -171,8 +171,8 @@ export default function SourcesPage() {
         <Link href="/methodology" className={buttonVariants()}>
           Read the methodology <ArrowRight className="h-4 w-4" />
         </Link>
-        <Link href="/results" className={buttonVariants({ variant: "outline" })}>
-          Explore the dataset
+        <Link href="/cities" className={buttonVariants({ variant: "outline" })}>
+          Browse cities
         </Link>
       </div>
     </div>

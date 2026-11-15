@@ -19,7 +19,7 @@ export function ThemeToggle({ className }: { className?: string }) {
       type="button"
       onClick={toggle}
       className={cn(
-        "inline-flex h-10 w-10 items-center justify-center rounded-full border border-border bg-card text-foreground transition-colors hover:bg-muted",
+        "inline-flex h-11 w-11 items-center justify-center border border-border bg-transparent text-foreground transition-colors hover:border-foreground",
         className,
       )}
       aria-label="Toggle color theme"

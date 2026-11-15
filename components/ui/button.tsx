@@ -6,22 +6,22 @@ type Size = "sm" | "md" | "lg" | "icon";
 
 const variants: Record<Variant, string> = {
   primary:
-    "bg-primary text-primary-foreground shadow-sm hover:brightness-110 active:brightness-95",
+    "border border-primary bg-primary text-primary-foreground hover:bg-[color-mix(in_srgb,var(--primary)_88%,black)]",
   secondary:
-    "bg-foreground text-background shadow-sm hover:opacity-90 active:opacity-95",
+    "border border-foreground bg-foreground text-background hover:bg-[color-mix(in_srgb,var(--foreground)_88%,white)]",
   outline:
-    "border border-border bg-card text-foreground hover:border-primary/40 hover:bg-muted",
-  ghost: "text-foreground hover:bg-muted",
+    "border border-foreground/35 bg-transparent text-foreground hover:border-foreground hover:bg-muted",
+  ghost: "border border-transparent text-foreground hover:bg-muted",
   accent:
-    "bg-accent text-accent-foreground shadow-sm hover:brightness-105 active:brightness-95",
-  soft: "bg-primary-soft text-primary hover:brightness-[0.97]",
+    "border border-primary bg-primary text-primary-foreground hover:bg-[color-mix(in_srgb,var(--primary)_88%,black)]",
+  soft: "border border-primary/25 bg-primary-soft text-primary hover:border-primary/50",
 };
 
 const sizes: Record<Size, string> = {
-  sm: "h-9 rounded-full px-3.5 text-sm gap-1.5",
-  md: "h-11 rounded-full px-5 text-sm gap-2",
-  lg: "h-12 rounded-full px-6 text-[0.95rem] gap-2",
-  icon: "h-10 w-10 rounded-full",
+  sm: "h-9 px-3.5 text-xs",
+  md: "h-11 px-5 text-sm",
+  lg: "h-12 px-6 text-base",
+  icon: "h-11 w-11",
 };
 
 export function buttonVariants({
@@ -34,7 +34,7 @@ export function buttonVariants({
   className?: string;
 } = {}): string {
   return cn(
-    "inline-flex select-none items-center justify-center whitespace-nowrap font-semibold transition-all duration-200 disabled:pointer-events-none disabled:opacity-45",
+    "inline-flex select-none items-center justify-center gap-2 rounded-none font-medium transition-colors duration-150 disabled:pointer-events-none disabled:opacity-40",
     variants[variant],
     sizes[size],
     className,

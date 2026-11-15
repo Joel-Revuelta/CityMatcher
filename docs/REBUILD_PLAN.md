@@ -64,6 +64,7 @@ revoked by the owner. The new app reads AI keys only from server environment var
 app/
   page.tsx                     Landing + 3-step wizard
   results/page.tsx             SSR ranking results
+  cities/page.tsx              Searchable city index
   city/[slug]/page.tsx         City profile
   compare/page.tsx             Side-by-side comparison
   shortlist/page.tsx           Saved cities (client)
@@ -77,7 +78,7 @@ app/
 components/
   site-header.tsx, site-footer.tsx, theme-toggle.tsx
   wizard/preference-wizard.tsx
-  city-card.tsx, match-badge.tsx, metric-bar.tsx
+  city-row.tsx, match-badge.tsx, metric-bar.tsx, brief-drawer.tsx
   climate-chart.tsx, budget-panel.tsx, source-list.tsx
   shortlist-button.tsx, compare-bar.tsx
 
@@ -133,7 +134,7 @@ interface City {
 ### Ranking specification (v1)
 
 1. **Hard filters:** region, monthly budget (`rent + living ≤ budget`), climate band, city size.
-   If strict filters return fewer than 3 cities, over-budget candidates up to 15% are shown
+   If strict filters return fewer than 3 cities, over-budget candidates up to 25% are shown
    and flagged — never silently ignored.
 2. **Weights:** the user sets 0 (skip), 1 (nice), 2 (important), 3 (essential) for ten criteria.
 3. **Metric scores (0–100):** affordability, safety, healthcare, climate, internet,
@@ -295,3 +296,24 @@ No ads, no paid data licence, no paid host until revenue covers it.
 - The finance/visa/occupation-level data listed in the roadmap is explicitly out of v1 and
   disclosed on the sources page.
 - Verification evidence is recorded in `docs/VERIFICATION.md`.
+
+---
+
+## 12. v1.1 visual and UX redesign (implemented)
+
+**Direction:** “The Relocation Ledger” — a civic field guide, not a travel brochure.
+Cool paper, oxblood signal, square rules, Archivo + IBM Plex Mono, data as the hero.
+
+- Replaced the cream/serif/terracotta identity, pill controls, glass header, gradient
+  washes, identical cards and tracked all-caps labels.
+- Rebuilt results as a paginated, expandable ledger with a 5-signal anatomy and a
+  link to the full city sheet.
+- Rebuilt the wizard as a brief sheet with a step rail, weight matrix and live city
+  count.
+- Added a right-side brief drawer for quick constraint changes.
+- Added `/cities`: server-rendered search, region/climate filters and sorting.
+- Redesigned the city sheet, compare matrix (including a two-city mobile diff view),
+  shortlist ledger, methodology, sources and about pages.
+- Added ledger-shaped loading states for `/results`, `/cities` and `/city/[slug]`.
+- Moved the shortlist client from the full dataset to compact server summaries.
+- Documented the system in `docs/DESIGN.md`; verification in `docs/VERIFICATION.md`.

@@ -29,62 +29,60 @@ export function BudgetPanel({
   const livingShare = Math.max(0, 100 - rentShare);
 
   return (
-    <div className="surface p-5 sm:p-6">
-      <div className="flex items-start justify-between gap-4">
-        <div>
-          <p className="eyebrow">Monthly budget</p>
-          <p className="mt-2 font-display text-3xl font-semibold tracking-tight">
-            {formatEUR(total)}
-            <span className="ml-1 text-sm font-normal text-muted-foreground">/ month</span>
-          </p>
-          <p className="mt-1 text-xs text-muted-foreground">
-            {HOUSEHOLD_LABELS[prefs.household]} · estimates in EUR
-          </p>
+    <div className="border border-border">
+      <div className="border-b border-border p-5">
+        <div className="flex items-start justify-between gap-4">
+          <div>
+            <p className="label">Estimated monthly budget</p>
+            <p className="mt-2 font-mono text-3xl font-medium tracking-tight">
+              {formatEUR(total)}
+            </p>
+            <p className="mt-1 text-xs text-muted-foreground">
+              {HOUSEHOLD_LABELS[prefs.household]}, EUR per month
+            </p>
+          </div>
+          <span className="flex h-9 w-9 items-center justify-center border border-border text-primary">
+            <Wallet className="h-4 w-4" />
+          </span>
         </div>
-        <span className="flex h-10 w-10 items-center justify-center rounded-full bg-primary-soft text-primary">
-          <Wallet className="h-4 w-4" />
-        </span>
+
+        <div className="mt-5 flex h-1.5 overflow-hidden bg-muted">
+          <span className="h-full bg-primary" style={{ width: `${rentShare}%` }} />
+          <span className="h-full bg-muted-foreground" style={{ width: `${livingShare}%` }} />
+        </div>
+        <div className="mt-2 flex justify-between font-mono text-xs text-muted-foreground">
+          <span>Rent {rentShare}%</span>
+          <span>Living {livingShare}%</span>
+        </div>
       </div>
 
-      <div className="mt-5 flex h-3 overflow-hidden rounded-full bg-muted">
-        <span
-          className="h-full bg-primary"
-          style={{ width: `${rentShare}%` }}
-          title={`Rent ${rentShare}%`}
-        />
-        <span
-          className="h-full bg-[var(--accent)]"
-          style={{ width: `${livingShare}%` }}
-          title={`Living costs ${livingShare}%`}
-        />
-      </div>
-
-      <dl className="mt-4 space-y-3">
-        <div className="flex items-center justify-between gap-3 text-sm">
+      <dl className="px-5">
+        <div className="flex items-center justify-between gap-3 border-b border-border/70 py-3 text-sm">
           <dt className="flex items-center gap-2 text-muted-foreground">
-            <Home className="h-3.5 w-3.5" /> Rent (1-bed)
+            <Home className="h-3.5 w-3.5" /> Rent, 1-bed
           </dt>
-          <dd className="font-semibold tabular-nums">{formatEUR(rent)}</dd>
+          <dd className="font-mono text-sm tabular-nums">{formatEUR(rent)}</dd>
         </div>
-        <div className="flex items-center justify-between gap-3 text-sm">
+        <div className="flex items-center justify-between gap-3 border-b border-border/70 py-3 text-sm">
           <dt className="flex items-center gap-2 text-muted-foreground">
             <Receipt className="h-3.5 w-3.5" /> Living costs
           </dt>
-          <dd className="font-semibold tabular-nums">{formatEUR(living)}</dd>
+          <dd className="font-mono text-sm tabular-nums">{formatEUR(living)}</dd>
         </div>
-        <div className="hairline" />
-        <div className="flex items-center justify-between gap-3 text-sm">
+        <div className="flex items-center justify-between gap-3 border-b border-border/70 py-3 text-sm">
           <dt className="text-muted-foreground">
             {prefs.income ? "Your net income" : "Local net salary"}
           </dt>
-          <dd className="font-semibold tabular-nums">{formatEUR(income)}</dd>
+          <dd className="font-mono text-sm tabular-nums">{formatEUR(income)}</dd>
         </div>
-        <div className="flex items-center justify-between gap-3 text-sm">
+        <div className="flex items-center justify-between gap-3 py-3 text-sm">
           <dt className="text-muted-foreground">
-            {leftover >= 0 ? "Left after costs" : "Shortfall"}
+            {leftover >= 0 ? "Left after costs" : "Monthly shortfall"}
           </dt>
           <dd
-            className={`inline-flex items-center gap-1 font-bold tabular-nums ${leftover >= 0 ? "text-[var(--success)]" : "text-[var(--danger)]"}`}
+            className={`inline-flex items-center gap-1 font-mono text-sm font-medium tabular-nums ${
+              leftover >= 0 ? "text-success" : "text-danger"
+            }`}
           >
             {leftover >= 0 ? (
               <ArrowUpRight className="h-3.5 w-3.5" />
@@ -96,9 +94,10 @@ export function BudgetPanel({
         </div>
       </dl>
 
-      <p className="mt-4 text-[0.7rem] leading-relaxed text-muted-foreground">
-        Cost model, not a quote. Rent and living costs are modelled from public
-        listings and national statistics. {prefs.income ? "" : "Salary is the city average, not your offer."}
+      <p className="border-t border-border px-5 py-4 text-xs leading-relaxed text-muted-foreground">
+        A planning model, not a quote. Rent and living costs use curated public
+        estimates.{" "}
+        {prefs.income ? "" : "The salary line is the city average, not your offer."}
       </p>
     </div>
   );

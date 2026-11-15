@@ -1,6 +1,6 @@
 "use client";
 
-import { Bookmark, BookmarkCheck } from "lucide-react";
+import { Bookmark } from "lucide-react";
 import { useSaved } from "./saved-provider";
 import { Button } from "./ui/button";
 import { cn } from "@/lib/utils";
@@ -25,15 +25,15 @@ export function ShortlistButton({
         type="button"
         onClick={() => toggleShortlist(slug)}
         className={cn(
-          "inline-flex h-9 w-9 items-center justify-center rounded-full border border-border bg-card transition-colors hover:bg-muted",
-          saved && "border-primary/30 bg-primary-soft text-primary",
+          "inline-flex h-11 w-11 items-center justify-center border border-border bg-transparent transition-colors hover:border-foreground",
+          saved && "border-primary bg-primary text-primary-foreground",
           className,
         )}
         aria-label={saved ? `Remove ${name} from shortlist` : `Save ${name} to shortlist`}
         aria-pressed={saved}
         title={saved ? "Saved" : "Save city"}
       >
-        {saved ? <BookmarkCheck className="h-4 w-4" /> : <Bookmark className="h-4 w-4" />}
+        <Bookmark className={cn("h-4 w-4", saved && "fill-current")} />
       </button>
     );
   }
@@ -45,10 +45,10 @@ export function ShortlistButton({
       onClick={() => toggleShortlist(slug)}
       aria-pressed={saved}
       aria-label={saved ? `Remove ${name} from shortlist` : `Save ${name} to shortlist`}
-      className={cn(saved && "bg-primary-soft text-primary", className)}
+      className={className}
     >
-      {saved ? <BookmarkCheck className="h-3.5 w-3.5" /> : <Bookmark className="h-3.5 w-3.5" />}
-      {saved ? "Saved" : "Save"}
+      <Bookmark className={cn("h-3.5 w-3.5", saved && "fill-current")} />
+      {saved ? "Saved" : "Save city"}
     </Button>
   );
 }

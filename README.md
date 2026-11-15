@@ -15,11 +15,14 @@ natural language; it never invents a city score. The app is fully usable without
 - A three-step preference wizard with a natural-language shortcut.
 - Deterministic matching across 11 criteria, with hard filters and over-budget handling.
 - Ranked results with strengths, trade-offs and monthly budget maths.
+- A searchable city index with region and climate filters.
 - Full city profiles: climate chart, cost breakdown, salary coverage, country context.
 - Side-by-side comparison for 2–4 finalists.
 - Anonymous shortlist in `localStorage`, plus shareable preference URLs.
 - Methodology and per-city provenance pages.
 - English UI, SEO metadata, JSON-LD, sitemap and accessible responsive design.
+- A square, editorial “relocation ledger” design system documented in
+  [`docs/DESIGN.md`](docs/DESIGN.md).
 
 ## Stack
 
@@ -105,13 +108,35 @@ The full formula and limitations are on `/methodology`.
 ## Project structure
 
 ```
-app/                    routes, API handlers, metadata, sitemap
-components/             UI, wizard, cards, charts, saved-state provider
-lib/                    types, scoring, preferences, parsing, dataset access
-data/dataset.json       generated, committed dataset
-scripts/                seed, ingestion, dataset QA
-tests/                  scoring, preferences, parser, dataset tests
-docs/REBUILD_PLAN.md    the complete rebuild plan
+app/
+  cities/                 searchable city index
+  results/                ranked matches page and loading state
+  city/[slug]/            city sheet and loading state
+  compare/                grouped decision matrix
+  shortlist/              saved-city ledger
+  methodology/ sources/   trust and provenance
+  about/                  product story
+  api/                    optional parsing and programmatic matching
+
+components/
+  wizard/                 brief-sheet preference flow
+  brief-drawer.tsx        quick constraint editor
+  city-row.tsx            expandable ledger row
+  city-row loading states, climate chart, budget sheet, source list
+
+lib/
+  types.ts                domain types
+  scoring.ts              deterministic ranking engine
+  prefs.ts                preference encoding/decoding
+  parse.ts                rule-based natural-language parser
+  ai.ts                   optional Gemini/Groq client
+
+data/dataset.json         generated, committed dataset
+scripts/                  seed, ingestion, dataset QA
+tests/                    scoring, preferences, parser, dataset tests
+docs/REBUILD_PLAN.md      the complete rebuild plan
+docs/DESIGN.md            the visual system and component rules
+docs/VERIFICATION.md      verification evidence
 ```
 
 ## Deployment

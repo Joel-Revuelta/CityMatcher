@@ -4,15 +4,12 @@ import { cn } from "@/lib/utils";
 type Tone = "neutral" | "primary" | "success" | "warning" | "danger" | "outline";
 
 const tones: Record<Tone, string> = {
-  neutral: "bg-muted text-muted-foreground",
-  primary: "bg-primary-soft text-primary",
-  success:
-    "bg-[color-mix(in_oklch,var(--success)_14%,transparent)] text-[var(--success)]",
-  warning:
-    "bg-[color-mix(in_oklch,var(--warning)_16%,transparent)] text-[color-mix(in_oklch,var(--warning)_70%,var(--foreground))]",
-  danger:
-    "bg-[color-mix(in_oklch,var(--danger)_13%,transparent)] text-[var(--danger)]",
-  outline: "border border-border bg-transparent text-muted-foreground",
+  neutral: "border-border bg-muted text-muted-foreground",
+  primary: "border-primary/30 bg-primary-soft text-primary",
+  success: "border-success/30 bg-success/10 text-success",
+  warning: "border-warning/35 bg-warning/10 text-warning",
+  danger: "border-danger/30 bg-danger/10 text-danger",
+  outline: "border-border bg-transparent text-foreground",
 };
 
 export function Badge({
@@ -27,7 +24,7 @@ export function Badge({
   return (
     <span
       className={cn(
-        "inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-[0.7rem] font-semibold leading-none",
+        "inline-flex items-center gap-1.5 border px-2 py-1 text-xs font-medium leading-none",
         tones[tone],
         className,
       )}

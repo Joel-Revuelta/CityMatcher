@@ -40,3 +40,7 @@ yarn-error.log*
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+
+# Local agent skills installed in the workspace
+.agents/
+skills-lock.json

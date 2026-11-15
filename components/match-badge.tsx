@@ -2,12 +2,10 @@ import { cn } from "@/lib/utils";
 import type { MatchTier } from "@/lib/types";
 
 const tierStyles: Record<MatchTier, string> = {
-  Excellent:
-    "bg-[color-mix(in_oklch,var(--success)_14%,transparent)] text-[var(--success)] ring-[color-mix(in_oklch,var(--success)_30%,transparent)]",
-  Strong:
-    "bg-primary-soft text-primary ring-[color-mix(in_oklch,var(--primary)_28%,transparent)]",
-  Fair: "bg-[color-mix(in_oklch,var(--warning)_16%,transparent)] text-[color-mix(in_oklch,var(--warning)_72%,var(--foreground))] ring-[color-mix(in_oklch,var(--warning)_30%,transparent)]",
-  Stretch: "bg-muted text-muted-foreground ring-border",
+  Excellent: "text-primary",
+  Strong: "text-foreground",
+  Fair: "text-warning",
+  Stretch: "text-muted-foreground",
 };
 
 export function MatchBadge({
@@ -22,24 +20,40 @@ export function MatchBadge({
   className?: string;
 }) {
   return (
-    <span
+    <div
       className={cn(
-        "inline-flex items-baseline gap-1 rounded-full font-bold ring-1 ring-inset",
-        size === "sm" && "px-2.5 py-1 text-xs",
-        size === "md" && "px-3 py-1.5 text-sm",
-        size === "lg" && "px-4 py-2 text-base",
-        tierStyles[tier],
+        "flex items-baseline border-l-2 border-primary pl-2.5",
+        size === "sm" && "gap-1",
+        size === "md" && "gap-1.5",
+        size === "lg" && "gap-2 pl-3",
         className,
       )}
       aria-label={`${Math.round(score)} out of 100 match, ${tier}`}
     >
-      <span className="font-display text-[1.1em] leading-none tabular-nums">
+      <span
+        className={cn(
+          "font-mono font-medium leading-none tabular-nums",
+          size === "sm" && "text-lg",
+          size === "md" && "text-2xl",
+          size === "lg" && "text-4xl",
+        )}
+      >
         {Math.round(score)}
       </span>
-      <span className="text-[0.72em] font-semibold opacity-80">/100</span>
-      <span className="ml-1 text-[0.72em] font-semibold uppercase tracking-wide opacity-80">
+      <span className="font-mono text-[0.6em] leading-none text-muted-foreground">
+        /100
+      </span>
+      <span
+        className={cn(
+          "font-medium leading-none",
+          size === "sm" && "text-xs",
+          size === "md" && "text-xs",
+          size === "lg" && "text-sm",
+          tierStyles[tier],
+        )}
+      >
         {tier}
       </span>
-    </span>
+    </div>
   );
 }

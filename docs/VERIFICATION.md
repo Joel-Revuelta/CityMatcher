@@ -1,8 +1,8 @@
-# Verification log — v1
+# Verification log — v1.1 redesign
 
 **Date:** 2026-11-15
 **Runtime:** Node 24.14.0, pnpm 11.22.0, Next.js 16.4.6
-**Result:** v1 verified end to end.
+**Result:** v1.1 "Relocation Ledger" redesign verified end to end.
 
 ## Automated checks
 
@@ -13,88 +13,84 @@
 | Lint | `pnpm lint` | Passed, no findings |
 | Types | `pnpm typecheck` | Passed, no errors |
 | Unit tests | `pnpm test` | 4 files / 28 tests passed |
-| Dataset QA | `pnpm data:qa` | 42 cities, 27 countries, 100% country + climate coverage, 0 warnings, 0 errors |
-| Production build | `pnpm build` | Passed; 16 routes generated |
+| Dataset QA | `pnpm data:qa` | 42 cities, 27 countries, 100% coverage, 0 errors |
+| Production build | `pnpm build` | Passed; 17 routes generated |
 
-Production route table:
-
-```
-ƒ /                    dynamic home with live preview + wizard
-○ /_not-found
-○ /about
-ƒ /api/match
-ƒ /api/parse
-ƒ /city/[slug]
-ƒ /compare
-○ /icon.svg
-○ /manifest.webmanifest
-○ /methodology
-○ /opengraph-image
-ƒ /results
-○ /robots.txt
-○ /shortlist
-○ /sitemap.xml
-○ /sources
-```
+Routes include the new `/cities` index and its loading state, plus ledger loading
+states for `/results` and `/city/[slug]`.
 
 ## Runtime smoke test
 
-Production server: `pnpm start` on `http://localhost:3000`.
+| Endpoint | Status | HTML size |
+| --- | --- | --- |
+| `/` | 200 | 83.4 KB |
+| `/results?b=2500` | 200 | 268.3 KB |
+| `/results?b=2500&page=2` | 200 | — |
+| `/cities` | 200 | 286.5 KB |
+| `/city/lisbon` | 200 | 138.4 KB |
+| `/compare?c=lisbon,vienna` | 200 | 93.1 KB |
+| `/methodology`, `/sources`, `/about` | 200 | — |
+| `/api/match?b=2500&limit=2` | 200 | — |
+| `POST /api/parse` | 200 | — |
+| `/opengraph-image` | 200, PNG 1200×630 | 64.9 KB |
+| `/city/does-not-exist` | 404 | — |
 
-| Endpoint | Status |
-| --- | --- |
-| `/` | 200 |
-| `/results?b=2500` | 200 |
-| `/city/lisbon?b=2500` | 200 |
-| `/compare?c=lisbon,vienna` | 200 |
-| `/methodology` | 200 |
-| `/sources` | 200 |
-| `/api/match?b=2500&limit=3` | 200 |
-| `POST /api/parse` with a natural-language brief | 200 |
-| `/city/does-not-exist` | 404 |
-| `/opengraph-image` | 200, image/png, 1200×630 |
-
-Security headers confirmed on `/`: `X-Content-Type-Options`, `Referrer-Policy`,
-`X-Frame-Options: DENY`, `Permissions-Policy`.
+The results page was reduced from the previous ~453 KB card grid to a paginated
+ledger (15 rows per page); the expanded row now shows a compact 5-signal anatomy
+and links to the full city sheet.
 
 ## Interactive smoke test (Playwright, Chromium)
 
-1. Entered “warm, walkable, safe, remote work, under €2,000” → chips appeared.
-2. Continued to priorities, applied the “Remote worker” preset.
-3. Continued to context, entered a €3,200 income.
-4. Opened matches → 6 result cards, headed “6 cities fit your brief.”
-5. Saved the first city → header shortlist count became 1.
-6. Opened `/shortlist` → saved city was present.
-7. Opened `/compare?c=lisbon,vienna` → 20 comparison rows, both cities present.
-8. Page console/page errors: **0**.
+1. Opened the home page; h1 reads “A city that fits the life you want.”
+2. Entered “warm, walkable, safe, remote work, under €2,000”; parser chips appeared.
+3. The live count updated (“cities fit”).
+4. Continued through the brief sheet, applied “Remote worker”, entered income.
+5. Opened matches: 6 results; expanded the first row; the city sheet link and
+   actions were visible.
+6. Saved and compared the first city; the header count and compare bar updated.
+7. Opened the brief drawer, selected Northern Europe, applied; URL gained
+   `r=northern`.
+8. Searched the `/cities` index for “Lisbon”; the Lisbon row appeared.
+9. Opened `/shortlist`; the saved city was present.
+10. Mobile menu opened and exposed the full navigation.
+11. Page console/page errors: **0**.
 
-A second pass verified edited-brief prefill, the empty-results state, a four-way comparison,
-dark-mode persistence after reload, and shortlist persistence after reload. Visual checks
-were captured at 1440×1000 and 390×844 in light and dark mode for the home, results, city
-profile and comparison pages. No layout breakage or contrast blockers were observed.
+## Visual checks
 
-## Tooling notes
+Captured at 1440×1000 and 390×844, light and dark:
 
-- **Package manager:** pnpm 11.22.0. `package-lock.json` was removed; `pnpm-lock.yaml` is
-  committed. CI uses `pnpm/action-setup` and a frozen lockfile.
-- **ESLint:** pinned to 9.39.5 because `eslint-config-next@16.4.6`'s bundled ESLint plugins
-  still declare support only through ESLint 9. ESLint 10 produced peer warnings.
-- **Audit override:** `@typescript-eslint/typescript-estree` pins `minimatch ^10.2.2`, which
-  falls under a moderate dev-only DoS advisory. `pnpm-workspace.yaml` overrides it to
-  `11.0.8` (patched), and lint is verified with that override. Node 22.12+ is required for
-  the ESM/CJS interop. Production dependencies audit clean independently.
+- Home: hero ledger, brief sheet, presets, evidence columns, ink CTA.
+- Results: paginated ledger, score blocks, sort, brief drawer.
+- City sheet: hero, climate almanac, signal rows, budget sheet, sources.
+- Compare: desktop grouped matrix and a dedicated two-city mobile diff view.
+- `/cities`: searchable directory and filters.
+- Shortlist: empty state and saved ledger.
+- Methodology/sources/about: constrained prose and ruled tables.
+
+The theme toggle, native `<details>` expansion, native `<dialog>` drawer, mobile
+navigation, keyboard focus rings, pagination and compare best-markers were
+exercised. `prefers-reduced-motion` leaves final states; no scroll engine,
+Three.js or animation library is shipped.
+
+## Design system
+
+The direction, tokens, typography, component rules and “do not reintroduce” list
+are in [`docs/DESIGN.md`](DESIGN.md). The redesign removed the previous
+cream/serif/terracotta identity, all-caps eyebrows, middle-dot metadata,
+pill controls, glass header, gradient washes, identical result cards and
+colour-only compare winners.
 
 ## Security notes
 
-- The leaked OpenAI key was removed from the new working tree.
-- No secret is read client-side; optional AI keys are server-only environment variables.
-- The old key still exists in git history of the legacy commit and on the remote. **The owner
-  must revoke it in the OpenAI dashboard and purge history before making the repository
-  public-facing again.** The legacy Angular build is preserved on `legacy/angular-v18`.
+- No secret is read client-side; optional AI keys are server-only environment
+  variables.
+- The legacy OpenAI key was removed from the working tree and must still be
+  revoked and purged from git history by the owner. See `SECURITY.md`.
+- `pnpm audit` is clean at verification time.
 
 ## Known v1 limits (disclosed in the UI)
 
 - Cost, salary and composite livability values are modelled, not official statistics.
 - Visas, tax residence and occupation-level salary offers are out of scope.
 - The shortlist is local to the browser; accounts and alerts are post-v1.
-- English only; no translation layer yet.
+- English only; the city index has no map view yet.

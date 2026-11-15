@@ -19,8 +19,8 @@ export default function MethodologyPage() {
   const example = rankCities(getAllCities(), DEFAULT_PREFS).results.slice(0, 3);
 
   return (
-    <div className="mx-auto w-full max-w-4xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
-      <p className="eyebrow">Methodology v{METHODOLOGY_VERSION}</p>
+    <div className="mx-auto w-full max-w-[1100px] px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
+      <p className="label">Methodology v{METHODOLOGY_VERSION}</p>
       <h1 className="mt-2 text-4xl font-semibold tracking-tight sm:text-5xl">
         How the match is calculated.
       </h1>
@@ -38,7 +38,7 @@ export default function MethodologyPage() {
         ].map((item) => {
           const Icon = item.icon;
           return (
-            <div key={item.title} className="surface p-4">
+            <div key={item.title} className="border border-border p-4">
               <Icon className="h-4 w-4 text-primary" />
               <p className="mt-2 text-sm font-semibold">{item.title}</p>
               <p className="mt-1 text-xs leading-relaxed text-muted-foreground">{item.text}</p>
@@ -94,7 +94,7 @@ export default function MethodologyPage() {
           both the numerator and the denominator. There is no hidden baseline and
           no universal “best city” bonus.
         </p>
-        <div className="not-prose overflow-hidden rounded-2xl border border-border bg-card">
+        <div className="not-prose overflow-hidden border border-border bg-card">
           <table className="w-full text-left text-sm">
             <thead className="border-b border-border bg-muted/40">
               <tr>
@@ -163,26 +163,26 @@ export default function MethodologyPage() {
           <Link
             key={result.city.slug}
             href={`/city/${result.city.slug}`}
-            className="surface group p-4 transition-colors hover:border-primary/35"
+            className="border border-border group p-4 transition-colors hover:border-primary/35"
           >
             <div className="flex items-center justify-between gap-2">
-              <p className="font-display text-lg font-semibold">{result.city.name}</p>
+              <p className="text-lg font-semibold">{result.city.name}</p>
               <Badge tone="primary">{Math.round(result.score)}</Badge>
             </div>
             <p className="mt-1 text-xs text-muted-foreground">
-              {result.city.country} · {result.tier}
+              {result.city.country}, {result.tier}
             </p>
             <p className="mt-2 line-clamp-2 text-xs leading-relaxed text-muted-foreground">
               {result.reasons[0]}
             </p>
             <span className="mt-2 inline-flex items-center gap-1 text-xs font-semibold text-primary">
-              Open profile <ArrowRight className="h-3 w-3" />
+              Open city sheet <ArrowRight className="h-3 w-3" />
             </span>
           </Link>
         ))}
       </div>
 
-      <div className="mt-10 rounded-2xl border border-border bg-muted/30 p-5">
+      <div className="mt-10 border border-border p-5">
         <p className="flex items-start gap-2 text-sm text-muted-foreground">
           <Database className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
           <span>

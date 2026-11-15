@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, Filter, GitCompareArrows, SlidersHorizontal } from "lucide-react";
-import { CityCard } from "@/components/city-card";
+import { ArrowRight, ChevronLeft, ChevronRight, GitCompareArrows } from "lucide-react";
+import { CityRow } from "@/components/city-row";
+import { BriefDrawer } from "@/components/brief-drawer";
 import { ShareButton } from "@/components/share-button";
+import { SortSelect } from "@/components/sort-select";
 import { Badge } from "@/components/ui/badge";
 import { buttonVariants } from "@/components/ui/button";
 import {
@@ -17,7 +19,6 @@ import { DEFAULT_PREFS, decodePreferences, encodePreferences } from "@/lib/prefs
 import { rankCities } from "@/lib/scoring";
 import type { MatchResult, Preferences } from "@/lib/types";
 import { formatEUR } from "@/lib/format";
-import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "Your city matches",
@@ -82,172 +83,192 @@ export default async function ResultsPage({
     }
   });
 
-  function sortHref(value: string): string {
-    const next = new URLSearchParams(encodePreferences(prefs));
-    if (value !== "match") next.set("sort", value);
-    return `/results?${next.toString()}`;
-  }
-
   const editHref = `/?${encodePreferences(prefs)}#wizard`;
   const topPriorities = CRITERIA.filter(
     (criterion) => prefs.weights[criterion.key] >= 2,
   ).slice(0, 4);
 
+  const PAGE_SIZE = 15;
+  const requestedPage = Number(params.get("page") ?? "1");
+  const totalPages = Math.max(1, Math.ceil(results.length / PAGE_SIZE));
+  const currentPage =
+    Number.isFinite(requestedPage) && requestedPage >= 1
+      ? Math.min(totalPages, Math.floor(requestedPage))
+      : 1;
+  const offset = (currentPage - 1) * PAGE_SIZE;
+  const pageResults = results.slice(offset, offset + PAGE_SIZE);
+
+  function pageHref(page: number): string {
+    const next = new URLSearchParams(encodePreferences(prefs));
+    if (sort !== "match") next.set("sort", sort);
+    if (page > 1) next.set("page", String(page));
+    return `/results?${next.toString()}`;
+  }
+
   return (
-    <div className="mx-auto w-full max-w-7xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
-      <div className="flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
-        <div className="max-w-2xl">
-          <p className="eyebrow">Your matches · methodology v1.0</p>
-          <h1 className="mt-2 text-4xl font-semibold tracking-tight sm:text-5xl">
+    <div className="mx-auto w-full max-w-[1360px] px-5 py-10 sm:px-8 lg:px-12 lg:py-14">
+      <div className="flex flex-col justify-between gap-6 border-b border-border pb-7 lg:flex-row lg:items-end">
+        <div className="max-w-3xl">
+          <p className="label">Matches</p>
+          <h1 className="mt-2 text-4xl font-semibold tracking-[-0.035em] sm:text-5xl">
             {results.length > 0
               ? `${results.length} ${results.length === 1 ? "city fits" : "cities fit"} your brief.`
               : "No city survives that brief."}
           </h1>
-          <p className="mt-3 max-w-xl text-sm leading-relaxed text-muted-foreground sm:text-base">
-            Ranked by the criteria you weighted, with the trade-off made explicit.
-            Every cost is an estimate for your household, in euros per month.
+          <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted-foreground">
+            Ranked only by the criteria you weighted. Open a row to see the score
+            anatomy, the trade-off and the monthly budget behind it.
           </p>
         </div>
         <div className="flex flex-wrap items-center gap-2">
-          <ShareButton label="Share my brief" />
-          <Link
-            href={editHref}
-            className={buttonVariants({ variant: "outline", size: "sm" })}
-          >
-            <SlidersHorizontal className="h-3.5 w-3.5" /> Edit brief
-          </Link>
+          <ShareButton label="Share brief" />
+          <BriefDrawer initial={prefs} />
         </div>
       </div>
 
-      <div className="mt-6 flex flex-wrap items-center gap-1.5">
-        <Badge tone="primary">
-          {prefs.budget ? `${formatEUR(prefs.budget)}/month` : "No budget cap"}
-        </Badge>
-        <Badge tone="outline">{HOUSEHOLD_LABELS[prefs.household]}</Badge>
-        {prefs.regions.length > 0 ? (
-          prefs.regions.map((region) => (
-            <Badge key={region} tone="outline">
-              {REGION_LABELS[region]}
-            </Badge>
-          ))
-        ) : (
-          <Badge tone="outline">All Europe</Badge>
-        )}
-        <Badge tone="outline">{CLIMATE_LABELS[prefs.climate]}</Badge>
-        {prefs.size !== "any" ? (
-          <Badge tone="outline">{SIZE_LABELS[prefs.size]}</Badge>
-        ) : null}
+      <div className="mt-5 flex flex-wrap items-center gap-x-5 gap-y-2 font-mono text-xs text-muted-foreground">
+        <span>
+          <span className="text-foreground">
+            {prefs.budget ? formatEUR(prefs.budget) : "No cap"}
+          </span>
+          /month
+        </span>
+        <span>{HOUSEHOLD_LABELS[prefs.household]}</span>
+        <span>
+          {prefs.regions.length > 0
+            ? prefs.regions.map((region) => REGION_LABELS[region]).join(" + ")
+            : "All Europe"}
+        </span>
+        <span>{CLIMATE_LABELS[prefs.climate]}</span>
+        {prefs.size !== "any" ? <span>{SIZE_LABELS[prefs.size]}</span> : null}
+        <Link href={editHref} className="text-primary underline-offset-4 hover:underline">
+          Fine-tune weights
+        </Link>
+      </div>
+
+      <div className="mt-3 flex flex-wrap gap-1.5">
         {topPriorities.map((criterion) => (
-          <Badge key={criterion.key} tone="primary">
-            <Filter className="h-3 w-3" /> {criterion.shortLabel}
+          <Badge key={criterion.key} tone="outline">
+            {criterion.shortLabel}
           </Badge>
         ))}
       </div>
 
       {outcome.relaxedBudget ? (
-        <div className="mt-6 rounded-2xl border border-[color-mix(in_oklch,var(--warning)_35%,transparent)] bg-[color-mix(in_oklch,var(--warning)_10%,transparent)] px-4 py-3 text-sm">
-          <p className="font-semibold">Your budget is tight for this brief.</p>
+        <div className="mt-6 border-t border-border pt-4 text-sm">
+          <p className="font-medium">Your budget is tight for this brief.</p>
           <p className="mt-1 text-muted-foreground">
-            We kept a few candidates up to 25% over budget so you can see the
-            closest options. They are marked and capped in the ranking.
+            A few candidates up to 25% over budget are included and marked so the
+            shortlist stays useful. They are capped in the ranking.{" "}
             {prefs.budget ? (
-              <>
-                {" "}
-                <Link
-                  className="font-semibold text-primary hover:underline"
-                  href={`/results?${(() => {
-                    const next = new URLSearchParams(encodePreferences(prefs));
-                    next.set("b", String(Math.round(prefs.budget! * 1.25)));
-                    return next.toString();
-                  })()}`}
-                >
-                  Try {formatEUR(Math.round(prefs.budget * 1.25))}
-                </Link>
-              </>
+              <Link
+                className="text-primary underline-offset-4 hover:underline"
+                href={`/results?${(() => {
+                  const next = new URLSearchParams(encodePreferences(prefs));
+                  next.set("b", String(Math.round(prefs.budget! * 1.25)));
+                  return next.toString();
+                })()}`}
+              >
+                Try {formatEUR(Math.round(prefs.budget * 1.25))}
+              </Link>
             ) : null}
           </p>
         </div>
       ) : null}
 
-      {outcome.filteredOut > 0 ? (
-        <p className="mt-5 text-xs text-muted-foreground">
-          {outcome.filteredOut} {outcome.filteredOut === 1 ? "city was" : "cities were"} excluded
-          by your region, climate or size filters.
+      <div className="mt-6 flex flex-col justify-between gap-3 border-y border-border py-3 sm:flex-row sm:items-center">
+        <p className="text-xs text-muted-foreground">
+          <span className="font-mono text-foreground">{results.length}</span> cities
+          {outcome.filteredOut > 0 ? (
+            <>
+              , 
+              {outcome.filteredOut} excluded by filters
+            </>
+          ) : null}
         </p>
-      ) : null}
-
-      <div className="mt-8 flex flex-col justify-between gap-3 border-y border-border py-3 sm:flex-row sm:items-center">
-        <div className="flex flex-wrap items-center gap-1.5">
-          <span className="mr-1 text-xs font-semibold uppercase tracking-wide text-muted-foreground">
-            Sort
-          </span>
-          {SORT_OPTIONS.map((option) => (
-            <Link
-              key={option.value}
-              href={sortHref(option.value)}
-              className={cn(
-                "rounded-full px-3 py-1.5 text-xs font-semibold transition-colors",
-                sort === option.value
-                  ? "bg-foreground text-background"
-                  : "text-muted-foreground hover:bg-muted hover:text-foreground",
-              )}
-            >
-              {option.label}
-            </Link>
-          ))}
+        <div className="flex flex-wrap items-center gap-4">
+          <p className="hidden items-center gap-1.5 text-xs text-muted-foreground sm:flex">
+            <GitCompareArrows className="h-3.5 w-3.5" />
+            Select 2–4 to compare
+          </p>
+          <SortSelect
+            value={sort}
+            options={SORT_OPTIONS}
+            preferencesQuery={encodePreferences(prefs)}
+          />
         </div>
-        <p className="inline-flex items-center gap-1.5 text-xs text-muted-foreground">
-          <GitCompareArrows className="h-3.5 w-3.5" />
-          Select 2–4 cities to compare
-        </p>
       </div>
 
       {results.length > 0 ? (
-        <div className="mt-7 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
-          {results.map((result, index) => (
-            <CityCard
+        <div className="mt-2">
+          {pageResults.map((result, index) => (
+            <CityRow
               key={result.city.slug}
               result={result}
               prefs={prefs}
-              rank={index + 1}
+              rank={offset + index + 1}
             />
           ))}
         </div>
       ) : (
-        <div className="surface mt-8 mx-auto max-w-xl p-8 text-center">
-          <span className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-muted text-muted-foreground">
-            <Filter className="h-5 w-5" />
-          </span>
-          <h2 className="mt-4 text-2xl font-semibold">Try widening one constraint</h2>
+        <div className="mx-auto mt-10 max-w-xl border border-border p-8">
+          <p className="label">No results</p>
+          <h2 className="mt-2 text-2xl font-semibold">Try widening one constraint</h2>
           <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-            Your region, climate, size and budget filters together exclude every
-            city in the dataset. Loosen one and the ranking will come back.
+            Region, climate, size and budget together exclude every city in the
+            dataset. Loosen one and the ledger will come back.
           </p>
-          <div className="mt-5 flex flex-wrap justify-center gap-2">
+          <div className="mt-5 flex flex-wrap gap-2">
             <Link href="/results" className={buttonVariants({ size: "sm" })}>
               Clear filters
             </Link>
-            <Link
-              href={editHref}
-              className={buttonVariants({ variant: "outline", size: "sm" })}
-            >
-              Edit brief <ArrowRight className="h-3.5 w-3.5" />
+            <Link href={editHref} className={buttonVariants({ variant: "outline", size: "sm" })}>
+              Edit brief
+              <ArrowRight className="h-3.5 w-3.5" />
             </Link>
           </div>
         </div>
       )}
 
-      <div className="mt-12 rounded-2xl border border-border bg-muted/30 p-5 text-sm text-muted-foreground">
-        <p>
-          <span className="font-semibold text-foreground">Reading the score:</span>{" "}
-          it is a weighted average of only the criteria you kept, not a universal
-          quality ranking. A city can be excellent for one brief and poor for
-          another.{" "}
-          <Link href="/methodology" className="font-semibold text-primary hover:underline">
-            See the formula
-          </Link>
-          .
-        </p>
+      {results.length > 0 && totalPages > 1 ? (
+        <div className="flex flex-wrap items-center justify-between gap-3 border-t border-border py-4">
+          <p className="text-xs text-muted-foreground">
+            Showing {offset + 1}–{Math.min(offset + PAGE_SIZE, results.length)} of{" "}
+            {results.length}
+          </p>
+          <div className="flex items-center gap-2">
+            {currentPage > 1 ? (
+              <Link href={pageHref(currentPage - 1)} className={buttonVariants({ variant: "outline", size: "sm" })}>
+                <ChevronLeft className="h-3.5 w-3.5" /> Previous
+              </Link>
+            ) : (
+              <span className="inline-flex h-9 items-center gap-1.5 border border-border px-3.5 text-xs text-muted-foreground opacity-50">
+                <ChevronLeft className="h-3.5 w-3.5" /> Previous
+              </span>
+            )}
+            <span className="font-mono text-xs text-muted-foreground">
+              {currentPage} / {totalPages}
+            </span>
+            {currentPage < totalPages ? (
+              <Link href={pageHref(currentPage + 1)} className={buttonVariants({ variant: "outline", size: "sm" })}>
+                Next <ChevronRight className="h-3.5 w-3.5" />
+              </Link>
+            ) : (
+              <span className="inline-flex h-9 items-center gap-1.5 border border-border px-3.5 text-xs text-muted-foreground opacity-50">
+                Next <ChevronRight className="h-3.5 w-3.5" />
+              </span>
+            )}
+          </div>
+        </div>
+      ) : null}
+
+      <div className="mt-10 border-t border-border pt-4 text-sm text-muted-foreground">
+        The score is a weighted average of only the criteria you kept, not a
+        universal quality ranking.{" "}
+        <Link href="/methodology" className="text-primary underline-offset-4 hover:underline">
+          Read the method
+        </Link>
+        .
       </div>
     </div>
   );

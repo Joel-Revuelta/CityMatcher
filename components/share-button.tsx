@@ -26,14 +26,19 @@ export function ShareButton({
       setCopied(true);
       window.setTimeout(() => setCopied(false), 2200);
     } catch {
-      // The user may have cancelled the share sheet; nothing to do.
+      // The user may have cancelled the share sheet.
     }
   }
 
   return (
-    <Button variant={variant} size="sm" onClick={share} className={className}>
-      {copied ? <Check className="h-3.5 w-3.5" /> : <Share2 className="h-3.5 w-3.5" />}
-      {copied ? "Link copied" : label}
-    </Button>
+    <>
+      <Button variant={variant} size="sm" onClick={share} className={className}>
+        {copied ? <Check className="h-3.5 w-3.5" /> : <Share2 className="h-3.5 w-3.5" />}
+        {copied ? "Link copied" : label}
+      </Button>
+      <span className="sr-only" role="status" aria-live="polite">
+        {copied ? "Link copied to clipboard" : ""}
+      </span>
+    </>
   );
 }

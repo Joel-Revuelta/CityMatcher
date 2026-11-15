@@ -14,8 +14,8 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <div className="mx-auto w-full max-w-4xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
-      <p className="eyebrow">About</p>
+    <div className="mx-auto w-full max-w-[1100px] px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
+      <p className="label">About</p>
       <h1 className="mt-2 text-4xl font-semibold tracking-tight sm:text-5xl">
         A hackathon idea, rebuilt properly.
       </h1>
@@ -70,7 +70,7 @@ export default function AboutPage() {
         ].map((item) => {
           const Icon = item.icon;
           return (
-            <div key={item.title} className="surface p-5">
+            <div key={item.title} className="border border-border p-5">
               <Icon className="h-4 w-4 text-primary" />
               <h2 className="mt-2 text-lg font-semibold">{item.title}</h2>
               <p className="mt-1 text-sm leading-relaxed text-muted-foreground">{item.text}</p>
@@ -108,9 +108,10 @@ export default function AboutPage() {
       </div>
 
       <div className="mt-8 flex flex-wrap items-center gap-2">
-        <Badge tone="primary">v1 · free · no account</Badge>
+        <Badge tone="primary">v1</Badge>
+        <Badge tone="outline">Free</Badge>
+        <Badge tone="outline">No account</Badge>
         <Badge tone="outline">Methodology v1.0</Badge>
-        <Badge tone="outline">Built for better moves</Badge>
       </div>
 
       <div className="mt-8 flex flex-wrap gap-2">
