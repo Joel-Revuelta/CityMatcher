@@ -44,6 +44,7 @@ export function ShortlistButton({
       size="sm"
       onClick={() => toggleShortlist(slug)}
       aria-pressed={saved}
+      aria-label={saved ? `Remove ${name} from shortlist` : `Save ${name} to shortlist`}
       className={cn(saved && "bg-primary-soft text-primary", className)}
     >
       {saved ? <BookmarkCheck className="h-3.5 w-3.5" /> : <Bookmark className="h-3.5 w-3.5" />}

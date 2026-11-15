@@ -41,6 +41,7 @@ export function CompareButton({
       size="sm"
       onClick={() => toggleCompare(slug)}
       aria-pressed={active}
+      aria-label={active ? `Remove ${name} from comparison` : `Compare ${name}`}
       className={cn(active && "bg-primary-soft text-primary")}
     >
       {active ? <Check className="h-3.5 w-3.5" /> : <GitCompareArrows className="h-3.5 w-3.5" />}
