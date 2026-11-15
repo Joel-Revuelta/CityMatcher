@@ -1,19 +1,20 @@
 # Verification log — v1
 
 **Date:** 2026-11-15
-**Runtime:** Node 24.14.0, npm 11.21.2, Next.js 16.4.6
+**Runtime:** Node 24.14.0, pnpm 11.22.0, Next.js 16.4.6
 **Result:** v1 verified end to end.
 
 ## Automated checks
 
 | Check | Command | Result |
 | --- | --- | --- |
-| Clean install | `npm ci` | 381 packages installed |
-| Lint | `npm run lint` | Passed, no findings |
-| Types | `npm run typecheck` | Passed, no errors |
-| Unit tests | `npm test` | 4 files / 28 tests passed |
-| Dataset QA | `npm run data:qa` | 42 cities, 27 countries, 100% country + climate coverage, 0 warnings, 0 errors |
-| Production build | `npm run build` | Passed; 16 routes generated |
+| Clean install | `pnpm install --frozen-lockfile` | Lockfile accepted |
+| Dependency audit | `pnpm audit` | No known vulnerabilities |
+| Lint | `pnpm lint` | Passed, no findings |
+| Types | `pnpm typecheck` | Passed, no errors |
+| Unit tests | `pnpm test` | 4 files / 28 tests passed |
+| Dataset QA | `pnpm data:qa` | 42 cities, 27 countries, 100% country + climate coverage, 0 warnings, 0 errors |
+| Production build | `pnpm build` | Passed; 16 routes generated |
 
 Production route table:
 
@@ -38,7 +39,7 @@ Production route table:
 
 ## Runtime smoke test
 
-Production server: `npm start` on `http://localhost:3000`.
+Production server: `pnpm start` on `http://localhost:3000`.
 
 | Endpoint | Status |
 | --- | --- |
@@ -67,9 +68,21 @@ Security headers confirmed on `/`: `X-Content-Type-Options`, `Referrer-Policy`,
 7. Opened `/compare?c=lisbon,vienna` → 20 comparison rows, both cities present.
 8. Page console/page errors: **0**.
 
-Visual checks were captured at 1440×1000 and 390×844 in light and dark mode for the home,
-results, city profile and comparison pages. No layout breakage or contrast blockers were
-observed.
+A second pass verified edited-brief prefill, the empty-results state, a four-way comparison,
+dark-mode persistence after reload, and shortlist persistence after reload. Visual checks
+were captured at 1440×1000 and 390×844 in light and dark mode for the home, results, city
+profile and comparison pages. No layout breakage or contrast blockers were observed.
+
+## Tooling notes
+
+- **Package manager:** pnpm 11.22.0. `package-lock.json` was removed; `pnpm-lock.yaml` is
+  committed. CI uses `pnpm/action-setup` and a frozen lockfile.
+- **ESLint:** pinned to 9.39.5 because `eslint-config-next@16.4.6`'s bundled ESLint plugins
+  still declare support only through ESLint 9. ESLint 10 produced peer warnings.
+- **Audit override:** `@typescript-eslint/typescript-estree` pins `minimatch ^10.2.2`, which
+  falls under a moderate dev-only DoS advisory. `pnpm-workspace.yaml` overrides it to
+  `11.0.8` (patched), and lint is verified with that override. Node 22.12+ is required for
+  the ESM/CJS interop. Production dependencies audit clean independently.
 
 ## Security notes
 

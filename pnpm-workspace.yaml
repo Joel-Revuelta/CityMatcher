@@ -1,0 +1,8 @@
+# pnpm 11 settings.
+#
+# eslint-config-next -> @typescript-eslint/typescript-estree pins minimatch ^10.2.2,
+# which is inside a moderate dev-only denial-of-service advisory. 11.0.8 is the
+# patched release; lint is verified with it. Node 22.12+ is required for the
+# ESM/CJS interop.
+overrides:
+  "@typescript-eslint/typescript-estree>minimatch": "11.0.8"

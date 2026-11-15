@@ -20,8 +20,8 @@ Because the key exists in the repository's git history, treat it as compromised:
 - Every AI route validates input, rate-limits requests and falls back to the deterministic
   parser on failure.
 - Security headers are set in `next.config.ts`.
-- Dependencies are pinned in `package-lock.json`; Dependabot is configured for weekly
-  updates.
+- Dependencies are pinned in `pnpm-lock.yaml`; `pnpm audit` is clean at v1 verification;
+  Dependabot is configured for weekly updates.
 - The app stores only a city shortlist and colour preference in `localStorage`.
 
 ## Reporting
